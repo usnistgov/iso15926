@@ -1,0 +1,25 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00005/complex_test_case00005-ParallelOperationsRequired
+# imports: http://data.posccaesar.org/tpl/
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00004/complex_test_case00004-ServiceOperationDutyCycle
+
+@prefix ctc00005: <http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00005/complex_test_case00005-ParallelOperationsRequired#> .
+@prefix dm: <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00005/complex_test_case00005-ParallelOperationsRequired>
+  rdf:type owl:Ontology ;
+  owl:imports tpl: ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00004/complex_test_case00004-ServiceOperationDutyCycle> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+ctc00005:ClassificationOfIndividual_1
+  rdf:type tpl:ClassificationOfIndividual ;
+  tpl:hasClassified <http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00004/complex_test_case00004-ServiceOperationDutyCycle#Activity_1> ;
+  tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS32039> ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.15 Parallel Operation Required Activity is Parallel Operation"^^xsd:string ;
+  rdfs:label "Activity is Parallel Operation"^^xsd:string ;
+.

@@ -1,0 +1,53 @@
+# baseURI: http://rdl.rdlfacade.org/data
+# imports: http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003
+
+@prefix dm: <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#> .
+@prefix meta: <http://standards.iso.org/iso/15926/meta#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdlfacade: <http://rdl.rdlfacade.org/data#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://rdl.rdlfacade.org/data>
+  rdf:type owl:Ontology ;
+  owl:imports <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+rdlfacade:CYCLE_PER_DAY
+  rdf:type dm:Scale ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.14 Starts Per Day"^^xsd:string ;
+  rdfs:label "Cycle Per Day Scale"^^xsd:string ;
+.
+rdlfacade:Classification_1
+  rdf:type dm:Classification ;
+  dm:hasClassified rdlfacade:CYCLE_PER_DAY ;
+  dm:hasClassifier <http://data.posccaesar.org/rdl/RDS1358627521> ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.14 Starts Per Day"^^xsd:string ;
+  rdfs:label "Cycle Per Day a FREQUENCY SCALE CLASS"^^xsd:string ;
+.
+rdlfacade:PROCESS_VARIATIONS_DESCRIPTION
+  rdf:type dm:ClassOfClassOfDescription ;
+  dm:hasClassOfPattern <http://data.posccaesar.org/rdl/RDS2100977881> ;
+  dm:hasClassOfRepresented <http://data.posccaesar.org/rdl/RDS416834> ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.10 Process Variations"^^xsd:string ;
+  rdfs:label "PROCESS VARIATIONS DESCRIPTION"^^xsd:string ;
+.
+rdlfacade:RA279224C9180470BAE922CFCBA21A78F
+  rdf:type dm:ClassOfClassOfIdentification ;
+  meta:annAdministrativeNote "This needs to become a PCA RDL item at some point, and be removed from being defined here in the test case itself."^^xsd:string ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.1 Add Identification to Project  (ClassifiedIdentificationOfIndividual)"^^xsd:string ;
+  rdfs:label "PROJECT IDENTIFICATION CODE"^^xsd:string ;
+.
+rdlfacade:REVISION_CODE_ASSIGNMENT_CLASS
+  rdf:type dm:ClassOfClassOfIdentification ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.3 Revision Number"^^xsd:string ;
+  rdfs:label "REVISION CODE ASSIGNMENT CLASS"^^xsd:string ;
+.
+rdlfacade:STARTING_CONDITIONS_DESCRIPTION
+  rdf:type dm:ClassOfClassOfDescription ;
+  dm:hasClassOfPattern <http://data.posccaesar.org/rdl/RDS2100977881> ;
+  dm:hasClassOfRepresented <http://data.posccaesar.org/rdl/RDS416834> ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.11 Starting Conditions"^^xsd:string ;
+  rdfs:label "STARTING CONDITIONS DESCRIPTION"^^xsd:string ;
+.

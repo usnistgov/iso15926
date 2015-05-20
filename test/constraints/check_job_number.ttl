@@ -1,0 +1,444 @@
+# baseURI: http://iso15926.fiatech.org/test/constraints/check_job_number
+# imports: http://data.posccaesar.org/tpl/
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00000-JobNumber
+# imports: http://spinrdf.org/spl
+
+@prefix arg: <http://spinrdf.org/arg#> .
+@prefix check_job_number: <http://iso15926.fiatech.org/test/constraints/check_job_number#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix spl: <http://spinrdf.org/spl#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://iso15926.fiatech.org/test/constraints/check_job_number>
+  rdf:type owl:Ontology ;
+  owl:imports tpl: ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00000-JobNumber> ;
+  owl:imports <http://spinrdf.org/spl> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+<http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#Activity>
+  spin:constraint [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object spin:ConstraintViolation ;
+            sp:predicate rdf:type ;
+            sp:subject _:b23927 ;
+          ]
+          [
+            sp:object spin:_this ;
+            sp:predicate spin:violationRoot ;
+            sp:subject _:b23927 ;
+          ]
+          [
+            sp:object "Activity representing Project (RDS9629) missing Project Identification Code (PROJECT_IDENTIFICATION_CODE)" ;
+            sp:predicate rdfs:label ;
+            sp:subject _:b23927 ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object spin:_this ;
+            sp:predicate tpl:hasClassified ;
+            sp:subject [
+                sp:varName "classificationofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object tpl:ClassificationOfIndividual ;
+            sp:predicate rdf:type ;
+            sp:subject [
+                sp:varName "classificationofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object <http://data.posccaesar.org/rdl/RDS9629> ;
+            sp:predicate tpl:hasClassifier ;
+            sp:subject [
+                sp:varName "classificationofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            rdf:type sp:NotExists ;
+            sp:elements (
+                [
+                  sp:object spin:_this ;
+                  sp:predicate tpl:hasIdentified ;
+                  sp:subject [
+                      sp:varName "classifiedidentificationofindividual"^^xsd:string ;
+                    ] ;
+                ]
+                [
+                  sp:object <http://rdl.rdlfacade.org/data#RA279224C9180470BAE922CFCBA21A78F> ;
+                  sp:predicate tpl:hasIdentificationType ;
+                  sp:subject [
+                      sp:varName "classifiedidentificationofindividual"^^xsd:string ;
+                    ] ;
+                ]
+                [
+                  sp:object tpl:ClassifiedIdentificationOfIndividual ;
+                  sp:predicate rdf:type ;
+                  sp:subject [
+                      sp:varName "classifiedidentificationofindividual"^^xsd:string ;
+                    ] ;
+                ]
+                [
+                  sp:object [
+                      sp:varName "JobNumberOnDataSheet"^^xsd:string ;
+                    ] ;
+                  sp:predicate tpl:valIdentifier ;
+                  sp:subject [
+                      sp:varName "classifiedidentificationofindividual"^^xsd:string ;
+                    ] ;
+                ]
+              ) ;
+          ]
+        ) ;
+      rdfs:comment "Check Activity as Project Has Code"^^xsd:string ;
+    ] ;
+  spin:constraint [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object spin:ConstraintViolation ;
+            sp:predicate rdf:type ;
+            sp:subject _:b52145 ;
+          ]
+          [
+            sp:object spin:_this ;
+            sp:predicate spin:violationRoot ;
+            sp:subject _:b52145 ;
+          ]
+          [
+            sp:object "Activity representing Project (RDS9629)  with Project Identification Code (PROJECT_IDENTIFICATION_CODE) not on a Data Sheet (RDS250334)" ;
+            sp:predicate rdfs:label ;
+            sp:subject _:b52145 ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object spin:_this ;
+            sp:predicate tpl:hasClassified ;
+            sp:subject [
+                sp:varName "classificationofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object tpl:ClassificationOfIndividual ;
+            sp:predicate rdf:type ;
+            sp:subject [
+                sp:varName "classificationofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object <http://data.posccaesar.org/rdl/RDS9629> ;
+            sp:predicate tpl:hasClassifier ;
+            sp:subject [
+                sp:varName "classificationofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object spin:_this ;
+            sp:predicate tpl:hasIdentified ;
+            sp:subject [
+                sp:varName "classifiedidentificationofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object <http://rdl.rdlfacade.org/data#RA279224C9180470BAE922CFCBA21A78F> ;
+            sp:predicate tpl:hasIdentificationType ;
+            sp:subject [
+                sp:varName "classifiedidentificationofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object tpl:ClassifiedIdentificationOfIndividual ;
+            sp:predicate rdf:type ;
+            sp:subject [
+                sp:varName "classifiedidentificationofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "JobNumberOnDataSheet"^^xsd:string ;
+              ] ;
+            sp:predicate tpl:valIdentifier ;
+            sp:subject [
+                sp:varName "classifiedidentificationofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            rdf:type sp:NotExists ;
+            sp:elements (
+                [
+                  sp:object spin:_this ;
+                  sp:predicate tpl:hasReferred ;
+                  sp:subject [
+                      sp:varName "referencetoindividualondocument"^^xsd:string ;
+                    ] ;
+                ]
+                [
+                  sp:object [
+                      sp:varName "classofinformationobject"^^xsd:string ;
+                    ] ;
+                  sp:predicate tpl:hasDocument ;
+                  sp:subject [
+                      sp:varName "referencetoindividualondocument"^^xsd:string ;
+                    ] ;
+                ]
+                [
+                  sp:object tpl:ReferenceToIndividualOnDocument ;
+                  sp:predicate rdf:type ;
+                  sp:subject [
+                      sp:varName "referencetoindividualondocument"^^xsd:string ;
+                    ] ;
+                ]
+                [
+                  sp:object <http://data.posccaesar.org/rdl/RDS250334> ;
+                  sp:predicate tpl:hasClassifier ;
+                  sp:subject [
+                      sp:varName "classificationofclassofindividual"^^xsd:string ;
+                    ] ;
+                ]
+                [
+                  sp:object [
+                      sp:varName "classofinformationobject"^^xsd:string ;
+                    ] ;
+                  sp:predicate tpl:hasClassified ;
+                  sp:subject [
+                      sp:varName "classificationofclassofindividual"^^xsd:string ;
+                    ] ;
+                ]
+                [
+                  sp:object <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#ClassOfInformationObject> ;
+                  sp:predicate rdf:type ;
+                  sp:subject [
+                      sp:varName "classofinformationobject"^^xsd:string ;
+                    ] ;
+                ]
+                [
+                  sp:object tpl:ClassificationOfClassOfIndividual ;
+                  sp:predicate rdf:type ;
+                  sp:subject [
+                      sp:varName "classificationofclassofindividual"^^xsd:string ;
+                    ] ;
+                ]
+              ) ;
+          ]
+        ) ;
+      rdfs:comment "Check full path Activity to Datasheet"^^xsd:string ;
+    ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object [
+                sp:varName "JobNumberOnDataSheet"^^xsd:string ;
+              ] ;
+            sp:predicate <http://testresult.org/jobnumber#projectOnDatasheetAsJobNumber> ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object spin:_this ;
+            sp:predicate tpl:hasClassified ;
+            sp:subject [
+                sp:varName "classificationofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object tpl:ClassificationOfIndividual ;
+            sp:predicate rdf:type ;
+            sp:subject [
+                sp:varName "classificationofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object <http://data.posccaesar.org/rdl/RDS9629> ;
+            sp:predicate tpl:hasClassifier ;
+            sp:subject [
+                sp:varName "classificationofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object spin:_this ;
+            sp:predicate tpl:hasReferred ;
+            sp:subject [
+                sp:varName "referencetoindividualondocument"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "classofinformationobject"^^xsd:string ;
+              ] ;
+            sp:predicate tpl:hasDocument ;
+            sp:subject [
+                sp:varName "referencetoindividualondocument"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object tpl:ReferenceToIndividualOnDocument ;
+            sp:predicate rdf:type ;
+            sp:subject [
+                sp:varName "referencetoindividualondocument"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object <http://data.posccaesar.org/rdl/RDS250334> ;
+            sp:predicate tpl:hasClassifier ;
+            sp:subject [
+                sp:varName "classificationofclassofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "classofinformationobject"^^xsd:string ;
+              ] ;
+            sp:predicate tpl:hasClassified ;
+            sp:subject [
+                sp:varName "classificationofclassofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#ClassOfInformationObject> ;
+            sp:predicate rdf:type ;
+            sp:subject [
+                sp:varName "classofinformationobject"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object tpl:ClassificationOfClassOfIndividual ;
+            sp:predicate rdf:type ;
+            sp:subject [
+                sp:varName "classificationofclassofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object spin:_this ;
+            sp:predicate tpl:hasIdentified ;
+            sp:subject [
+                sp:varName "classifiedidentificationofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object <http://rdl.rdlfacade.org/data#RA279224C9180470BAE922CFCBA21A78F> ;
+            sp:predicate tpl:hasIdentificationType ;
+            sp:subject [
+                sp:varName "classifiedidentificationofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object tpl:ClassifiedIdentificationOfIndividual ;
+            sp:predicate rdf:type ;
+            sp:subject [
+                sp:varName "classifiedidentificationofindividual"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "JobNumberOnDataSheet"^^xsd:string ;
+              ] ;
+            sp:predicate tpl:valIdentifier ;
+            sp:subject [
+                sp:varName "classifiedidentificationofindividual"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+      rdfs:comment "Construct JobNumber (Project code) on Datasheet"^^xsd:string ;
+    ] ;
+.
+<http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#ClassOfInformationObject>
+  spin:constraint [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object spin:ConstraintViolation ;
+            sp:predicate rdf:type ;
+            sp:subject _:b71668 ;
+          ]
+          [
+            sp:object spin:_this ;
+            sp:predicate spin:violationRoot ;
+            sp:subject _:b71668 ;
+          ]
+          [
+            sp:object "ClassOfInformationObject not a Data Sheet (RDS250334)" ;
+            sp:predicate rdfs:label ;
+            sp:subject _:b71668 ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:NotExists ;
+            sp:elements (
+                [
+                  sp:object spin:_this ;
+                  sp:predicate tpl:hasClassified ;
+                  sp:subject [
+                      sp:varName "docisdatasheet"^^xsd:string ;
+                    ] ;
+                ]
+                [
+                  sp:object <http://data.posccaesar.org/rdl/RDS250334> ;
+                  sp:predicate tpl:hasClassifier ;
+                  sp:subject [
+                      sp:varName "docisdatasheet"^^xsd:string ;
+                    ] ;
+                ]
+                [
+                  sp:object tpl:ClassificationOfClassOfIndividual ;
+                  sp:predicate rdf:type ;
+                  sp:subject [
+                      sp:varName "docisdatasheet"^^xsd:string ;
+                    ] ;
+                ]
+              ) ;
+          ]
+        ) ;
+      rdfs:comment "Check ClassOfInformationObject as Datasheet (RDS250334)"^^xsd:string ;
+    ] ;
+  spin:rule [
+      rdf:type sp:Construct ;
+      sp:templates (
+          [
+            sp:object [
+                sp:varName "class"^^xsd:string ;
+              ] ;
+            sp:predicate <http://testresult.org/jobnumber#classesForClassOfInformationObject> ;
+            sp:subject spin:_this ;
+          ]
+        ) ;
+      sp:where (
+          [
+            sp:object spin:_this ;
+            sp:predicate tpl:hasClassified ;
+            sp:subject [
+                sp:varName "docisdatasheet"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object [
+                sp:varName "class"^^xsd:string ;
+              ] ;
+            sp:predicate tpl:hasClassifier ;
+            sp:subject [
+                sp:varName "docisdatasheet"^^xsd:string ;
+              ] ;
+          ]
+          [
+            sp:object tpl:ClassificationOfClassOfIndividual ;
+            sp:predicate rdf:type ;
+            sp:subject [
+                sp:varName "docisdatasheet"^^xsd:string ;
+              ] ;
+          ]
+        ) ;
+      rdfs:comment "Construct ClassOfInformationObject Classifications"^^xsd:string ;
+    ] ;
+.

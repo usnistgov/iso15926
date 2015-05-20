@@ -1,0 +1,11 @@
+SELECT ?PumpIdentifier
+WHERE {
+    ?possibleindividual rdf:type dm:PossibleIndividual .
+    ?classificationofindividual tpl:hasClassified ?possibleindividual .
+    ?classificationofindividual tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS416834> .
+    ?classificationofindividual rdf:type tpl:ClassificationOfIndividual .
+    ?classifiedidentificationofindividual tpl:hasIdentificationType <http://data.posccaesar.org/rdl/RDS2100944981> .
+    ?classifiedidentificationofindividual tpl:hasIdentified ?possibleindividual .
+    ?classifiedidentificationofindividual rdf:type tpl:ClassifiedIdentificationOfIndividual .
+    ?classifiedidentificationofindividual tpl:valIdentifier ?PumpIdentifier .
+}

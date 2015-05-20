@@ -1,0 +1,112 @@
+# baseURI: null
+
+@prefix composite: <http://www.topbraid.org/2007/05/composite.owl#> .
+@prefix forms: <http://www.topbraid.org/2007/01/forms.owl#> .
+@prefix inference: <http://www.topbraid.org/2007/06/inference.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix visual: <http://topbraid.org/visual#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[
+  rdf:type visual:Graph ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/rdl/RDS14286227> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "305"^^xsd:int ;
+      visual:x "18"^^xsd:int ;
+      visual:y "617"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/rdl/RDS400679> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "292"^^xsd:int ;
+      visual:x "20"^^xsd:int ;
+      visual:y "483"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/rdl/RDS7353897> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "298"^^xsd:int ;
+      visual:x "23"^^xsd:int ;
+      visual:y "571"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/rdl/RDS7353960> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "298"^^xsd:int ;
+      visual:x "19"^^xsd:int ;
+      visual:y "528"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/tpl/EnumerationOfClass> ;
+      visual:height "179"^^xsd:int ;
+      visual:width "283"^^xsd:int ;
+      visual:x "338"^^xsd:int ;
+      visual:y "10"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/tpl/PickListOfClasses> ;
+      visual:height "179"^^xsd:int ;
+      visual:width "283"^^xsd:int ;
+      visual:x "17"^^xsd:int ;
+      visual:y "11"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00004/atomic_test_case00004-EnumeratedClassOfCapacity#EnumeratedSetOfCapacityClass_1> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "288"^^xsd:int ;
+      visual:x "251"^^xsd:int ;
+      visual:y "338"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00004/atomic_test_case00004-EnumeratedClassOfCapacity#EnumerationOfClass_1> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "226"^^xsd:int ;
+      visual:x "449"^^xsd:int ;
+      visual:y "414"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00004/atomic_test_case00004-EnumeratedClassOfCapacity#PickListOfCapacityClasses_1> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "261"^^xsd:int ;
+      visual:x "22"^^xsd:int ;
+      visual:y "232"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00004/atomic_test_case00004-EnumeratedClassOfCapacity#PumpCapacityUnionClass_1> ;
+      visual:height "53"^^xsd:int ;
+      visual:width "256"^^xsd:int ;
+      visual:x "105"^^xsd:int ;
+      visual:y "383"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#ClassOfIndirectProperty> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "200"^^xsd:int ;
+      visual:x "5"^^xsd:int ;
+      visual:y "300"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#EnumeratedSetOfClass> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "197"^^xsd:int ;
+      visual:x "299"^^xsd:int ;
+      visual:y "259"^^xsd:int ;
+    ] ;
+  visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00004/atomic_test_case00004-EnumeratedClassOfCapacity#PumpCapacityUnionClass_1> ;
+  rdfs:label "PumpCapacityUnionClass" ;
+].

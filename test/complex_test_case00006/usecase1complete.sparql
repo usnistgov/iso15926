@@ -1,0 +1,103 @@
+SELECT *
+WHERE {
+    ?instance a ?template .
+	?template a p7tm:Template . 
+	OPTIONAL { ?roledescription p7tm:hasTemplate ?template . }
+	FILTER NOT EXISTS {?roledescription  a p7tm:TemplateDescription . }
+	OPTIONAL { ?roledescription a p7tm:TemplateRoleDescription  . }
+	OPTIONAL {  ?roledescription p7tm:hasRole ?role . }
+	OPTIONAL {  ?roledescription p7tm:hasRoleFillerType ?roletype . }
+	?instance ?role ?rolevalue .
+	BIND(afn:namespace(?rolevalue) AS ?rvns )
+	FILTER ( ?rvns = "http://data.posccaesar.org/rdl/"^^xsd:string )
+	?rolevalue pcardlprop:designation ?rolevaluerlabel .
+	?rolevalue pcardlprop:classifier ?rolevalueclassifier .
+	?rolevalue pcardlprop:superclassDesignation ?rolevalueclassifierlabel .
+	?rolevalue pcardlprop:rdftype ?rolevaluetype .
+}
+
+FIND CENT PUMP
+
+SELECT ?pump
+WHERE {
+    ?classificationofindividual tpl:hasClassified ?pump .
+    ?classificationofindividual tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS416834> .
+    ?pump rdf:type dm:PossibleIndividual .
+}
+
+FIND ALL PUMP INDIRECT PROPERTIES
+
+SELECT ?pump ?property ?propertylabel ?value ?scale ?scalelabel 
+WHERE {
+    ?individualhasindirectpropertywithvalue rdf:type tpl:IndividualHasIndirectPropertyWithValue .
+    ?individualhasindirectpropertywithvalue tpl:hasIndirectPropertyType ?property .
+	OPTIONAL {
+		?property pcardlprop:designation ?propertylabel .
+		}
+	OPTIONAL { 
+		?property rdfs:label ?propertylabel . 
+		}
+    ?individualhasindirectpropertywithvalue tpl:hasPossessor ?pump .
+    ?individualhasindirectpropertywithvalue tpl:hasScale ?scale .
+	?individualhasindirectpropertywithvalue tpl:valPropertyValue ?value .
+	?classificationofindividual tpl:hasClassified ?pump .
+    ?classificationofindividual tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS416834> .
+	OPTIONAL {
+		?scale pcardlprop:designation ?scalelabel .
+		}
+	OPTIONAL { 
+		?scale rdfs:label ?scalelabel . 
+		}
+}
+
+FIND ALL CLASSIFICATIONS
+
+SELECT ?thinglabel ?classlabel ?classificationtype ?thing ?class
+WHERE {
+	?clsn tpl:hasClassified ?thing .
+	?thing rdfs:label ?thinglabel .
+	?clsn tpl:hasClassifier ?class .
+	?clsn a ?classificationtype .
+	OPTIONAL { SERVICE  <http://data.posccaesar.org/rdl/> {
+		?class <http://data.posccaesar.org/rdl/hasDesignation> ?classlabel .} 
+		}
+	OPTIONAL { 
+		?class rdfs:label ?classlabel . 
+		}
+}
+
+FIND ALL IDENTIFICATIONS
+
+SELECT ?thing ?thingkind ?id ?classlabel
+WHERE {
+	?idn tpl:hasIdentificationType ?class .
+	?idn tpl:hasIdentified ?thing .
+	?thing a ?thingkind .
+	?thing rdfs:label ?thinglabel .
+	?idn a ?classificationtype .
+	?idn tpl:valIdentifier ?id .
+	OPTIONAL { SERVICE  <http://data.posccaesar.org/rdl/> {
+		?class <http://data.posccaesar.org/rdl/hasDesignation> ?classlabel .} 
+		}
+	OPTIONAL { 
+		?class rdfs:label ?classlabel . 
+		}
+}
+
+FIND ALL DESCRIPTIONS
+
+SELECT ?thing ?thingkind ?desc ?classlabel
+WHERE {
+	?idn tpl:hasDescriptionType ?class .
+	?idn tpl:hasDescribed ?thing .
+	?thing a ?thingkind .
+	?thing rdfs:label ?thinglabel .
+	?idn a ?classificationtype .
+	?idn tpl:valDescriptor ?desc .
+	OPTIONAL { SERVICE  <http://data.posccaesar.org/rdl/> {
+		?class <http://data.posccaesar.org/rdl/hasDesignation> ?classlabel .} 
+		}
+	OPTIONAL { 
+		?class rdfs:label ?classlabel . 
+		}
+}

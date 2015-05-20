@@ -1,0 +1,14 @@
+SELECT ?RevisionDate
+WHERE {
+    ?actualindividual rdf:type dm:ActualIndividual .
+    ?actualindividual rdf:type dm:Activity .
+    ?classofinformationobject rdf:type dm:ClassOfInformationObject .
+    ?documentrevision tpl:hasActivity ?actualindividual .
+    ?documentrevision tpl:hasActivityType <http://data.posccaesar.org/rdl/RDS9656027> .
+    ?documentrevision tpl:hasRevisedDocument ?classofinformationobject .
+    ?documentrevision rdf:type tpl:DocumentRevision .
+    ?classificationofclassofindividual tpl:hasClassified ?classofinformationobject .
+    ?classificationofclassofindividual tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS250334> .
+    ?classificationofclassofindividual rdf:type tpl:ClassificationOfClassOfIndividual .
+    ?documentrevision tpl:valRevisionDate ?RevisionDate .
+}

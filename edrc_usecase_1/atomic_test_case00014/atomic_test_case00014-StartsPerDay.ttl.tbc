@@ -1,0 +1,149 @@
+# baseURI: null
+
+@prefix composite: <http://www.topbraid.org/2007/05/composite.owl#> .
+@prefix forms: <http://www.topbraid.org/2007/01/forms.owl#> .
+@prefix inference: <http://www.topbraid.org/2007/06/inference.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix visual: <http://topbraid.org/visual#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[
+  rdf:type visual:Graph ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/rdl/RDS1358627521> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "328"^^xsd:int ;
+      visual:x "58"^^xsd:int ;
+      visual:y "388"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://rdl.rdlfacade.org/data#CYCLE_PER_DAY> ;
+      visual:height "53"^^xsd:int ;
+      visual:width "254"^^xsd:int ;
+      visual:x "51"^^xsd:int ;
+      visual:y "102"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://rdl.rdlfacade.org/data#Classification_1> ;
+      visual:height "53"^^xsd:int ;
+      visual:width "254"^^xsd:int ;
+      visual:x "91"^^xsd:int ;
+      visual:y "254"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#Classification> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "154"^^xsd:int ;
+      visual:x "333"^^xsd:int ;
+      visual:y "53"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#Scale> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "113"^^xsd:int ;
+      visual:x "89"^^xsd:int ;
+      visual:y "19"^^xsd:int ;
+    ] ;
+  visual:depicts <http://rdl.rdlfacade.org/data#CYCLE_PER_DAY> ;
+  rdfs:label "CYCLE_PER_DAY RD" ;
+].
+[
+  rdf:type visual:Graph ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/rdl/RDS402974> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "316"^^xsd:int ;
+      visual:x "183"^^xsd:int ;
+      visual:y "251"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/rdl/RDS416834> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "304"^^xsd:int ;
+      visual:x "699"^^xsd:int ;
+      visual:y "458"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/tpl/ClassificationOfIndividual> ;
+      visual:height "197"^^xsd:int ;
+      visual:width "297"^^xsd:int ;
+      visual:x "643"^^xsd:int ;
+      visual:y "15"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/tpl/ClassifiedIdentificationOfIndividual> ;
+      visual:height "197"^^xsd:int ;
+      visual:width "297"^^xsd:int ;
+      visual:x "332"^^xsd:int ;
+      visual:y "15"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/tpl/IndividualHasIndirectPropertyWithValue> ;
+      visual:height "197"^^xsd:int ;
+      visual:width "297"^^xsd:int ;
+      visual:x "19"^^xsd:int ;
+      visual:y "13"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber#ClassificationOfIndividual_1> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "256"^^xsd:int ;
+      visual:x "677"^^xsd:int ;
+      visual:y "269"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber#ClassifiedIdentificationOfIndividual_1> ;
+      visual:height "35"^^xsd:int ;
+      visual:width "306"^^xsd:int ;
+      visual:x "381"^^xsd:int ;
+      visual:y "323"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber#PossibleIndividual_1> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "215"^^xsd:int ;
+      visual:x "459"^^xsd:int ;
+      visual:y "536"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00014/atomic_test_case00014-StartsPerDay#IndividualHasIndirectPropertyWithValue_1> ;
+      visual:height "35"^^xsd:int ;
+      visual:width "330"^^xsd:int ;
+      visual:x "21"^^xsd:int ;
+      visual:y "435"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://rdl.rdlfacade.org/data#CYCLE_PER_DAY> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "332"^^xsd:int ;
+      visual:x "52"^^xsd:int ;
+      visual:y "574"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#PossibleIndividual> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "170"^^xsd:int ;
+      visual:x "367"^^xsd:int ;
+      visual:y "427"^^xsd:int ;
+    ] ;
+  visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber#PossibleIndividual_1> ;
+  rdfs:label "StartsPerDay" ;
+].

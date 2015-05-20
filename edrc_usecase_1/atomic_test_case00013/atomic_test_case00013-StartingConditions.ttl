@@ -1,0 +1,26 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00013/atomic_test_case00013-StartingConditions
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber
+# imports: http://rdl.rdlfacade.org/data
+
+@prefix atc00013: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00013/atomic_test_case00013-StartingConditions#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00013/atomic_test_case00013-StartingConditions>
+  rdf:type owl:Ontology ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.11 Starting Conditions"^^xsd:string ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber> ;
+  owl:imports <http://rdl.rdlfacade.org/data> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+atc00013:ClassifiedDescriptionOfIndividual_1
+  rdf:type tpl:ClassifiedDescriptionOfIndividual ;
+  tpl:hasDescribed <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber#PossibleIndividual_1> ;
+  tpl:hasDescriptionType <http://rdl.rdlfacade.org/data#STARTING_CONDITIONS_DESCRIPTION> ;
+  tpl:valDescriptor "This is some starting conditions description text."^^xsd:string ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.11 Starting Conditions"^^xsd:string ;
+  rdfs:label "Describe starting conditions with text"^^xsd:string ;
+.

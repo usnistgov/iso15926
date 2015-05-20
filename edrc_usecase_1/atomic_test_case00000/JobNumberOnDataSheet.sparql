@@ -1,0 +1,21 @@
+SELECT ?JobNumberOnDataSheet
+WHERE {
+    ?activity rdf:type dm:Activity .
+    ?classificationofindividual tpl:hasClassified ?activity .
+    ?classificationofindividual rdf:type tpl:ClassificationOfIndividual .
+    ?classificationofindividual tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS9629> .
+
+    ?referencetoindividualondocument tpl:hasReferred ?activity .
+    ?referencetoindividualondocument tpl:hasDocument ?classofinformationobject .
+    ?referencetoindividualondocument rdf:type tpl:ReferenceToIndividualOnDocument .
+
+    ?classificationofclassofindividual tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS345689> .
+    ?classificationofclassofindividual tpl:hasClassified ?classofinformationobject .
+    ?classofinformationobject rdf:type dm:ClassOfInformationObject .
+    ?classificationofclassofindividual rdf:type tpl:ClassificationOfClassOfIndividual .
+
+    ?classifiedidentificationofindividual tpl:hasIdentified ?activity .
+    ?classifiedidentificationofindividual tpl:hasIdentificationType <http://rdl.rdlfacade.org/data#RA279224C9180470BAE922CFCBA21A78F> .
+    ?classifiedidentificationofindividual rdf:type tpl:ClassifiedIdentificationOfIndividual .
+    ?classifiedidentificationofindividual tpl:valIdentifier ?JobNumberOnDataSheet .
+}

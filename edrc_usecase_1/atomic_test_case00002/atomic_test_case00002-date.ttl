@@ -1,0 +1,32 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00002/atomic_test_case00002-date
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00000-JobNumber
+
+@prefix atc00002: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00002/atomic_test_case00002-date#> .
+@prefix dm: <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00002/atomic_test_case00002-date>
+  rdf:type owl:Ontology ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00000-JobNumber> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.4 Date"^^xsd:string ;
+.
+atc00002:Activity_1
+  rdf:type dm:Activity ;
+  rdf:type dm:ActualIndividual ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.4 Date"^^xsd:string ;
+  rdfs:label "Revising DataSheet P-100-DS"^^xsd:string ;
+.
+atc00002:DocumentRevision_1
+  rdf:type tpl:DocumentRevision ;
+  tpl:hasActivity atc00002:Activity_1 ;
+  tpl:hasActivityType <http://data.posccaesar.org/rdl/RDS9656027> ;
+  tpl:hasRevisedDocument <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00000-JobNumber#ClassOfIndividual_1> ;
+  tpl:valRevisionDate "2014-12-12T00:00:00"^^xsd:dateTime ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.4 Date"^^xsd:string ;
+  rdfs:label "Dated Document Revision"^^xsd:string ;
+.

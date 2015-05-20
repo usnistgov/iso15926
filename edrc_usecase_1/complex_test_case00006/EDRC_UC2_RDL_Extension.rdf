@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:meta="http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/metadata#"
+    xmlns:dm="http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:owllist="http://www.co-ode.org/ontologies/list.owl#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:p7tm="http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#"
+    xmlns:rdl="http://posccaesar.org/rdl/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xml:base="http://posccaesar.org/rdl/">
+  <owl:Ontology rdf:about="">
+    <owl:imports rdf:resource="http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >owl:Ontology added by TopBraid</owl:versionInfo>
+  </owl:Ontology>
+  <dm:ClassOfClassOfComposition rdf:about="http://posccaesar.org/rdl/R-4fdefbef-886a-4e1a-b26d-002ccde50006">
+    <dm:hasClassOfClassOfPart>
+      <dm:DocumentDefinition rdf:about="http://posccaesar.org/rdl/R-a3107083-c97f-458d-aa24-d3785a0a1835">
+        <rdfs:label>RFQ ITEM</rdfs:label>
+        <rdl:defaultRdsId>R-a3107083-c97f-458d-aa24-d3785a0a1835</rdl:defaultRdsId>
+      </dm:DocumentDefinition>
+    </dm:hasClassOfClassOfPart>
+    <rdl:defaultRdsId>R-4fdefbef-886a-4e1a-b26d-002ccde50006</rdl:defaultRdsId>
+    <rdfs:label>RFQhasRFQItem</rdfs:label>
+    <dm:hasClassOfClassOfWhole>
+      <dm:DocumentDefinition rdf:about="http://posccaesar.org/rdl/R-4d2153f8-2b65-4bee-9efb-a2fcac12f284">
+        <rdfs:label>REQUEST FOR QUOTATION</rdfs:label>
+        <rdl:defaultRdsId>R-4d2153f8-2b65-4bee-9efb-a2fcac12f284</rdl:defaultRdsId>
+      </dm:DocumentDefinition>
+    </dm:hasClassOfClassOfWhole>
+  </dm:ClassOfClassOfComposition>
+  <dm:Classification rdf:about="http://posccaesar.org/rdl/R-1fde410b-9371-4beb-bb4e-fe74a3193cf9">
+    <dm:hasClassified>
+      <dm:Scale rdf:about="http://posccaesar.org/rdl/R-ae6295bf-20ae-4f1a-bd9d-9e66bc631097">
+        <rdfs:label>EUR</rdfs:label>
+        <rdl:defaultRdsId>R-ae6295bf-20ae-4f1a-bd9d-9e66bc631097</rdl:defaultRdsId>
+      </dm:Scale>
+    </dm:hasClassified>
+    <rdl:defaultRdsId>R-1fde410b-9371-4beb-bb4e-fe74a3193cf9</rdl:defaultRdsId>
+    <dm:hasClassifier>
+      <dm:ClassOfScale rdf:about="http://posccaesar.org/rdl/R-eb90b4c2-c867-437c-8b15-d45a165abf27">
+        <rdfs:label>CURRENCY</rdfs:label>
+        <rdl:defaultRdsId>R-eb90b4c2-c867-437c-8b15-d45a165abf27</rdl:defaultRdsId>
+      </dm:ClassOfScale>
+    </dm:hasClassifier>
+  </dm:Classification>
+  <dm:Classification rdf:about="http://posccaesar.org/rdl/R-3a135676-3f18-40fb-8d04-496fe0c8815a">
+    <rdl:defaultRdsId>R-3a135676-3f18-40fb-8d04-496fe0c8815a</rdl:defaultRdsId>
+    <dm:hasClassified>
+      <dm:Scale rdf:about="http://posccaesar.org/rdl/R-c8311bd1-e698-4a73-80d8-df27417a17ee">
+        <rdfs:label>USD</rdfs:label>
+        <rdl:defaultRdsId>R-c8311bd1-e698-4a73-80d8-df27417a17ee</rdl:defaultRdsId>
+      </dm:Scale>
+    </dm:hasClassified>
+    <dm:hasClassifier rdf:resource="http://posccaesar.org/rdl/R-eb90b4c2-c867-437c-8b15-d45a165abf27"/>
+  </dm:Classification>
+  <dm:ClassOfClassOfDescription rdf:about="http://posccaesar.org/rdl/R-ea7087c4-3149-4b75-a7db-aff7b7e5e6af">
+    <rdl:defaultRdsId>R-ea7087c4-3149-4b75-a7db-aff7b7e5e6af</rdl:defaultRdsId>
+    <rdfs:label>CLASS DESCRIPTION BY QUOTATION</rdfs:label>
+    <dm:hasClassOfPattern rdf:resource="http://posccaesar.org/rdl/R-a9d5fb7a-09e2-4d59-8adb-04a5ea984cef"/>
+    <dm:hasClassOfRepresented rdf:resource="http://posccaesar.org/rdl/RDS8615020"/>
+  </dm:ClassOfClassOfDescription>
+  <dm:ClassOfInanimatePhysicalObject rdf:about="http://posccaesar.org/rdl/R-9589eb0d-8276-40b8-9ada-8d79cf1c7101">
+    <rdfs:label>4-20 mA, HART</rdfs:label>
+    <rdl:defaultRdsId>R-9589eb0d-8276-40b8-9ada-8d79cf1c7101</rdl:defaultRdsId>
+  </dm:ClassOfInanimatePhysicalObject>
+  <dm:Classification rdf:about="http://posccaesar.org/rdl/R-5274df30-436b-476b-b9bc-025ea8483190">
+    <dm:hasClassifier rdf:resource="http://posccaesar.org/rdl/RDS1400140751"/>
+    <dm:hasClassified>
+      <dm:ClassOfInanimatePhysicalObject rdf:about="http://posccaesar.org/rdl/R-1ea100f5-e301-4528-bc51-9ab95b73d5f5">
+        <rdl:defaultRdsId>R-1ea100f5-e301-4528-bc51-9ab95b73d5f5</rdl:defaultRdsId>
+        <rdfs:label>ATEX FLAME-PROOF</rdfs:label>
+      </dm:ClassOfInanimatePhysicalObject>
+    </dm:hasClassified>
+    <rdl:defaultRdsId>R-5274df30-436b-476b-b9bc-025ea8483190</rdl:defaultRdsId>
+  </dm:Classification>
+  <dm:ClassOfClassOfIdentification rdf:about="http://posccaesar.org/rdl/R-0d8da6d3-bf11-4e17-bdeb-fcfcbeb32490">
+    <dm:hasClassOfPattern rdf:resource="http://posccaesar.org/rdl/RDS13285277"/>
+    <dm:hasClassOfRepresented rdf:resource="http://posccaesar.org/rdl/RDS2064425441"/>
+    <rdfs:label>TAG ASSIGNMENT CLASS</rdfs:label>
+    <rdl:defaultRdsId>R-0d8da6d3-bf11-4e17-bdeb-fcfcbeb32490</rdl:defaultRdsId>
+  </dm:ClassOfClassOfIdentification>
+  <dm:ClassOfClassOfDefinition rdf:about="http://posccaesar.org/rdl/R-67680ea6-21d0-4951-baec-de09bbe4f41d">
+    <rdfs:label>CLASS DEFINITION BY RFQ REQUIREMENT</rdfs:label>
+    <dm:hasClassOfPattern rdf:resource="http://posccaesar.org/rdl/R-a3107083-c97f-458d-aa24-d3785a0a1835"/>
+    <dm:hasClassOfRepresented>
+      <dm:ClassOfClassOfIndividual rdf:about="http://posccaesar.org/rdl/R-c898dddf-932e-4216-bf99-0f40df3847f4">
+        <rdl:defaultRdsId>R-c898dddf-932e-4216-bf99-0f40df3847f4</rdl:defaultRdsId>
+        <rdfs:label>REQUIRED ITEM CLASS</rdfs:label>
+      </dm:ClassOfClassOfIndividual>
+    </dm:hasClassOfRepresented>
+    <rdl:defaultRdsId>R-67680ea6-21d0-4951-baec-de09bbe4f41d</rdl:defaultRdsId>
+  </dm:ClassOfClassOfDefinition>
+  <dm:Role rdf:about="http://posccaesar.org/rdl/R-d2f7bbdf-0314-417b-b50b-b4fa4b6cd897">
+    <rdfs:label>PERFORMER</rdfs:label>
+    <rdl:defaultRdsId>R-d2f7bbdf-0314-417b-b50b-b4fa4b6cd897</rdl:defaultRdsId>
+  </dm:Role>
+  <dm:ClassOfIndirectProperty rdf:about="http://posccaesar.org/rdl/R-172326ab-22d4-4ba0-be6e-f2f4890e8185">
+    <rdfs:label>CALIBRATION RANGE</rdfs:label>
+    <rdl:defaultRdsId>R-172326ab-22d4-4ba0-be6e-f2f4890e8185</rdl:defaultRdsId>
+  </dm:ClassOfIndirectProperty>
+  <dm:DocumentDefinition rdf:about="http://posccaesar.org/rdl/R-bd9e51e1-7182-421d-887e-e5cb37e34653">
+    <rdl:defaultRdsId>R-bd9e51e1-7182-421d-887e-e5cb37e34653</rdl:defaultRdsId>
+    <rdfs:label>QUOTATION</rdfs:label>
+  </dm:DocumentDefinition>
+  <dm:Classification rdf:about="http://posccaesar.org/rdl/R-8b34456b-1c2c-4973-a970-5ca8ab5dc5fc">
+    <dm:hasClassifier rdf:resource="http://posccaesar.org/rdl/R-eb90b4c2-c867-437c-8b15-d45a165abf27"/>
+    <dm:hasClassified>
+      <dm:Scale rdf:about="http://posccaesar.org/rdl/R-c24ca6fa-5d7f-48f4-8493-96eb3d981e76">
+        <rdfs:label>GBP</rdfs:label>
+        <rdl:defaultRdsId>R-c24ca6fa-5d7f-48f4-8493-96eb3d981e76</rdl:defaultRdsId>
+      </dm:Scale>
+    </dm:hasClassified>
+    <rdl:defaultRdsId>R-8b34456b-1c2c-4973-a970-5ca8ab5dc5fc</rdl:defaultRdsId>
+  </dm:Classification>
+</rdf:RDF>
+
+<!-- Created with TopBraid -->

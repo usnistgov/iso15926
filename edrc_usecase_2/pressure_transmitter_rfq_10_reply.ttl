@@ -1,0 +1,1390 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_2/pressure_transmitter_rfq_10_reply
+# imports: http://data.posccaesar.org/tpl/
+
+@prefix : <http://example.org/TestData10Reply#> .
+@prefix basens: <http://example.org/> .
+@prefix dm: <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pcardl: <http://posccaesar.org/rdl/> .
+@prefix pressure_transmitter_rfq_10_reply: <http://iso15926.fiatech.org/edrc_usecase_2/pressure_transmitter_rfq_10_reply#> .
+@prefix qn2: <http://data.emerson.com/> .
+@prefix qn3: <http://example.org/data/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:id0c7bccc3-fad3-49c3-b366-28f221168ed4
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDescriptionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDescribed> qn3:id0a3425fb-4fc9-47c4-8070-5a70aae74c9a ;
+  <http://data.posccaesar.org/tpl/hasDescriptionType> pcardl:R-ea7087c4-3149-4b75-a7db-aff7b7e5e6af ;
+  <http://data.posccaesar.org/tpl/hasDescriptor> :idf4171242-ebab-44bd-9138-cbaaa391cec0 ;
+.
+:id0cd18032-821e-4590-a29e-63fa652f88a2
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDescriptionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDescribed> qn3:id4e438b8e-d723-4784-b261-af2a8a905493 ;
+  <http://data.posccaesar.org/tpl/hasDescriptionType> pcardl:R-ea7087c4-3149-4b75-a7db-aff7b7e5e6af ;
+  <http://data.posccaesar.org/tpl/hasDescriptor> :idf4171242-ebab-44bd-9138-cbaaa391cec0 ;
+.
+:id1749d425-3c74-49bf-8568-443b289a888b
+  rdf:type dm:ClassOfArrangedIndividual ;
+.
+:id174b5eec-dda7-48d3-bd0f-c0984a1bee4c
+  rdf:type <http://data.posccaesar.org/tpl/ProductClassFulfilsClassOfFunctionPlace> ;
+  <http://data.posccaesar.org/tpl/hasClassOfFulfilled> :iddadc242c-8d97-45e2-b85c-1000d2500c0e ;
+  <http://data.posccaesar.org/tpl/hasFunctionPlaceClass> qn3:id756db915-b2f0-45a3-9ec8-32991241767e ;
+  <http://data.posccaesar.org/tpl/hasProductClass> qn2:id_2051TG3A2B21BE1 ;
+.
+:id2039519b-60a5-42b3-af2f-347a7866f7a6
+  rdf:type <http://data.posccaesar.org/tpl/ProductClassFulfilsClassOfFunctionPlace> ;
+  <http://data.posccaesar.org/tpl/hasClassOfFulfilled> :idecd56ffa-bf4c-45be-9029-f5336b400ba4 ;
+  <http://data.posccaesar.org/tpl/hasFunctionPlaceClass> qn3:ida84aa2b7-25ee-45ea-a777-6422c78fd15d ;
+  <http://data.posccaesar.org/tpl/hasProductClass> qn2:id_2051TG3A2B21BE1 ;
+.
+:id2c6afb76-ba7f-4c57-baf3-3f135a1ed7d5
+  rdf:type dm:ClassOfArrangedIndividual ;
+.
+:id3cffba2e-9df6-4499-9465-cc84758af9aa
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDescriptionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDescribed> qn3:id7a53f892-2c7a-42ba-9f01-0cd3965a3839 ;
+  <http://data.posccaesar.org/tpl/hasDescriptionType> pcardl:R-ea7087c4-3149-4b75-a7db-aff7b7e5e6af ;
+  <http://data.posccaesar.org/tpl/hasDescriptor> :idf4171242-ebab-44bd-9138-cbaaa391cec0 ;
+.
+:id3dce8cd4-a00a-4ca3-a7f1-0b98bbd9c125
+  rdf:type dm:ClassOfArrangedIndividual ;
+.
+:id4f340aac-77d0-48c0-9cf4-66edd3101d59
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDescriptionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDescribed> qn3:id7493b3a1-c314-4fad-ae1d-09b97bfc8295 ;
+  <http://data.posccaesar.org/tpl/hasDescriptionType> pcardl:R-ea7087c4-3149-4b75-a7db-aff7b7e5e6af ;
+  <http://data.posccaesar.org/tpl/hasDescriptor> :idf4171242-ebab-44bd-9138-cbaaa391cec0 ;
+.
+:id57870c8c-dd79-4845-86b2-4ebec24782c5
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDescriptionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDescribed> qn3:id3c391e4d-ccac-470c-94d9-007d472939dd ;
+  <http://data.posccaesar.org/tpl/hasDescriptionType> pcardl:R-ea7087c4-3149-4b75-a7db-aff7b7e5e6af ;
+  <http://data.posccaesar.org/tpl/hasDescriptor> :idf4171242-ebab-44bd-9138-cbaaa391cec0 ;
+.
+:id636d7487-abff-4fa8-8a06-831c54dadcfa
+  rdf:type <http://data.posccaesar.org/tpl/ProductClassFulfilsClassOfFunctionPlace> ;
+  <http://data.posccaesar.org/tpl/hasClassOfFulfilled> :id8648eb2c-8636-426e-9f66-9724c1b174c6 ;
+  <http://data.posccaesar.org/tpl/hasFunctionPlaceClass> qn3:id0a3425fb-4fc9-47c4-8070-5a70aae74c9a ;
+  <http://data.posccaesar.org/tpl/hasProductClass> qn2:id_2051TG2A2B21BE1 ;
+.
+:id6596bdf2-4feb-4bc7-8cac-9bd20498f3e0
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDescriptionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDescribed> qn3:id756db915-b2f0-45a3-9ec8-32991241767e ;
+  <http://data.posccaesar.org/tpl/hasDescriptionType> pcardl:R-ea7087c4-3149-4b75-a7db-aff7b7e5e6af ;
+  <http://data.posccaesar.org/tpl/hasDescriptor> :idf4171242-ebab-44bd-9138-cbaaa391cec0 ;
+.
+:id65b4455e-b393-4780-bd47-fbdee2512610
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDescriptionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDescribed> qn3:id688adf86-65f0-40bc-875b-bc0af9b96e38 ;
+  <http://data.posccaesar.org/tpl/hasDescriptionType> pcardl:R-ea7087c4-3149-4b75-a7db-aff7b7e5e6af ;
+  <http://data.posccaesar.org/tpl/hasDescriptor> :idf4171242-ebab-44bd-9138-cbaaa391cec0 ;
+.
+:id65dbd364-46fe-4560-881c-f9253223d46a
+  rdf:type <http://data.posccaesar.org/tpl/ProductClassFulfilsClassOfFunctionPlace> ;
+  <http://data.posccaesar.org/tpl/hasClassOfFulfilled> :id2c6afb76-ba7f-4c57-baf3-3f135a1ed7d5 ;
+  <http://data.posccaesar.org/tpl/hasFunctionPlaceClass> qn3:id3c391e4d-ccac-470c-94d9-007d472939dd ;
+  <http://data.posccaesar.org/tpl/hasProductClass> qn2:id_2051TG2A2B21BE1 ;
+.
+:id70efa170-11ce-41d1-9832-e77f2bfea9dd
+  rdf:type dm:ClassOfArrangedIndividual ;
+.
+:id7e472a96-0631-47fa-b1f1-9dd63b1d10ce
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasMonetaryValue> ;
+  <http://data.posccaesar.org/tpl/hasCostType> pcardl:RDS8503440 ;
+  <http://data.posccaesar.org/tpl/hasCurrency> pcardl:R-c8311bd1-e698-4a73-80d8-df27417a17ee ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn2:id_2051TG2A2B21BE1 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "1715.0" ;
+.
+:id848ac6de-2583-482b-aa7e-a29d2bf1c0cc
+  rdf:type <http://data.posccaesar.org/tpl/ProductClassFulfilsClassOfFunctionPlace> ;
+  <http://data.posccaesar.org/tpl/hasClassOfFulfilled> :id8c0806a1-a4cb-42e2-bfac-ee51439578b9 ;
+  <http://data.posccaesar.org/tpl/hasFunctionPlaceClass> qn3:id4cdef6e6-b663-4988-aa7e-b15abef887c7 ;
+  <http://data.posccaesar.org/tpl/hasProductClass> qn2:id_2051TG2A2B21BE1 ;
+.
+:id8648eb2c-8636-426e-9f66-9724c1b174c6
+  rdf:type dm:ClassOfArrangedIndividual ;
+.
+:id8b513f6f-3de3-4b01-9cfc-b26076ce3305
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasMonetaryValue> ;
+  <http://data.posccaesar.org/tpl/hasCostType> pcardl:RDS8503440 ;
+  <http://data.posccaesar.org/tpl/hasCurrency> pcardl:R-c8311bd1-e698-4a73-80d8-df27417a17ee ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn2:id_2051TG3A2B21BE1 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "1715.0" ;
+.
+:id8c0806a1-a4cb-42e2-bfac-ee51439578b9
+  rdf:type dm:ClassOfArrangedIndividual ;
+.
+:idab5582e6-6922-40ae-98e0-b83e0139535d
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDescriptionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDescribed> qn3:ida84aa2b7-25ee-45ea-a777-6422c78fd15d ;
+  <http://data.posccaesar.org/tpl/hasDescriptionType> pcardl:R-ea7087c4-3149-4b75-a7db-aff7b7e5e6af ;
+  <http://data.posccaesar.org/tpl/hasDescriptor> :idf4171242-ebab-44bd-9138-cbaaa391cec0 ;
+.
+:idad6ea2e3-21e3-4f09-afe4-184628e52ef1
+  rdf:type <http://data.posccaesar.org/tpl/ProductClassFulfilsClassOfFunctionPlace> ;
+  <http://data.posccaesar.org/tpl/hasClassOfFulfilled> :idb9b2eb79-60e6-40eb-abd3-47445be3a9da ;
+  <http://data.posccaesar.org/tpl/hasFunctionPlaceClass> qn3:id688adf86-65f0-40bc-875b-bc0af9b96e38 ;
+  <http://data.posccaesar.org/tpl/hasProductClass> qn2:id_2051TG3A2B21BE1 ;
+.
+:idaffa041d-9dce-4ae4-901b-6cbba84b7faa
+  rdf:type dm:ClassOfArrangedIndividual ;
+.
+:idb9b2eb79-60e6-40eb-abd3-47445be3a9da
+  rdf:type dm:ClassOfArrangedIndividual ;
+.
+:idbf086d97-d9a0-4718-80db-48d5275188c1
+  rdf:type <http://data.posccaesar.org/tpl/ProductClassFulfilsClassOfFunctionPlace> ;
+  <http://data.posccaesar.org/tpl/hasClassOfFulfilled> :idaffa041d-9dce-4ae4-901b-6cbba84b7faa ;
+  <http://data.posccaesar.org/tpl/hasFunctionPlaceClass> qn3:id7493b3a1-c314-4fad-ae1d-09b97bfc8295 ;
+  <http://data.posccaesar.org/tpl/hasProductClass> qn2:id_2051TG2A2B21BE1 ;
+.
+:idd3dcddf4-b9f3-41de-856e-8e143d4fb596
+  rdf:type <http://data.posccaesar.org/tpl/ProductClassFulfilsClassOfFunctionPlace> ;
+  <http://data.posccaesar.org/tpl/hasClassOfFulfilled> :id1749d425-3c74-49bf-8568-443b289a888b ;
+  <http://data.posccaesar.org/tpl/hasFunctionPlaceClass> qn3:id7a53f892-2c7a-42ba-9f01-0cd3965a3839 ;
+  <http://data.posccaesar.org/tpl/hasProductClass> qn2:id_2051TG3A2B21BE1 ;
+.
+:idd69efeec-f5bb-4253-95c8-655fb8f63bb0
+  rdf:type <http://data.posccaesar.org/tpl/ProductClassFulfilsClassOfFunctionPlace> ;
+  <http://data.posccaesar.org/tpl/hasClassOfFulfilled> :id70efa170-11ce-41d1-9832-e77f2bfea9dd ;
+  <http://data.posccaesar.org/tpl/hasFunctionPlaceClass> qn3:idc487ca08-ddf2-4fb8-b836-8ec06ee88098 ;
+  <http://data.posccaesar.org/tpl/hasProductClass> qn2:id_2051TG3A2B21BE1 ;
+.
+:iddadc242c-8d97-45e2-b85c-1000d2500c0e
+  rdf:type dm:ClassOfArrangedIndividual ;
+.
+:iddb596426-42d6-4b8e-b8a2-cc9e00baf6d8
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDescriptionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDescribed> qn3:idc487ca08-ddf2-4fb8-b836-8ec06ee88098 ;
+  <http://data.posccaesar.org/tpl/hasDescriptionType> pcardl:R-ea7087c4-3149-4b75-a7db-aff7b7e5e6af ;
+  <http://data.posccaesar.org/tpl/hasDescriptor> :idf4171242-ebab-44bd-9138-cbaaa391cec0 ;
+.
+:idde3b0109-47d6-4304-90e6-eb6960e162d2
+  rdf:type <http://data.posccaesar.org/tpl/ProductClassFulfilsClassOfFunctionPlace> ;
+  <http://data.posccaesar.org/tpl/hasClassOfFulfilled> :id3dce8cd4-a00a-4ca3-a7f1-0b98bbd9c125 ;
+  <http://data.posccaesar.org/tpl/hasFunctionPlaceClass> qn3:id4e438b8e-d723-4784-b261-af2a8a905493 ;
+  <http://data.posccaesar.org/tpl/hasProductClass> qn2:id_2051TG2A2B21BE1 ;
+.
+:idec14322c-5d9c-4f1d-9690-9100513decca
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDescriptionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDescribed> qn3:id4cdef6e6-b663-4988-aa7e-b15abef887c7 ;
+  <http://data.posccaesar.org/tpl/hasDescriptionType> pcardl:R-ea7087c4-3149-4b75-a7db-aff7b7e5e6af ;
+  <http://data.posccaesar.org/tpl/hasDescriptor> :idf4171242-ebab-44bd-9138-cbaaa391cec0 ;
+.
+:idecd56ffa-bf4c-45be-9029-f5336b400ba4
+  rdf:type dm:ClassOfArrangedIndividual ;
+.
+:idf4171242-ebab-44bd-9138-cbaaa391cec0
+  rdf:type pcardl:R-bd9e51e1-7182-421d-887e-e5cb37e34653 ;
+  rdf:type dm:ClassOfInformationRepresentation ;
+  rdfs:label "RFQ-001-Repl" ;
+.
+qn3:id004899d0-83b0-4043-9f15-89fbd36d53ab
+  rdf:type <http://data.posccaesar.org/tpl/CompositionOfClassOfInformationRepresentation> ;
+  <http://data.posccaesar.org/tpl/hasPart> qn3:id345ed174-9664-4607-9b8d-01e1beec2a58 ;
+  <http://data.posccaesar.org/tpl/hasWhole> qn3:id9a7f09fa-b99c-4c96-8111-6fb015c07f0b ;
+.
+qn3:id0048a001-03e9-47a8-bfe3-be7c09b840ad
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id3c391e4d-ccac-470c-94d9-007d472939dd ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:R-1ea100f5-e301-4528-bc51-9ab95b73d5f5 ;
+.
+qn3:id031053e7-eb48-4ab8-b9d4-c881d020ce24
+  rdf:type pcardl:R-a3107083-c97f-458d-aa24-d3785a0a1835 ;
+  rdf:type dm:ClassOfInformationRepresentation ;
+  rdfs:label "6" ;
+.
+qn3:id036b9be9-b958-4c13-8c49-2b729525f1a7
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369674 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id8a809311-6c68-4f50-992a-bed8c4265a0c ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1322684 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "95.0" ;
+.
+qn3:id03d378f0-5f5f-4ed1-a493-23917fa530bc
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id3a220838-4e96-4f7d-bee5-9af18715a788 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:idc487ca08-ddf2-4fb8-b836-8ec06ee88098 ;
+.
+qn3:id057ceff9-8b74-442c-b666-ed8c2a53a90f
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDefinitionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDefined> qn3:ida84aa2b7-25ee-45ea-a777-6422c78fd15d ;
+  <http://data.posccaesar.org/tpl/hasDefinition> qn3:idfd27c5c8-d9b5-4cbd-88c6-92a8abeef820 ;
+  <http://data.posccaesar.org/tpl/hasDefinitionType> pcardl:R-67680ea6-21d0-4951-baec-de09bbe4f41d ;
+.
+qn3:id09997d6b-471c-4b07-84ea-70c23272bc58
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "S_R420-PT-6505" ;
+  rdfs:subClassOf pcardl:RDS13026796 ;
+.
+qn3:id0a1a0cbd-ede5-4103-8b31-7aa4d39cd7fd
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "PE_R420-PT-5153" ;
+  rdfs:subClassOf pcardl:RDS462104 ;
+.
+qn3:id0a3425fb-4fc9-47c4-8070-5a70aae74c9a
+  rdf:type pcardl:R-c898dddf-932e-4216-bf99-0f40df3847f4 ;
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "CO_R420-PT-6505" ;
+  rdfs:subClassOf pcardl:RDS743399 ;
+.
+qn3:id0b178036-5b6e-44b2-b75a-089d6d5379b9
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfContainmentDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfContained> qn3:id8a809311-6c68-4f50-992a-bed8c4265a0c ;
+  <http://data.posccaesar.org/tpl/hasClassOfContainer> qn3:idc487ca08-ddf2-4fb8-b836-8ec06ee88098 ;
+.
+qn3:id0bfb47a6-c99e-47d6-a0ee-edeace7d49c6
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfParticipationDefinition> ;
+  <http://data.posccaesar.org/tpl/hasActivityType> qn3:id73ce4ff8-f31d-48e3-b384-ec357cbd8a69 ;
+  <http://data.posccaesar.org/tpl/hasParticipantRole> pcardl:R-d2f7bbdf-0314-417b-b50b-b4fa4b6cd897 ;
+  <http://data.posccaesar.org/tpl/hasParticipantType> qn3:id3c391e4d-ccac-470c-94d9-007d472939dd ;
+.
+qn3:id0d0654af-6447-4097-a9fa-2b99f229b7c8
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:idd7008514-7fab-45e9-976a-1c0bbfc526e0 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:ida84aa2b7-25ee-45ea-a777-6422c78fd15d ;
+.
+qn3:id0d507efd-3291-4ef3-abcf-45afea0bd2e2
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDefinitionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDefined> qn3:id688adf86-65f0-40bc-875b-bc0af9b96e38 ;
+  <http://data.posccaesar.org/tpl/hasDefinition> qn3:id345ed174-9664-4607-9b8d-01e1beec2a58 ;
+  <http://data.posccaesar.org/tpl/hasDefinitionType> pcardl:R-67680ea6-21d0-4951-baec-de09bbe4f41d ;
+.
+qn3:id0d91bced-cb28-4e61-88c3-c26d8d2acdb1
+  rdf:type <http://data.posccaesar.org/tpl/CompositionOfClassOfInformationRepresentation> ;
+  <http://data.posccaesar.org/tpl/hasPart> qn3:id1f4af87e-a3ac-44d6-b05f-ca737bc2fe11 ;
+  <http://data.posccaesar.org/tpl/hasWhole> qn3:id9a7f09fa-b99c-4c96-8111-6fb015c07f0b ;
+.
+qn3:id105cf5b6-91b5-4532-a167-34e812950da0
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id88dcb730-067c-4fbe-a35c-dff51d240e95 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:idc487ca08-ddf2-4fb8-b836-8ec06ee88098 ;
+.
+qn3:id1186a9fd-9bcd-4091-b681-3cbc750896c8
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithBoundingValues> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:R-172326ab-22d4-4ba0-be6e-f2f4890e8185 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:idc487ca08-ddf2-4fb8-b836-8ec06ee88098 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valLowerBound> "0" ;
+  <http://data.posccaesar.org/tpl/valUpperBound> "30.0" ;
+.
+qn3:id1212914d-eac8-44ba-ba62-d56fd44e62cf
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDefinitionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDefined> qn3:id7493b3a1-c314-4fad-ae1d-09b97bfc8295 ;
+  <http://data.posccaesar.org/tpl/hasDefinition> qn3:idd3b2b470-de7a-4d91-b8a7-0486d911373e ;
+  <http://data.posccaesar.org/tpl/hasDefinitionType> pcardl:R-67680ea6-21d0-4951-baec-de09bbe4f41d ;
+.
+qn3:id16dcfe27-2387-4d84-85bc-126cbfc7c336
+  rdf:type dm:FunctionalPhysicalObject ;
+  rdfs:label "R420-PT-6503" ;
+.
+qn3:id16fb7efc-4cef-4d5f-b886-9f6780a19753
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id88dcb730-067c-4fbe-a35c-dff51d240e95 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id0a3425fb-4fc9-47c4-8070-5a70aae74c9a ;
+.
+qn3:id1a34745f-ba45-4d7c-aa85-9b75d4f6af7a
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:idbf575ffc-6626-4a9e-8e0a-af7b3bc2a014 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS429389 ;
+.
+qn3:id1b1ae18d-1d62-4ca5-9b2a-bfd417c027bb
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "S_R420-PT-5152" ;
+  rdfs:subClassOf pcardl:RDS13026796 ;
+.
+qn3:id1cc809c0-acf2-4498-89d7-fc5c0a1ae85f
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369674 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id1b1ae18d-1d62-4ca5-9b2a-bfd417c027bb ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1322684 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "95.0" ;
+.
+qn3:id1d6a5918-2c39-4dd9-94b0-e5cefa7dfc14
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id88dcb730-067c-4fbe-a35c-dff51d240e95 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id756db915-b2f0-45a3-9ec8-32991241767e ;
+.
+qn3:id1f4af87e-a3ac-44d6-b05f-ca737bc2fe11
+  rdf:type pcardl:R-a3107083-c97f-458d-aa24-d3785a0a1835 ;
+  rdf:type dm:ClassOfInformationRepresentation ;
+  rdfs:label "10" ;
+.
+qn3:id1fa898df-8179-4e26-b1e5-0d47631406c4
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:idd7008514-7fab-45e9-976a-1c0bbfc526e0 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id4e438b8e-d723-4784-b261-af2a8a905493 ;
+.
+qn3:id20e31fac-10ef-4657-800b-3ff815cc3aeb
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:idae3d8a1b-54e2-4d28-baea-0f25d9a47afb ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS429389 ;
+.
+qn3:id21dda9f1-9df8-41df-a737-9d23c59a9063
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:idd7008514-7fab-45e9-976a-1c0bbfc526e0 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:idc487ca08-ddf2-4fb8-b836-8ec06ee88098 ;
+.
+qn3:id249f46a1-cfa7-4c98-9403-a03bd9832004
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfContainmentDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfContained> qn3:id1b1ae18d-1d62-4ca5-9b2a-bfd417c027bb ;
+  <http://data.posccaesar.org/tpl/hasClassOfContainer> qn3:ida84aa2b7-25ee-45ea-a777-6422c78fd15d ;
+.
+qn3:id251a9fbb-579a-443b-955b-b41f9b829499
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithBoundingValues> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:R-172326ab-22d4-4ba0-be6e-f2f4890e8185 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id688adf86-65f0-40bc-875b-bc0af9b96e38 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valLowerBound> "0" ;
+  <http://data.posccaesar.org/tpl/valUpperBound> "30.0" ;
+.
+qn3:id270db88f-1213-4dca-93b4-17f011a5160e
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDefinitionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDefined> qn3:id0a3425fb-4fc9-47c4-8070-5a70aae74c9a ;
+  <http://data.posccaesar.org/tpl/hasDefinition> qn3:id1f4af87e-a3ac-44d6-b05f-ca737bc2fe11 ;
+  <http://data.posccaesar.org/tpl/hasDefinitionType> pcardl:R-67680ea6-21d0-4951-baec-de09bbe4f41d ;
+.
+qn3:id276c3308-6c90-4952-83e7-401783bc0d2a
+  rdf:type pcardl:R-a3107083-c97f-458d-aa24-d3785a0a1835 ;
+  rdf:type dm:ClassOfInformationRepresentation ;
+  rdfs:label "4" ;
+.
+qn3:id29896cda-feb9-4152-9d43-57286146e353
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "PE_R420-PT-6504" ;
+  rdfs:subClassOf pcardl:RDS462104 ;
+.
+qn3:id2a608e39-6714-468f-baa6-9c0d865b6452
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedIdentificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasIdentificationType> pcardl:R-0d8da6d3-bf11-4e17-bdeb-fcfcbeb32490 ;
+  <http://data.posccaesar.org/tpl/hasIdentified> qn3:id9fa6aa30-11b2-46ce-b739-36bf392739ea ;
+  <http://data.posccaesar.org/tpl/valIdentifier> "R420-PT-5156" ;
+.
+qn3:id2c04234e-4ee4-4a8c-8111-e4e00295289a
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369674 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id549a97fb-3f20-4866-95f7-03f033e58134 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1322684 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "46.0" ;
+.
+qn3:id2d1334ac-9164-48a9-8e46-e58535abb934
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id7a53f892-2c7a-42ba-9f01-0cd3965a3839 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:R-1ea100f5-e301-4528-bc51-9ab95b73d5f5 ;
+.
+qn3:id2f0dcc6f-cc01-4a9f-9172-e6ac00f43110
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id88dcb730-067c-4fbe-a35c-dff51d240e95 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id7a53f892-2c7a-42ba-9f01-0cd3965a3839 ;
+.
+qn3:id2f2e9d7c-1bae-4863-8aa7-9665809f3c33
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationByCompoundType> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id6c604657-df1b-4acf-beff-c9d365fda9ab ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS472229 ;
+.
+qn3:id324f68df-d8b9-4510-b946-7beb0667ab1e
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369629 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id09997d6b-471c-4b07-84ea-70c23272bc58 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "10.0" ;
+.
+qn3:id340bfeeb-d2cf-4eae-92d6-b80d3617668c
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id88dcb730-067c-4fbe-a35c-dff51d240e95 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:ida84aa2b7-25ee-45ea-a777-6422c78fd15d ;
+.
+qn3:id345ed174-9664-4607-9b8d-01e1beec2a58
+  rdf:type pcardl:R-a3107083-c97f-458d-aa24-d3785a0a1835 ;
+  rdf:type dm:ClassOfInformationRepresentation ;
+  rdfs:label "2" ;
+.
+qn3:id3492d5d6-fca4-4d4e-90d1-a8c84e56b6b3
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:idc50d51f3-67e6-4a5d-be72-bec9a5e9fe68 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id756db915-b2f0-45a3-9ec8-32991241767e ;
+.
+qn3:id35ad40fe-cf73-4969-beda-4b892326e9ed
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id3a220838-4e96-4f7d-bee5-9af18715a788 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id0a3425fb-4fc9-47c4-8070-5a70aae74c9a ;
+.
+qn3:id35ce1754-3e21-4a72-95b1-8a67fd680791
+  rdf:type <http://data.posccaesar.org/tpl/ClassificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasClassified> qn3:id5c4d110e-bce6-4cbb-a8bf-a80130117ee3 ;
+  <http://data.posccaesar.org/tpl/hasClassifier> qn3:id4e438b8e-d723-4784-b261-af2a8a905493 ;
+.
+qn3:id3a220838-4e96-4f7d-bee5-9af18715a788
+  rdf:type dm:ClassOfArrangedIndividual ;
+  rdfs:subClassOf pcardl:RDS1442382761 ;
+.
+qn3:id3a9b161b-af78-4dca-ba0f-0669a171bd74
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfParticipationDefinition> ;
+  <http://data.posccaesar.org/tpl/hasActivityType> qn3:id73ce4ff8-f31d-48e3-b384-ec357cbd8a69 ;
+  <http://data.posccaesar.org/tpl/hasParticipantRole> pcardl:R-d2f7bbdf-0314-417b-b50b-b4fa4b6cd897 ;
+  <http://data.posccaesar.org/tpl/hasParticipantType> qn3:id756db915-b2f0-45a3-9ec8-32991241767e ;
+.
+qn3:id3b2a3c18-798f-4e1e-a8ca-2a9c0ddbe773
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id88dcb730-067c-4fbe-a35c-dff51d240e95 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id4e438b8e-d723-4784-b261-af2a8a905493 ;
+.
+qn3:id3c391e4d-ccac-470c-94d9-007d472939dd
+  rdf:type pcardl:R-c898dddf-932e-4216-bf99-0f40df3847f4 ;
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "CO_R420-PT-6502" ;
+  rdfs:subClassOf pcardl:RDS743399 ;
+.
+qn3:id3cd60b41-c3e3-461f-a291-69d56a698576
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "S_R420-PT-6501" ;
+  rdfs:subClassOf pcardl:RDS13026796 ;
+.
+qn3:id3d3fdd69-2429-438d-abf5-20b9c45fe6dc
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationByCompoundType> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:idd7008514-7fab-45e9-976a-1c0bbfc526e0 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS480059 ;
+.
+qn3:id40387e7c-1068-4a26-85ef-f850d0453292
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:idae3d8a1b-54e2-4d28-baea-0f25d9a47afb ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id0a3425fb-4fc9-47c4-8070-5a70aae74c9a ;
+.
+qn3:id41297031-6b5b-422e-8954-19035cb3af1c
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:ida84aa2b7-25ee-45ea-a777-6422c78fd15d ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:R-1ea100f5-e301-4528-bc51-9ab95b73d5f5 ;
+.
+qn3:id4151d0df-f557-43ae-887a-451cc4c4f5bb
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDefinitionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDefined> qn3:id7a53f892-2c7a-42ba-9f01-0cd3965a3839 ;
+  <http://data.posccaesar.org/tpl/hasDefinition> qn3:idb178fdd9-6b1e-4cf3-a0f7-cea3ecdd59d7 ;
+  <http://data.posccaesar.org/tpl/hasDefinitionType> pcardl:R-67680ea6-21d0-4951-baec-de09bbe4f41d ;
+.
+qn3:id44a53abb-dbc5-48d6-b9d4-79a41bbef26f
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfContainmentDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfContained> qn3:id5f6f071a-28b3-4d89-a12d-0c16f730a2f9 ;
+  <http://data.posccaesar.org/tpl/hasClassOfContainer> qn3:id7a53f892-2c7a-42ba-9f01-0cd3965a3839 ;
+.
+qn3:id47f4cdc1-7787-47ad-b527-1dafa3c2f43b
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369674 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:idf9f85b6f-74ee-4d09-949a-20acf3728368 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1322684 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "95.0" ;
+.
+qn3:id48bec059-f5bd-4d72-b53b-614b71fca03c
+  rdf:type <http://data.posccaesar.org/tpl/CompositionOfClassOfInformationRepresentation> ;
+  <http://data.posccaesar.org/tpl/hasPart> qn3:idb178fdd9-6b1e-4cf3-a0f7-cea3ecdd59d7 ;
+  <http://data.posccaesar.org/tpl/hasWhole> qn3:id9a7f09fa-b99c-4c96-8111-6fb015c07f0b ;
+.
+qn3:id4a0c7df9-2a92-43c5-90a6-7bfdd5755009
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369629 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id549a97fb-3f20-4866-95f7-03f033e58134 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "2.0" ;
+.
+qn3:id4a264642-0e8e-472e-96c8-5e9157c6690d
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:idd7008514-7fab-45e9-976a-1c0bbfc526e0 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id756db915-b2f0-45a3-9ec8-32991241767e ;
+.
+qn3:id4b681403-b01b-44d8-8ef5-7525e73ace02
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedIdentificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasIdentificationType> pcardl:R-0d8da6d3-bf11-4e17-bdeb-fcfcbeb32490 ;
+  <http://data.posccaesar.org/tpl/hasIdentified> qn3:idbf2630ed-c635-487a-baa8-16768924cafb ;
+  <http://data.posccaesar.org/tpl/valIdentifier> "R420-PT-5153" ;
+.
+qn3:id4c79c107-114b-4394-8715-b62f01f48bb6
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id4fa229b9-ccf1-4512-a4fa-79ca444b1801 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS429389 ;
+.
+qn3:id4c8699cd-5d17-4a0f-a949-9ca74a095f4d
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id0a3425fb-4fc9-47c4-8070-5a70aae74c9a ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:R-1ea100f5-e301-4528-bc51-9ab95b73d5f5 ;
+.
+qn3:id4cdef6e6-b663-4988-aa7e-b15abef887c7
+  rdf:type pcardl:R-c898dddf-932e-4216-bf99-0f40df3847f4 ;
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "CO_R420-PT-6501" ;
+  rdfs:subClassOf pcardl:RDS743399 ;
+.
+qn3:id4d72cd5b-b7d2-4649-80f4-d947dc3e2ced
+  rdf:type pcardl:R-a3107083-c97f-458d-aa24-d3785a0a1835 ;
+  rdf:type dm:ClassOfInformationRepresentation ;
+  rdfs:label "9" ;
+.
+qn3:id4e1aac25-4436-43db-88a3-72ba5337aa7d
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithBoundingValues> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:R-172326ab-22d4-4ba0-be6e-f2f4890e8185 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id7a53f892-2c7a-42ba-9f01-0cd3965a3839 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valLowerBound> "0" ;
+  <http://data.posccaesar.org/tpl/valUpperBound> "30.0" ;
+.
+qn3:id4e438b8e-d723-4784-b261-af2a8a905493
+  rdf:type pcardl:R-c898dddf-932e-4216-bf99-0f40df3847f4 ;
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "CO_R420-PT-6504" ;
+  rdfs:subClassOf pcardl:RDS743399 ;
+.
+qn3:id4fa229b9-ccf1-4512-a4fa-79ca444b1801
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "PE_R420-PT-6503" ;
+  rdfs:subClassOf pcardl:RDS462104 ;
+.
+qn3:id50853d68-edc1-4c75-9d51-d148d0ee718b
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:idc487ca08-ddf2-4fb8-b836-8ec06ee88098 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:R-1ea100f5-e301-4528-bc51-9ab95b73d5f5 ;
+.
+qn3:id51c4a7e9-cbeb-49f1-81a0-9a76acc2b29b
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationByCompoundType> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:idae3d8a1b-54e2-4d28-baea-0f25d9a47afb ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS472229 ;
+.
+qn3:id531f3c97-e6b7-47eb-b5d2-c39ad641abc0
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "PE_R420-PT-5154" ;
+  rdfs:subClassOf pcardl:RDS462104 ;
+.
+qn3:id53e55be9-cb96-495b-8c4c-08df4a3b09b1
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationByCompoundType> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id4fa229b9-ccf1-4512-a4fa-79ca444b1801 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS472229 ;
+.
+qn3:id549a97fb-3f20-4866-95f7-03f033e58134
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "S_R420-PT-6503" ;
+  rdfs:subClassOf pcardl:RDS13026796 ;
+.
+qn3:id54c587d3-1628-4ad5-b689-c5f79e85329c
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id3a220838-4e96-4f7d-bee5-9af18715a788 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:ida84aa2b7-25ee-45ea-a777-6422c78fd15d ;
+.
+qn3:id55d6fc2a-d520-432d-96a0-33eece6f5dd4
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithBoundingValues> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:R-172326ab-22d4-4ba0-be6e-f2f4890e8185 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id3c391e4d-ccac-470c-94d9-007d472939dd ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valLowerBound> "0" ;
+  <http://data.posccaesar.org/tpl/valUpperBound> "3.0" ;
+.
+qn3:id5637556a-ff7b-477e-9d0d-7e8ad49f571f
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:ida5322d43-efcf-453a-8457-e081d097b95b ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS429389 ;
+.
+qn3:id5696f533-3e50-4139-819f-0c9932dd6578
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id6c604657-df1b-4acf-beff-c9d365fda9ab ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS429389 ;
+.
+qn3:id576bced1-2c3c-47ef-b896-0dd390294063
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:idd7008514-7fab-45e9-976a-1c0bbfc526e0 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id0a3425fb-4fc9-47c4-8070-5a70aae74c9a ;
+.
+qn3:id5a834444-41ba-494b-b1ac-86e54e784369
+  rdf:type <http://data.posccaesar.org/tpl/CompositionOfClassOfInformationRepresentation> ;
+  <http://data.posccaesar.org/tpl/hasPart> qn3:ida11da807-4f22-4aa1-97c9-86d018a2d960 ;
+  <http://data.posccaesar.org/tpl/hasWhole> qn3:id9a7f09fa-b99c-4c96-8111-6fb015c07f0b ;
+.
+qn3:id5abb902c-7da3-428b-90b4-182fd0f1eab8
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithBoundingValues> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:R-172326ab-22d4-4ba0-be6e-f2f4890e8185 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id4cdef6e6-b663-4988-aa7e-b15abef887c7 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valLowerBound> "0" ;
+  <http://data.posccaesar.org/tpl/valUpperBound> "3.0" ;
+.
+qn3:id5ac70ed2-e50f-4c4a-b76b-544037300f5f
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedIdentificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasIdentificationType> pcardl:R-0d8da6d3-bf11-4e17-bdeb-fcfcbeb32490 ;
+  <http://data.posccaesar.org/tpl/hasIdentified> qn3:idd3465a1a-fde6-4dce-90d6-fb5e69b5d477 ;
+  <http://data.posccaesar.org/tpl/valIdentifier> "R420-PT-6505" ;
+.
+qn3:id5ba1b39f-a4f5-4b8f-9103-42951ac13523
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationByCompoundType> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:idbf575ffc-6626-4a9e-8e0a-af7b3bc2a014 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS472229 ;
+.
+qn3:id5c4d110e-bce6-4cbb-a8bf-a80130117ee3
+  rdf:type dm:FunctionalPhysicalObject ;
+  rdfs:label "R420-PT-6504" ;
+.
+qn3:id5ce91d7a-9afa-4b9e-8d13-b8373dccc451
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id756db915-b2f0-45a3-9ec8-32991241767e ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:R-1ea100f5-e301-4528-bc51-9ab95b73d5f5 ;
+.
+qn3:id5ead4ae4-91ee-433f-96f0-19e2dcf8b297
+  rdf:type pcardl:R-a3107083-c97f-458d-aa24-d3785a0a1835 ;
+  rdf:type dm:ClassOfInformationRepresentation ;
+  rdfs:label "7" ;
+.
+qn3:id5ecaf1f7-2f91-43b4-8c55-351cfe8ac6f7
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id6f7c2b79-eadf-49a4-a4f8-91e6d5b88dd7 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS429389 ;
+.
+qn3:id5f6f071a-28b3-4d89-a12d-0c16f730a2f9
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "S_R420-PT-5154" ;
+  rdfs:subClassOf pcardl:RDS13026796 ;
+.
+qn3:id61479b57-a9dc-436e-b2ac-b569c4754fcc
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfParticipationDefinition> ;
+  <http://data.posccaesar.org/tpl/hasActivityType> qn3:id73ce4ff8-f31d-48e3-b384-ec357cbd8a69 ;
+  <http://data.posccaesar.org/tpl/hasParticipantRole> pcardl:R-d2f7bbdf-0314-417b-b50b-b4fa4b6cd897 ;
+  <http://data.posccaesar.org/tpl/hasParticipantType> qn3:idc487ca08-ddf2-4fb8-b836-8ec06ee88098 ;
+.
+qn3:id61d7afb6-8bbc-4303-a5c1-8702ff82198b
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id3a220838-4e96-4f7d-bee5-9af18715a788 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id4cdef6e6-b663-4988-aa7e-b15abef887c7 ;
+.
+qn3:id630a0715-e282-4d4d-9ef3-1930063a402e
+  rdf:type <http://data.posccaesar.org/tpl/CompositionOfClassOfInformationRepresentation> ;
+  <http://data.posccaesar.org/tpl/hasPart> qn3:id031053e7-eb48-4ab8-b9d4-c881d020ce24 ;
+  <http://data.posccaesar.org/tpl/hasWhole> qn3:id9a7f09fa-b99c-4c96-8111-6fb015c07f0b ;
+.
+qn3:id63bf4b37-3388-4b42-a0f0-d8b1bc006f07
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDefinitionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDefined> qn3:id3c391e4d-ccac-470c-94d9-007d472939dd ;
+  <http://data.posccaesar.org/tpl/hasDefinition> qn3:id5ead4ae4-91ee-433f-96f0-19e2dcf8b297 ;
+  <http://data.posccaesar.org/tpl/hasDefinitionType> pcardl:R-67680ea6-21d0-4951-baec-de09bbe4f41d ;
+.
+qn3:id645ac197-1d91-4458-9158-551dc92c4133
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369629 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id5f6f071a-28b3-4d89-a12d-0c16f730a2f9 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "19.2" ;
+.
+qn3:id65175a90-ba14-4b4f-ba67-9b07f5e7e38a
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id3a220838-4e96-4f7d-bee5-9af18715a788 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id688adf86-65f0-40bc-875b-bc0af9b96e38 ;
+.
+qn3:id66bc81db-d669-4fcc-bf14-84dd02c733b0
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id531f3c97-e6b7-47eb-b5d2-c39ad641abc0 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id7a53f892-2c7a-42ba-9f01-0cd3965a3839 ;
+.
+qn3:id66bfc305-3648-4241-a08d-561da3a21d69
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationByCompoundType> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id0a1a0cbd-ede5-4103-8b31-7aa4d39cd7fd ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS472229 ;
+.
+qn3:id688adf86-65f0-40bc-875b-bc0af9b96e38
+  rdf:type pcardl:R-c898dddf-932e-4216-bf99-0f40df3847f4 ;
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "CO_R420-PT-5153" ;
+  rdfs:subClassOf pcardl:RDS743399 ;
+.
+qn3:id699706ed-51bb-4c88-9e13-cb2a1c7c9a46
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedIdentificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasIdentificationType> pcardl:R-0d8da6d3-bf11-4e17-bdeb-fcfcbeb32490 ;
+  <http://data.posccaesar.org/tpl/hasIdentified> qn3:idb548925b-2898-4875-83a6-24ace88db6e8 ;
+  <http://data.posccaesar.org/tpl/valIdentifier> "R420-PT-5154" ;
+.
+qn3:id6c604657-df1b-4acf-beff-c9d365fda9ab
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "PE_R420-PT-5152" ;
+  rdfs:subClassOf pcardl:RDS462104 ;
+.
+qn3:id6d01dc44-811c-4b67-9c27-a529874abd21
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369629 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:idef97e618-ef9d-4d7d-9224-fa530855dd42 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "19.2" ;
+.
+qn3:id6f7c2b79-eadf-49a4-a4f8-91e6d5b88dd7
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "PE_R420-PT-6502" ;
+  rdfs:subClassOf pcardl:RDS462104 ;
+.
+qn3:id70653837-6780-42d9-8c9e-7964cb39410c
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithBoundingValues> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:R-172326ab-22d4-4ba0-be6e-f2f4890e8185 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id7493b3a1-c314-4fad-ae1d-09b97bfc8295 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valLowerBound> "0" ;
+  <http://data.posccaesar.org/tpl/valUpperBound> "3.0" ;
+.
+qn3:id73ce4ff8-f31d-48e3-b384-ec357cbd8a69
+  rdf:type dm:ClassOfActivity ;
+  rdfs:subClassOf pcardl:RDS9652247 ;
+.
+qn3:id7493b3a1-c314-4fad-ae1d-09b97bfc8295
+  rdf:type pcardl:R-c898dddf-932e-4216-bf99-0f40df3847f4 ;
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "CO_R420-PT-6503" ;
+  rdfs:subClassOf pcardl:RDS327239 ;
+.
+qn3:id756db915-b2f0-45a3-9ec8-32991241767e
+  rdf:type pcardl:R-c898dddf-932e-4216-bf99-0f40df3847f4 ;
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "CO_R420-PT-5155" ;
+  rdfs:subClassOf pcardl:RDS743399 ;
+.
+qn3:id75a52a3d-b322-4340-a0bc-1fde1a27d270
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithBoundingValues> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:R-172326ab-22d4-4ba0-be6e-f2f4890e8185 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:ida84aa2b7-25ee-45ea-a777-6422c78fd15d ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valLowerBound> "0" ;
+  <http://data.posccaesar.org/tpl/valUpperBound> "30.0" ;
+.
+qn3:id763760fc-516f-406f-aa52-0baab6ce77c1
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id7493b3a1-c314-4fad-ae1d-09b97bfc8295 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:R-1ea100f5-e301-4528-bc51-9ab95b73d5f5 ;
+.
+qn3:id7681b385-5b6d-4e31-8ddf-0de21854e7ba
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfContainmentDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfContained> qn3:id549a97fb-3f20-4866-95f7-03f033e58134 ;
+  <http://data.posccaesar.org/tpl/hasClassOfContainer> qn3:id7493b3a1-c314-4fad-ae1d-09b97bfc8295 ;
+.
+qn3:id7687b22f-44c2-4232-b1f0-25de85c61e08
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationByCompoundType> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:ida5322d43-efcf-453a-8457-e081d097b95b ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS472229 ;
+.
+qn3:id796ffd77-7d05-451f-9b57-6d6331e5fc0b
+  rdf:type <http://data.posccaesar.org/tpl/ClassificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasClassified> qn3:idf8d35fe3-0b13-467f-a502-4f5a13df67b4 ;
+  <http://data.posccaesar.org/tpl/hasClassifier> qn3:id4cdef6e6-b663-4988-aa7e-b15abef887c7 ;
+.
+qn3:id7a53f892-2c7a-42ba-9f01-0cd3965a3839
+  rdf:type pcardl:R-c898dddf-932e-4216-bf99-0f40df3847f4 ;
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "CO_R420-PT-5154" ;
+  rdfs:subClassOf pcardl:RDS743399 ;
+.
+qn3:id7b2ba8e7-c608-4a93-8d13-032b9d9f72d2
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id4e438b8e-d723-4784-b261-af2a8a905493 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:R-1ea100f5-e301-4528-bc51-9ab95b73d5f5 ;
+.
+qn3:id7b3a9ea9-14d6-4f3a-b79a-bd72a5d45033
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id4cdef6e6-b663-4988-aa7e-b15abef887c7 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:R-1ea100f5-e301-4528-bc51-9ab95b73d5f5 ;
+.
+qn3:id81021f6c-0e2c-44df-9926-ba1e2b636454
+  rdf:type dm:FunctionalPhysicalObject ;
+  rdfs:label "R420-PT-5152" ;
+.
+qn3:id81626644-80aa-4a0f-92cc-923354f56ff8
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithBoundingValues> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:R-172326ab-22d4-4ba0-be6e-f2f4890e8185 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id756db915-b2f0-45a3-9ec8-32991241767e ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valLowerBound> "0" ;
+  <http://data.posccaesar.org/tpl/valUpperBound> "30.0" ;
+.
+qn3:id81d7d302-e012-4a04-9199-d17f2719deb9
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationByCompoundType> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:idc50d51f3-67e6-4a5d-be72-bec9a5e9fe68 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS472229 ;
+.
+qn3:id8257b053-877e-4f3e-827d-e4451cba4c7f
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:idad9bcef5-0822-4a5a-b5d4-ddfafebda2b2 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:R-9589eb0d-8276-40b8-9ada-8d79cf1c7101 ;
+.
+qn3:id8263a0ee-1d02-4283-99f0-f9da81e0feae
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369674 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id09997d6b-471c-4b07-84ea-70c23272bc58 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1322684 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "46.0" ;
+.
+qn3:id82bc52cf-8dcf-4347-90ed-9233b8932434
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDefinitionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDefined> qn3:id4e438b8e-d723-4784-b261-af2a8a905493 ;
+  <http://data.posccaesar.org/tpl/hasDefinition> qn3:id4d72cd5b-b7d2-4649-80f4-d947dc3e2ced ;
+  <http://data.posccaesar.org/tpl/hasDefinitionType> pcardl:R-67680ea6-21d0-4951-baec-de09bbe4f41d ;
+.
+qn3:id8367a1f7-c33e-4a98-8d4e-b0d45bbb9661
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369629 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id3cd60b41-c3e3-461f-a291-69d56a698576 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "2.0" ;
+.
+qn3:id84f37f1d-501c-47ba-a8d0-aa36e4ac6c20
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedIdentificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasIdentificationType> pcardl:R-0d8da6d3-bf11-4e17-bdeb-fcfcbeb32490 ;
+  <http://data.posccaesar.org/tpl/hasIdentified> qn3:id5c4d110e-bce6-4cbb-a8bf-a80130117ee3 ;
+  <http://data.posccaesar.org/tpl/valIdentifier> "R420-PT-6504" ;
+.
+qn3:id8526cfb1-91ba-4ac5-a390-907232fce214
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfParticipationDefinition> ;
+  <http://data.posccaesar.org/tpl/hasActivityType> qn3:id73ce4ff8-f31d-48e3-b384-ec357cbd8a69 ;
+  <http://data.posccaesar.org/tpl/hasParticipantRole> pcardl:R-d2f7bbdf-0314-417b-b50b-b4fa4b6cd897 ;
+  <http://data.posccaesar.org/tpl/hasParticipantType> qn3:id0a3425fb-4fc9-47c4-8070-5a70aae74c9a ;
+.
+qn3:id88dcb730-067c-4fbe-a35c-dff51d240e95
+  rdf:type dm:ClassOfArrangedIndividual ;
+  rdfs:subClassOf pcardl:RDS9551659 ;
+.
+qn3:id8a0722ce-3711-4f1e-949e-e091a7f7d226
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id88dcb730-067c-4fbe-a35c-dff51d240e95 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id4cdef6e6-b663-4988-aa7e-b15abef887c7 ;
+.
+qn3:id8a095510-67d5-47a2-acb2-7ff7f5bbc54d
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369674 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:idef97e618-ef9d-4d7d-9224-fa530855dd42 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1322684 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "95.0" ;
+.
+qn3:id8a809311-6c68-4f50-992a-bed8c4265a0c
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "S_R420-PT-5156" ;
+  rdfs:subClassOf pcardl:RDS13026796 ;
+.
+qn3:id8b518bc5-4e56-4938-bd67-ce63dc953d23
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfContainmentDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfContained> qn3:idef97e618-ef9d-4d7d-9224-fa530855dd42 ;
+  <http://data.posccaesar.org/tpl/hasClassOfContainer> qn3:id688adf86-65f0-40bc-875b-bc0af9b96e38 ;
+.
+qn3:id8f3062a3-0913-47b4-8245-55e9664bc448
+  rdf:type dm:FunctionalPhysicalObject ;
+  rdfs:label "R420-PT-5155" ;
+.
+qn3:id8f7674d2-b364-4de1-a501-f5d3fcc2f945
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedIdentificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasIdentificationType> pcardl:R-0d8da6d3-bf11-4e17-bdeb-fcfcbeb32490 ;
+  <http://data.posccaesar.org/tpl/hasIdentified> qn3:id8f3062a3-0913-47b4-8245-55e9664bc448 ;
+  <http://data.posccaesar.org/tpl/valIdentifier> "R420-PT-5155" ;
+.
+qn3:id91b549c8-9248-486c-a765-ef20b5fe92ff
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id6c604657-df1b-4acf-beff-c9d365fda9ab ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:ida84aa2b7-25ee-45ea-a777-6422c78fd15d ;
+.
+qn3:id93246e57-24e6-4bfa-a8cd-2e8afee4d165
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369674 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id3cd60b41-c3e3-461f-a291-69d56a698576 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1322684 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "46.0" ;
+.
+qn3:id93b7902a-3cd1-465b-a1b0-ae7fa7d997c9
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369629 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id8a809311-6c68-4f50-992a-bed8c4265a0c ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "19.2" ;
+.
+qn3:id96d787e8-485e-4281-b8e1-d8136c6b338a
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id4fa229b9-ccf1-4512-a4fa-79ca444b1801 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id7493b3a1-c314-4fad-ae1d-09b97bfc8295 ;
+.
+qn3:id96dfba38-4294-412d-96fa-af6c0d03f499
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:idd7008514-7fab-45e9-976a-1c0bbfc526e0 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id7493b3a1-c314-4fad-ae1d-09b97bfc8295 ;
+.
+qn3:id972f1879-fbe5-4079-a58b-eade312a7573
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id88dcb730-067c-4fbe-a35c-dff51d240e95 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id7493b3a1-c314-4fad-ae1d-09b97bfc8295 ;
+.
+qn3:id9992313f-44a0-4702-b19d-2bc0882b3de3
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfContainmentDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfContained> qn3:id3cd60b41-c3e3-461f-a291-69d56a698576 ;
+  <http://data.posccaesar.org/tpl/hasClassOfContainer> qn3:id4cdef6e6-b663-4988-aa7e-b15abef887c7 ;
+.
+qn3:id99fa41ea-d8cf-4f21-9b3b-21aac37a41a5
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id3a220838-4e96-4f7d-bee5-9af18715a788 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id756db915-b2f0-45a3-9ec8-32991241767e ;
+.
+qn3:id9a7f09fa-b99c-4c96-8111-6fb015c07f0b
+  rdf:type pcardl:R-4d2153f8-2b65-4bee-9efb-a2fcac12f284 ;
+  rdf:type dm:ClassOfInformationRepresentation ;
+  rdfs:label "RFQ-001" ;
+.
+qn3:id9aa7945a-755b-4eba-9446-9f15c6a003ee
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id29896cda-feb9-4152-9d43-57286146e353 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS429389 ;
+.
+qn3:id9d88f0c9-ca0a-4ede-a68c-e1b8ee447f63
+  rdf:type <http://data.posccaesar.org/tpl/CompositionOfClassOfInformationRepresentation> ;
+  <http://data.posccaesar.org/tpl/hasPart> qn3:id276c3308-6c90-4952-83e7-401783bc0d2a ;
+  <http://data.posccaesar.org/tpl/hasWhole> qn3:id9a7f09fa-b99c-4c96-8111-6fb015c07f0b ;
+.
+qn3:id9da6d206-4943-4b39-a406-fd68aca261c1
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369629 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:idf9f85b6f-74ee-4d09-949a-20acf3728368 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "19.2" ;
+.
+qn3:id9ed245f0-4d12-4a1c-9236-1e13bfadddd9
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369629 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:idb21dfa80-506d-4197-a9f8-06e30122f62e ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "2.0" ;
+.
+qn3:id9fa6aa30-11b2-46ce-b739-36bf392739ea
+  rdf:type dm:FunctionalPhysicalObject ;
+  rdfs:label "R420-PT-5156" ;
+.
+qn3:ida11da807-4f22-4aa1-97c9-86d018a2d960
+  rdf:type pcardl:R-a3107083-c97f-458d-aa24-d3785a0a1835 ;
+  rdf:type dm:ClassOfInformationRepresentation ;
+  rdfs:label "5" ;
+.
+qn3:ida14026d4-aca0-49ef-b1db-0ec7cac695fa
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedIdentificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasIdentificationType> pcardl:R-0d8da6d3-bf11-4e17-bdeb-fcfcbeb32490 ;
+  <http://data.posccaesar.org/tpl/hasIdentified> qn3:idf8d35fe3-0b13-467f-a502-4f5a13df67b4 ;
+  <http://data.posccaesar.org/tpl/valIdentifier> "R420-PT-6501" ;
+.
+qn3:ida1fe36e2-f66c-47e9-851e-43e1a6f99d95
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfParticipationDefinition> ;
+  <http://data.posccaesar.org/tpl/hasActivityType> qn3:id73ce4ff8-f31d-48e3-b384-ec357cbd8a69 ;
+  <http://data.posccaesar.org/tpl/hasParticipantRole> pcardl:R-d2f7bbdf-0314-417b-b50b-b4fa4b6cd897 ;
+  <http://data.posccaesar.org/tpl/hasParticipantType> qn3:id4e438b8e-d723-4784-b261-af2a8a905493 ;
+.
+qn3:ida3b818d9-4db4-47fb-87cb-5dc01a471c8f
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369629 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:ide9ef87ec-330d-446b-954d-f7ac7b9b1567 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "2.0" ;
+.
+qn3:ida3f49570-a7ad-43cd-a920-60be38779b03
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfParticipationDefinition> ;
+  <http://data.posccaesar.org/tpl/hasActivityType> qn3:id73ce4ff8-f31d-48e3-b384-ec357cbd8a69 ;
+  <http://data.posccaesar.org/tpl/hasParticipantRole> pcardl:R-d2f7bbdf-0314-417b-b50b-b4fa4b6cd897 ;
+  <http://data.posccaesar.org/tpl/hasParticipantType> qn3:id688adf86-65f0-40bc-875b-bc0af9b96e38 ;
+.
+qn3:ida5322d43-efcf-453a-8457-e081d097b95b
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "PE_R420-PT-6501" ;
+  rdfs:subClassOf pcardl:RDS462104 ;
+.
+qn3:ida6c75b31-c563-47cc-9810-18c59873ecb1
+  rdf:type <http://data.posccaesar.org/tpl/CompositionOfClassOfInformationRepresentation> ;
+  <http://data.posccaesar.org/tpl/hasPart> qn3:id4d72cd5b-b7d2-4649-80f4-d947dc3e2ced ;
+  <http://data.posccaesar.org/tpl/hasWhole> qn3:id9a7f09fa-b99c-4c96-8111-6fb015c07f0b ;
+.
+qn3:ida714241b-9a9e-44f8-8522-d3d3c2c62e49
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id531f3c97-e6b7-47eb-b5d2-c39ad641abc0 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS429389 ;
+.
+qn3:ida84aa2b7-25ee-45ea-a777-6422c78fd15d
+  rdf:type pcardl:R-c898dddf-932e-4216-bf99-0f40df3847f4 ;
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "CO_R420-PT-5152" ;
+  rdfs:subClassOf pcardl:RDS743399 ;
+.
+qn3:ida8924296-71f0-4cde-bddf-925c84494097
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id88dcb730-067c-4fbe-a35c-dff51d240e95 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id688adf86-65f0-40bc-875b-bc0af9b96e38 ;
+.
+qn3:ida9f6f6c0-3f3a-48ae-b49d-95dea1343243
+  rdf:type <http://data.posccaesar.org/tpl/ClassificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasClassified> qn3:id8f3062a3-0913-47b4-8245-55e9664bc448 ;
+  <http://data.posccaesar.org/tpl/hasClassifier> qn3:id756db915-b2f0-45a3-9ec8-32991241767e ;
+.
+qn3:idaac99e7c-8c59-4b29-a8ec-f2a46376d51e
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfParticipationDefinition> ;
+  <http://data.posccaesar.org/tpl/hasActivityType> qn3:id73ce4ff8-f31d-48e3-b384-ec357cbd8a69 ;
+  <http://data.posccaesar.org/tpl/hasParticipantRole> pcardl:R-d2f7bbdf-0314-417b-b50b-b4fa4b6cd897 ;
+  <http://data.posccaesar.org/tpl/hasParticipantType> qn3:id4cdef6e6-b663-4988-aa7e-b15abef887c7 ;
+.
+qn3:idad9bcef5-0822-4a5a-b5d4-ddfafebda2b2
+  rdf:type dm:ClassOfArrangedIndividual ;
+  rdfs:subClassOf pcardl:RDS337196911 ;
+.
+qn3:idadd655c7-b79f-4668-bacb-ea82026d5002
+  rdf:type <http://data.posccaesar.org/tpl/CompositionOfClassOfInformationRepresentation> ;
+  <http://data.posccaesar.org/tpl/hasPart> qn3:idd3b2b470-de7a-4d91-b8a7-0486d911373e ;
+  <http://data.posccaesar.org/tpl/hasWhole> qn3:id9a7f09fa-b99c-4c96-8111-6fb015c07f0b ;
+.
+qn3:idae3d8a1b-54e2-4d28-baea-0f25d9a47afb
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "PE_R420-PT-6505" ;
+  rdfs:subClassOf pcardl:RDS462104 ;
+.
+qn3:idafe14c59-b53d-43d3-a985-1a2d64818591
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDefinitionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDefined> qn3:id4cdef6e6-b663-4988-aa7e-b15abef887c7 ;
+  <http://data.posccaesar.org/tpl/hasDefinition> qn3:id031053e7-eb48-4ab8-b9d4-c881d020ce24 ;
+  <http://data.posccaesar.org/tpl/hasDefinitionType> pcardl:R-67680ea6-21d0-4951-baec-de09bbe4f41d ;
+.
+qn3:idb024dba9-c34c-48a9-9f55-8dce4b25da94
+  rdf:type <http://data.posccaesar.org/tpl/ClassificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasClassified> qn3:idd50d00e2-8697-4836-b4fa-803a3de2aea4 ;
+  <http://data.posccaesar.org/tpl/hasClassifier> qn3:id3c391e4d-ccac-470c-94d9-007d472939dd ;
+.
+qn3:idb178fdd9-6b1e-4cf3-a0f7-cea3ecdd59d7
+  rdf:type pcardl:R-a3107083-c97f-458d-aa24-d3785a0a1835 ;
+  rdf:type dm:ClassOfInformationRepresentation ;
+  rdfs:label "3" ;
+.
+qn3:idb1b2efd9-4105-4e33-80a6-250f441bd704
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id3a220838-4e96-4f7d-bee5-9af18715a788 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id7493b3a1-c314-4fad-ae1d-09b97bfc8295 ;
+.
+qn3:idb21dfa80-506d-4197-a9f8-06e30122f62e
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "S_R420-PT-6502" ;
+  rdfs:subClassOf pcardl:RDS13026796 ;
+.
+qn3:idb4f0df1d-0d97-4e7e-a193-851cf80fb688
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id88dcb730-067c-4fbe-a35c-dff51d240e95 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS1459162771 ;
+.
+qn3:idb548925b-2898-4875-83a6-24ace88db6e8
+  rdf:type dm:FunctionalPhysicalObject ;
+  rdfs:label "R420-PT-5154" ;
+.
+qn3:idb55aff50-a954-4e58-afae-326e7a6b7a8f
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationByCompoundType> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id6f7c2b79-eadf-49a4-a4f8-91e6d5b88dd7 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS472229 ;
+.
+qn3:idb903efeb-54f4-41f0-b214-1f2d4a84b39c
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationByCompoundType> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id29896cda-feb9-4152-9d43-57286146e353 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS472229 ;
+.
+qn3:idbb1a43f3-4e6b-4cd1-a9de-114e2c575407
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id29896cda-feb9-4152-9d43-57286146e353 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id4e438b8e-d723-4784-b261-af2a8a905493 ;
+.
+qn3:idbb2b58ce-7a71-4bdc-b023-9b95ebe5146e
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369629 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id1b1ae18d-1d62-4ca5-9b2a-bfd417c027bb ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "19.2" ;
+.
+qn3:idbc3eb681-6832-48c2-833f-9c55d0a6dd7e
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id3a220838-4e96-4f7d-bee5-9af18715a788 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id3c391e4d-ccac-470c-94d9-007d472939dd ;
+.
+qn3:idbed2ff73-58ce-4ee1-bd6a-4c0a7bf3766e
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfParticipationDefinition> ;
+  <http://data.posccaesar.org/tpl/hasActivityType> qn3:id73ce4ff8-f31d-48e3-b384-ec357cbd8a69 ;
+  <http://data.posccaesar.org/tpl/hasParticipantRole> pcardl:R-d2f7bbdf-0314-417b-b50b-b4fa4b6cd897 ;
+  <http://data.posccaesar.org/tpl/hasParticipantType> qn3:ida84aa2b7-25ee-45ea-a777-6422c78fd15d ;
+.
+qn3:idbf2630ed-c635-487a-baa8-16768924cafb
+  rdf:type dm:FunctionalPhysicalObject ;
+  rdfs:label "R420-PT-5153" ;
+.
+qn3:idbf575ffc-6626-4a9e-8e0a-af7b3bc2a014
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "PE_R420-PT-5156" ;
+  rdfs:subClassOf pcardl:RDS462104 ;
+.
+qn3:idbf6ba139-5b9b-4aad-a56f-7e963e94a2a5
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:idd7008514-7fab-45e9-976a-1c0bbfc526e0 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id688adf86-65f0-40bc-875b-bc0af9b96e38 ;
+.
+qn3:idc2263b15-25cc-4321-bc16-4d5e071f3710
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id3a220838-4e96-4f7d-bee5-9af18715a788 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id4e438b8e-d723-4784-b261-af2a8a905493 ;
+.
+qn3:idc487ca08-ddf2-4fb8-b836-8ec06ee88098
+  rdf:type pcardl:R-c898dddf-932e-4216-bf99-0f40df3847f4 ;
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "CO_R420-PT-5156" ;
+  rdfs:subClassOf pcardl:RDS743399 ;
+.
+qn3:idc50d51f3-67e6-4a5d-be72-bec9a5e9fe68
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "PE_R420-PT-5155" ;
+  rdfs:subClassOf pcardl:RDS462104 ;
+.
+qn3:idc5229ee5-e2df-442b-b268-63b0603ffccf
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:ida5322d43-efcf-453a-8457-e081d097b95b ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id4cdef6e6-b663-4988-aa7e-b15abef887c7 ;
+.
+qn3:idc5cdfba9-5a24-4324-b5ec-d4243b3685ae
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfParticipationDefinition> ;
+  <http://data.posccaesar.org/tpl/hasActivityType> qn3:id73ce4ff8-f31d-48e3-b384-ec357cbd8a69 ;
+  <http://data.posccaesar.org/tpl/hasParticipantRole> pcardl:R-d2f7bbdf-0314-417b-b50b-b4fa4b6cd897 ;
+  <http://data.posccaesar.org/tpl/hasParticipantType> qn3:id7a53f892-2c7a-42ba-9f01-0cd3965a3839 ;
+.
+qn3:idc7573274-b0f8-410d-a124-237ff12aabb4
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedIdentificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasIdentificationType> pcardl:R-0d8da6d3-bf11-4e17-bdeb-fcfcbeb32490 ;
+  <http://data.posccaesar.org/tpl/hasIdentified> qn3:idd50d00e2-8697-4836-b4fa-803a3de2aea4 ;
+  <http://data.posccaesar.org/tpl/valIdentifier> "R420-PT-6502" ;
+.
+qn3:idc96b38c0-4bf5-49c3-8f22-0a7f6d42c574
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfContainmentDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfContained> qn3:idb21dfa80-506d-4197-a9f8-06e30122f62e ;
+  <http://data.posccaesar.org/tpl/hasClassOfContainer> qn3:id3c391e4d-ccac-470c-94d9-007d472939dd ;
+.
+qn3:idca24853d-b03c-4883-b3ce-e8595dce2a5b
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfContainmentDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfContained> qn3:ide9ef87ec-330d-446b-954d-f7ac7b9b1567 ;
+  <http://data.posccaesar.org/tpl/hasClassOfContainer> qn3:id4e438b8e-d723-4784-b261-af2a8a905493 ;
+.
+qn3:idca308b3b-286b-48a9-8e54-c4fe368558ab
+  rdf:type <http://data.posccaesar.org/tpl/ClassificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasClassified> qn3:idd3465a1a-fde6-4dce-90d6-fb5e69b5d477 ;
+  <http://data.posccaesar.org/tpl/hasClassifier> qn3:id0a3425fb-4fc9-47c4-8070-5a70aae74c9a ;
+.
+qn3:idce21b76d-dee3-4879-89d2-521d46d33e1e
+  rdf:type <http://data.posccaesar.org/tpl/CompositionOfClassOfInformationRepresentation> ;
+  <http://data.posccaesar.org/tpl/hasPart> qn3:id5ead4ae4-91ee-433f-96f0-19e2dcf8b297 ;
+  <http://data.posccaesar.org/tpl/hasWhole> qn3:id9a7f09fa-b99c-4c96-8111-6fb015c07f0b ;
+.
+qn3:idceb5153b-7d4d-4d38-98b1-ed534cf7a7e4
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id3a220838-4e96-4f7d-bee5-9af18715a788 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS9062776044 ;
+.
+qn3:idceb95fd3-5283-4200-9364-668a15d2eaf3
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfParticipationDefinition> ;
+  <http://data.posccaesar.org/tpl/hasActivityType> qn3:id73ce4ff8-f31d-48e3-b384-ec357cbd8a69 ;
+  <http://data.posccaesar.org/tpl/hasParticipantRole> pcardl:RDS13652847 ;
+  <http://data.posccaesar.org/tpl/hasParticipantType> qn3:idad9bcef5-0822-4a5a-b5d4-ddfafebda2b2 ;
+.
+qn3:idd3465a1a-fde6-4dce-90d6-fb5e69b5d477
+  rdf:type dm:FunctionalPhysicalObject ;
+  rdfs:label "R420-PT-6505" ;
+.
+qn3:idd3b2b470-de7a-4d91-b8a7-0486d911373e
+  rdf:type pcardl:R-a3107083-c97f-458d-aa24-d3785a0a1835 ;
+  rdf:type dm:ClassOfInformationRepresentation ;
+  rdfs:label "8" ;
+.
+qn3:idd448c57a-dd73-41ce-88f9-780e329f0ac9
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:idd7008514-7fab-45e9-976a-1c0bbfc526e0 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id4cdef6e6-b663-4988-aa7e-b15abef887c7 ;
+.
+qn3:idd50d00e2-8697-4836-b4fa-803a3de2aea4
+  rdf:type dm:FunctionalPhysicalObject ;
+  rdfs:label "R420-PT-6502" ;
+.
+qn3:idd5414ba6-6e4d-4069-aed5-c74180922b5a
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfParticipationDefinition> ;
+  <http://data.posccaesar.org/tpl/hasActivityType> qn3:id73ce4ff8-f31d-48e3-b384-ec357cbd8a69 ;
+  <http://data.posccaesar.org/tpl/hasParticipantRole> pcardl:R-d2f7bbdf-0314-417b-b50b-b4fa4b6cd897 ;
+  <http://data.posccaesar.org/tpl/hasParticipantType> qn3:id7493b3a1-c314-4fad-ae1d-09b97bfc8295 ;
+.
+qn3:idd637a4c9-f728-4480-95a4-e2c938cb31a6
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369674 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:ide9ef87ec-330d-446b-954d-f7ac7b9b1567 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1322684 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "46.0" ;
+.
+qn3:idd7008514-7fab-45e9-976a-1c0bbfc526e0
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:subClassOf pcardl:RDS11008205 ;
+.
+qn3:idd7ea553f-1ad1-42fc-9da7-7cd8af3e2ea2
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id3a220838-4e96-4f7d-bee5-9af18715a788 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id7a53f892-2c7a-42ba-9f01-0cd3965a3839 ;
+.
+qn3:iddeb74104-aaff-4f06-9df1-b0a71f22f993
+  rdf:type <http://data.posccaesar.org/tpl/ClassificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasClassified> qn3:id9fa6aa30-11b2-46ce-b739-36bf392739ea ;
+  <http://data.posccaesar.org/tpl/hasClassifier> qn3:idc487ca08-ddf2-4fb8-b836-8ec06ee88098 ;
+.
+qn3:iddefd18d1-7726-4928-8082-9abd0504a616
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id6f7c2b79-eadf-49a4-a4f8-91e6d5b88dd7 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id3c391e4d-ccac-470c-94d9-007d472939dd ;
+.
+qn3:iddf7fe263-c7d5-46c7-886c-5cbad70c9c69
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfContainmentDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfContained> qn3:idf9f85b6f-74ee-4d09-949a-20acf3728368 ;
+  <http://data.posccaesar.org/tpl/hasClassOfContainer> qn3:id756db915-b2f0-45a3-9ec8-32991241767e ;
+.
+qn3:ide00ef269-973b-428b-b74f-270fb971a63d
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithBoundingValues> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:R-172326ab-22d4-4ba0-be6e-f2f4890e8185 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id4e438b8e-d723-4784-b261-af2a8a905493 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valLowerBound> "0" ;
+  <http://data.posccaesar.org/tpl/valUpperBound> "3.0" ;
+.
+qn3:ide0c0aab3-18bb-4f37-9302-5b5ecbc2ff3b
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationByCompoundType> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id531f3c97-e6b7-47eb-b5d2-c39ad641abc0 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS472229 ;
+.
+qn3:ide1852e33-01b7-43d7-a03a-22ee208d1f75
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id0a1a0cbd-ede5-4103-8b31-7aa4d39cd7fd ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS429389 ;
+.
+qn3:ide1a66549-f31d-4a4b-8f26-3be68a55cba5
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithBoundingValues> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:R-172326ab-22d4-4ba0-be6e-f2f4890e8185 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id0a3425fb-4fc9-47c4-8070-5a70aae74c9a ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1348874 ;
+  <http://data.posccaesar.org/tpl/valLowerBound> "0" ;
+  <http://data.posccaesar.org/tpl/valUpperBound> "3.0" ;
+.
+qn3:ide423f161-0e22-44f6-b343-67159b8f5658
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:idd7008514-7fab-45e9-976a-1c0bbfc526e0 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id3c391e4d-ccac-470c-94d9-007d472939dd ;
+.
+qn3:ide593ce3d-b159-4feb-be72-7b8b440014af
+  rdf:type <http://data.posccaesar.org/tpl/ClassificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasClassified> qn3:id16dcfe27-2387-4d84-85bc-126cbfc7c336 ;
+  <http://data.posccaesar.org/tpl/hasClassifier> qn3:id7493b3a1-c314-4fad-ae1d-09b97bfc8295 ;
+.
+qn3:ide62f209a-69d5-4fdb-ab32-1609bd142b6d
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id0a1a0cbd-ede5-4103-8b31-7aa4d39cd7fd ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id688adf86-65f0-40bc-875b-bc0af9b96e38 ;
+.
+qn3:ide67d305a-adf4-4421-a92d-1c7ce5564dcf
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDefinitionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDefined> qn3:id756db915-b2f0-45a3-9ec8-32991241767e ;
+  <http://data.posccaesar.org/tpl/hasDefinition> qn3:id276c3308-6c90-4952-83e7-401783bc0d2a ;
+  <http://data.posccaesar.org/tpl/hasDefinitionType> pcardl:R-67680ea6-21d0-4951-baec-de09bbe4f41d ;
+.
+qn3:ide84f4c8a-0216-40b2-ba3e-c80e30fb353d
+  rdf:type <http://data.posccaesar.org/tpl/ClassificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasClassified> qn3:idbf2630ed-c635-487a-baa8-16768924cafb ;
+  <http://data.posccaesar.org/tpl/hasClassifier> qn3:id688adf86-65f0-40bc-875b-bc0af9b96e38 ;
+.
+qn3:ide9ef87ec-330d-446b-954d-f7ac7b9b1567
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "S_R420-PT-6504" ;
+  rdfs:subClassOf pcardl:RDS13026796 ;
+.
+qn3:idea123a35-fe19-4fc4-ab8a-f7418883144a
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedDefinitionOfClassOfIndividualByCOIR> ;
+  <http://data.posccaesar.org/tpl/hasDefined> qn3:idc487ca08-ddf2-4fb8-b836-8ec06ee88098 ;
+  <http://data.posccaesar.org/tpl/hasDefinition> qn3:ida11da807-4f22-4aa1-97c9-86d018a2d960 ;
+  <http://data.posccaesar.org/tpl/hasDefinitionType> pcardl:R-67680ea6-21d0-4951-baec-de09bbe4f41d ;
+.
+qn3:ideacfb648-33aa-4f7b-a796-8bf211962d17
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369674 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:idb21dfa80-506d-4197-a9f8-06e30122f62e ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1322684 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "46.0" ;
+.
+qn3:idedb97be2-3e97-4626-9822-8ac4f4718f8b
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedIdentificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasIdentificationType> pcardl:R-0d8da6d3-bf11-4e17-bdeb-fcfcbeb32490 ;
+  <http://data.posccaesar.org/tpl/hasIdentified> qn3:id81021f6c-0e2c-44df-9926-ba1e2b636454 ;
+  <http://data.posccaesar.org/tpl/valIdentifier> "R420-PT-5152" ;
+.
+qn3:idee0a0937-26e9-4d72-ba50-46538db4794e
+  rdf:type <http://data.posccaesar.org/tpl/ClassificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasClassified> qn3:id81021f6c-0e2c-44df-9926-ba1e2b636454 ;
+  <http://data.posccaesar.org/tpl/hasClassifier> qn3:ida84aa2b7-25ee-45ea-a777-6422c78fd15d ;
+.
+qn3:ideeeb885b-35dd-46a2-bdf1-ed2f46e7c552
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:idbf575ffc-6626-4a9e-8e0a-af7b3bc2a014 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:idc487ca08-ddf2-4fb8-b836-8ec06ee88098 ;
+.
+qn3:idef97e618-ef9d-4d7d-9224-fa530855dd42
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "S_R420-PT-5153" ;
+  rdfs:subClassOf pcardl:RDS13026796 ;
+.
+qn3:idf3ed611c-a0c5-40af-b317-b066dfcf8df8
+  rdf:type <http://data.posccaesar.org/tpl/ClassificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasClassified> qn3:idb548925b-2898-4875-83a6-24ace88db6e8 ;
+  <http://data.posccaesar.org/tpl/hasClassifier> qn3:id7a53f892-2c7a-42ba-9f01-0cd3965a3839 ;
+.
+qn3:idf4912677-b895-4edf-ab50-2f0de784d1ad
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:idc50d51f3-67e6-4a5d-be72-bec9a5e9fe68 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:RDS429389 ;
+.
+qn3:idf4af6f01-0d7f-4498-948b-b4857e03eb66
+  rdf:type <http://data.posccaesar.org/tpl/ClassifiedIdentificationOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasIdentificationType> pcardl:R-0d8da6d3-bf11-4e17-bdeb-fcfcbeb32490 ;
+  <http://data.posccaesar.org/tpl/hasIdentified> qn3:id16dcfe27-2387-4d84-85bc-126cbfc7c336 ;
+  <http://data.posccaesar.org/tpl/valIdentifier> "R420-PT-6503" ;
+.
+qn3:idf4e4ec87-dadf-4beb-b653-03142b325aa9
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfFeatureWholePartDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:id88dcb730-067c-4fbe-a35c-dff51d240e95 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id3c391e4d-ccac-470c-94d9-007d472939dd ;
+.
+qn3:idf6a7ac48-cf40-46a2-9741-94cbd01fe6ef
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfIndividualHasIndirectPropertyWithValue> ;
+  <http://data.posccaesar.org/tpl/hasIndirectPropertyType> pcardl:RDS369674 ;
+  <http://data.posccaesar.org/tpl/hasPossessorType> qn3:id5f6f071a-28b3-4d89-a12d-0c16f730a2f9 ;
+  <http://data.posccaesar.org/tpl/hasScale> pcardl:RDS1322684 ;
+  <http://data.posccaesar.org/tpl/valPropertyValue> "95.0" ;
+.
+qn3:idf8d35fe3-0b13-467f-a502-4f5a13df67b4
+  rdf:type dm:FunctionalPhysicalObject ;
+  rdfs:label "R420-PT-6501" ;
+.
+qn3:idf9f85b6f-74ee-4d09-949a-20acf3728368
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "S_R420-PT-5155" ;
+  rdfs:subClassOf pcardl:RDS13026796 ;
+.
+qn3:idf9fd3834-8e6f-4003-aa6a-6704094d756d
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfPart> qn3:idd7008514-7fab-45e9-976a-1c0bbfc526e0 ;
+  <http://data.posccaesar.org/tpl/hasClassOfWhole> qn3:id7a53f892-2c7a-42ba-9f01-0cd3965a3839 ;
+.
+qn3:idfbb25332-3e1f-4c3d-93d7-23df5972fcb6
+  rdf:type <http://data.posccaesar.org/tpl/ClassOfContainmentDefinition> ;
+  <http://data.posccaesar.org/tpl/hasClassOfContained> qn3:id09997d6b-471c-4b07-84ea-70c23272bc58 ;
+  <http://data.posccaesar.org/tpl/hasClassOfContainer> qn3:id0a3425fb-4fc9-47c4-8070-5a70aae74c9a ;
+.
+qn3:idfd27c5c8-d9b5-4cbd-88c6-92a8abeef820
+  rdf:type pcardl:R-a3107083-c97f-458d-aa24-d3785a0a1835 ;
+  rdf:type dm:ClassOfInformationRepresentation ;
+  rdfs:label "1" ;
+.
+qn3:idff67c6a4-6b43-43e2-b3b3-9d6f18da3da7
+  rdf:type <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+  <http://data.posccaesar.org/tpl/hasSubClass> qn3:id688adf86-65f0-40bc-875b-bc0af9b96e38 ;
+  <http://data.posccaesar.org/tpl/hasSuperClass> pcardl:R-1ea100f5-e301-4528-bc51-9ab95b73d5f5 ;
+.
+qn3:idff843720-2a2a-42cc-b2d4-9aeff9ceb766
+  rdf:type <http://data.posccaesar.org/tpl/CompositionOfClassOfInformationRepresentation> ;
+  <http://data.posccaesar.org/tpl/hasPart> qn3:idfd27c5c8-d9b5-4cbd-88c6-92a8abeef820 ;
+  <http://data.posccaesar.org/tpl/hasWhole> qn3:id9a7f09fa-b99c-4c96-8111-6fb015c07f0b ;
+.
+<http://iso15926.fiatech.org/edrc_usecase_2/pressure_transmitter_rfq_10_reply>
+  rdf:type owl:Ontology ;
+  owl:imports <http://data.posccaesar.org/tpl/> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.

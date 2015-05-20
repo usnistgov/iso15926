@@ -1,0 +1,12 @@
+SELECT ?ClassLabel ?ClassMember
+WHERE {
+    ?enumerationofclass tpl:hasSet ?enumeratedsetofclass .
+    ?enumerationofclass tpl:hasMember ?ClassMember .
+    ?enumerationofclass rdf:type tpl:EnumerationOfClass .
+    ?enumeratedsetofclass rdf:type dm:EnumeratedSetOfClass .
+    ?class rdf:type dm:ClassOfIndirectProperty .
+    ?picklistofclasses tpl:hasSetOfClass ?enumeratedsetofclass .
+    ?picklistofclasses tpl:hasClass ?class .
+    ?picklistofclasses rdf:type tpl:PickListOfClasses .
+    ?class rdfs:label ?ClassLabel .
+}

@@ -1,0 +1,18 @@
+SELECT ?PumpIdentifier ?PumpStartingConditionsDescriptionText
+WHERE {
+    ?classificationofindividual tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS416834> .
+    ?classificationofindividual tpl:hasClassified ?possibleindividual .
+    ?classificationofindividual rdf:type tpl:ClassificationOfIndividual .
+    rdlfacade:STARTING_CONDITIONS_DESCRIPTION rdf:type dm:ClassOfClassOfDescription .
+    rdlfacade:STARTING_CONDITIONS_DESCRIPTION dm:hasClassOfPattern <http://data.posccaesar.org/rdl/RDS2100977881> .
+    rdlfacade:STARTING_CONDITIONS_DESCRIPTION dm:hasClassOfRepresented <http://data.posccaesar.org/rdl/RDS416834> .
+    ?classifiedidentificationofindividual tpl:hasIdentified ?possibleindividual .
+    ?classifiedidentificationofindividual rdf:type tpl:ClassifiedIdentificationOfIndividual .
+    ?classifiedidentificationofindividual tpl:hasIdentificationType <http://data.posccaesar.org/rdl/RDS2100944981> .
+    ?possibleindividual rdf:type dm:PossibleIndividual .
+    ?classifieddescriptionofindividual tpl:hasDescribed ?possibleindividual .
+    ?classifieddescriptionofindividual rdf:type tpl:ClassifiedDescriptionOfIndividual .
+    ?classifieddescriptionofindividual tpl:hasDescriptionType rdlfacade:STARTING_CONDITIONS_DESCRIPTION .
+    ?classifiedidentificationofindividual tpl:valIdentifier ?PumpIdentifier .
+    ?classifieddescriptionofindividual tpl:valDescriptor ?PumpStartingConditionsDescriptionText .
+}

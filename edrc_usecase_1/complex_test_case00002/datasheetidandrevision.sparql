@@ -1,0 +1,12 @@
+SELECT ?DatasheetIdentifier ?DatasheetRevisionCode
+WHERE {
+    ?classifiedidentificationofclassofindividual1 tpl:hasIdentified atc00000:ClassOfIndividual_1 .
+    ?classifiedidentificationofclassofindividual1 tpl:hasIdentificationType <http://data.posccaesar.org/rdl/RDS2102408551> .
+    ?classifiedidentificationofclassofindividual1 rdf:type tpl:ClassifiedIdentificationOfClassOfIndividual .
+    ?classifiedidentificationofclassofindividual tpl:hasIdentified atc00000:ClassOfIndividual_1 .
+    ?classifiedidentificationofclassofindividual rdf:type tpl:ClassifiedIdentificationOfClassOfIndividual .
+    ?classifiedidentificationofclassofindividual tpl:hasIdentificationType rdlfacade:REVISION_CODE_ASSIGNMENT_CLASS .
+    atc00000:ClassOfIndividual_1 rdf:type dm:ClassOfInformationObject .
+    ?classifiedidentificationofclassofindividual1 tpl:valIdentifier ?DatasheetIdentifier .
+    ?classifiedidentificationofclassofindividual tpl:valIdentifier ?DatasheetRevisionCode .
+}

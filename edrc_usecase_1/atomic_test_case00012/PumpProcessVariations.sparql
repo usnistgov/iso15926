@@ -1,0 +1,17 @@
+SELECT ?PumpIdentifier ?PumpProcessVariationDescriptionText
+WHERE {
+    ?classificationofindividual tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS416834> .
+    ?classificationofindividual tpl:hasClassified ?possibleindividual .
+    ?classificationofindividual rdf:type tpl:ClassificationOfIndividual .
+    ?possibleindividual rdf:type dm:PossibleIndividual .
+    ?classifiedidentificationofindividual tpl:hasIdentified ?possibleindividual .
+    ?classifiedidentificationofindividual rdf:type ?class .
+    rdlfacade:PROCESS_VARIATIONS_DESCRIPTION dm:hasClassOfPattern <http://data.posccaesar.org/rdl/RDS2100977881> .
+    rdlfacade:PROCESS_VARIATIONS_DESCRIPTION dm:hasClassOfRepresented <http://data.posccaesar.org/rdl/RDS416834> .
+    rdlfacade:PROCESS_VARIATIONS_DESCRIPTION rdf:type dm:ClassOfClassOfDescription .
+    ?classifieddescriptionofindividual rdf:type tpl:ClassifiedDescriptionOfIndividual .
+    ?classifieddescriptionofindividual tpl:hasDescribed ?possibleindividual .
+    ?classifieddescriptionofindividual tpl:hasDescriptionType rdlfacade:PROCESS_VARIATIONS_DESCRIPTION .
+    ?classifiedidentificationofindividual tpl:valIdentifier ?PumpIdentifier .
+    ?classifieddescriptionofindividual tpl:valDescriptor ?PumpProcessVariationDescriptionText
+}

@@ -1,0 +1,109 @@
+# Repair role object properties missing OWL datatype property statements
+
+CONSTRUCT { 
+	?role a owl:DatatypeProperty . 
+	?role a owl:FunctionalProperty .
+ }
+WHERE {
+	?template a p7tm:Template . 
+	OPTIONAL { ?roledescription p7tm:hasTemplate ?template . }
+	FILTER NOT EXISTS {?roledescription  a p7tm:TemplateDescription . }
+	OPTIONAL { ?roledescription a p7tm:TemplateRoleDescription  . }
+	OPTIONAL {  ?roledescription p7tm:hasRole ?role . }
+	OPTIONAL {  ?roledescription p7tm:hasRoleFillerType ?roletype . }
+	NOT EXISTS { ?role a ?roleowlclass . }
+	BIND(xsd:string(afn:namespace(?roletype)) AS ?roletypens )
+	FILTER ( ?roletypens = "http://www.w3.org/2001/XMLSchema#"^^xsd:string )
+}
+
+# Repair role object properties missing OWL object property statements
+
+CONSTRUCT { 
+	?role a owl:ObjectProperty . 
+	?role a owl:FunctionalProperty .
+ }
+WHERE {
+	?template a p7tm:Template . 
+	OPTIONAL { ?roledescription p7tm:hasTemplate ?template . }
+	FILTER NOT EXISTS {?roledescription  a p7tm:TemplateDescription . }
+	OPTIONAL { ?roledescription a p7tm:TemplateRoleDescription  . }
+	OPTIONAL {  ?roledescription p7tm:hasRole ?role . }
+	OPTIONAL {  ?roledescription p7tm:hasRoleFillerType ?roletype . }
+	NOT EXISTS { ?role a ?roleowlclass . }
+	BIND(xsd:string(afn:namespace(?roletype)) AS ?roletypens )
+	FILTER ( ?roletypens = "http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#"^^xsd:string )
+}
+
+
+
+
+# Find templates where template roles are not defined as owl properties
+
+SELECT DISTINCT ?template ?role ?roletype
+WHERE {
+	?template a p7tm:Template . 
+	OPTIONAL { ?roledescription p7tm:hasTemplate ?template . }
+	FILTER NOT EXISTS {?roledescription  a p7tm:TemplateDescription . }
+	OPTIONAL { ?roledescription a p7tm:TemplateRoleDescription  . }
+	OPTIONAL {  ?roledescription p7tm:hasRole ?role . }
+	OPTIONAL {  ?roledescription p7tm:hasRoleFillerType ?roletype . }
+	NOT EXISTS { ?role a ?roleowlclass . }
+}
+
+# Find templates and template roles for instances in an exchang file
+
+SELECT DISTINCT ?template ?role ?roletype
+WHERE {
+    ?instance a ?template .
+	?template a p7tm:Template . 
+	OPTIONAL { ?roledescription p7tm:hasTemplate ?template . }
+	FILTER NOT EXISTS {?roledescription  a p7tm:TemplateDescription . }
+	OPTIONAL { ?roledescription a p7tm:TemplateRoleDescription  . }
+	OPTIONAL {  ?roledescription p7tm:hasRole ?role . }
+	OPTIONAL {  ?roledescription p7tm:hasRoleFillerType ?roletype . }
+}
+
+# Find Missing template role object property specifications
+
+SELECT *
+WHERE {
+    ?restriction owl:onProperty ?role .
+	BIND(afn:namespace(?role) AS ?rolens )
+	FILTER (?rolens = "http://data.posccaesar.org/tpl/" )
+	OPTIONAL {
+		?role a ?roleclass .
+	}
+	?restriction owl:allValuesFrom ?rolerange . 
+	BIND(afn:namespace(?rolerange) AS ?rolerangens  )
+	FILTER ( ?rolerangens = "http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#" )
+}
+
+
+# Find Missing template role object property specifications
+
+SELECT *
+WHERE {
+    ?restriction owl:onProperty ?role .
+	BIND(afn:namespace(?role) AS ?rolens )
+	FILTER (?rolens = "http://data.posccaesar.org/tpl/" )
+	OPTIONAL {
+		?role a ?roleclass .
+	}
+	?restriction owl:allValuesFrom ?rolerange . 
+	BIND(afn:namespace(?rolerange) AS ?rolerangens  )
+	FILTER(?rolerangens = "http://www.w3.org/2001/XMLSchema#" )
+}
+
+# Find 15926.or missing role classes
+
+SELECT *
+WHERE {
+    ?restriction owl:onProperty ?role .
+	BIND(afn:namespace(?role) AS ?rolens )
+	FILTER (?rolens = "http://15926.org/templates-test/" )
+	OPTIONAL {
+		?role a ?roleclass .
+	}
+	?restriction owl:allValuesFrom ?rolerange . 
+	BIND(afn:namespace(?rolerange) AS ?rolerangens  )
+}

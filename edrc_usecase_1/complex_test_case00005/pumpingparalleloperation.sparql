@@ -1,0 +1,15 @@
+SELECT ?PumpIdentifierPumpingParallelOperation
+WHERE {
+    ?activity rdf:type dm:Activity .
+    ?classifiedidentificationofindividual tpl:hasIdentified ?possibleindividual .
+    ?classifiedidentificationofindividual tpl:hasIdentificationType <http://data.posccaesar.org/rdl/RDS2100944981> .
+    ?classifiedidentificationofindividual rdf:type tpl:ClassifiedIdentificationOfIndividual .
+    ?classificationofindividual1 tpl:hasClassified ?activity .
+    ?classificationofindividual1 tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS9657917> .
+    ?classificationofindividual1 rdf:type tpl:ClassificationOfIndividual .
+    ?possibleindividual rdf:type dm:PossibleIndividual .
+    ?classificationofindividual tpl:hasClassified ?activity .
+    ?classificationofindividual tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS32039> .
+    ?classificationofindividual rdf:type tpl:ClassificationOfIndividual .
+    ?classifiedidentificationofindividual tpl:valIdentifier ?PumpIdentifierPumpingParallelOperation .
+}

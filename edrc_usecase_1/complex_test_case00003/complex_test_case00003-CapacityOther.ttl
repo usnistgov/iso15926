@@ -1,0 +1,27 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00003/complex_test_case00003-CapacityOther
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00004/atomic_test_case00004-EnumeratedClassOfCapacity
+
+@prefix ctc00003: <http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00003/complex_test_case00003-CapacityOther#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00003/complex_test_case00003-CapacityOther>
+  rdf:type owl:Ontology ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.2 Capacity Other"^^xsd:string ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00004/atomic_test_case00004-EnumeratedClassOfCapacity> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+ctc00003:IndividualHasIndirectPropertyWithValue_1
+  rdf:type tpl:IndividualHasIndirectPropertyWithValue ;
+  tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS400679> ;
+  tpl:hasPossessor <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber#PossibleIndividual_1> ;
+  tpl:hasScale <http://data.posccaesar.org/rdl/RDS1321064> ;
+  tpl:valPropertyValue "2.22"^^xsd:float ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.2 Capacity Other"^^xsd:string ;
+  rdfs:label "Pump has LOWER LIMIT VOLUME FLOW RATE of 2.22 Metre Cubed Per Hour"^^xsd:string ;
+.

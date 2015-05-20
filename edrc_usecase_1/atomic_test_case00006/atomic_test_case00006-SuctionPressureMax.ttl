@@ -1,0 +1,25 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00006/atomic_test_case00006-SuctionPressureMax
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber
+
+@prefix atc00006: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00006/atomic_test_case00006-SuctionPressureMax#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00006/atomic_test_case00006-SuctionPressureMax>
+  rdf:type owl:Ontology ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.4 Suction Pressure Max"^^xsd:string ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+atc00006:IndividualHasIndirectPropertyWithValue_1
+  rdf:type tpl:IndividualHasIndirectPropertyWithValue ;
+  tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS400724> ;
+  tpl:hasPossessor <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber#PossibleIndividual_1> ;
+  tpl:hasScale <http://data.posccaesar.org/rdl/RDS1059963660> ;
+  tpl:valPropertyValue "4.4"^^xsd:float ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.4 Suction Pressure Max"^^xsd:string ;
+  rdfs:label "Pump Suction Pressure Max is 4.4 MegaPascalGuage"^^xsd:string ;
+.

@@ -1,0 +1,10 @@
+SELECT ?Activity ?ServiceDutyCycle
+WHERE {
+    ?Activity rdf:type dm:Activity .
+    ?classificationofindividual tpl:hasClassified ?activity .
+    ?classificationofindividual rdf:type tpl:ClassificationOfIndividual .
+    ?classificationofindividual tpl:hasClassifier ?ServiceDutyCycle .
+    ?classification dm:hasClassifier myrd:PUMP_OPERATION_DUTY_CYCLE_TYPE .
+    ?classification dm:hasClassified ?ServiceDutyCycle .
+    ?classification rdf:type dm:Classification .
+}

@@ -1,0 +1,26 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00012/atomic_test_case00012-ProcessVariations
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber
+# imports: http://rdl.rdlfacade.org/data
+
+@prefix atc00012: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00012/atomic_test_case00012-ProcessVariations#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00012/atomic_test_case00012-ProcessVariations>
+  rdf:type owl:Ontology ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.10 Process Variations"^^xsd:string ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber> ;
+  owl:imports <http://rdl.rdlfacade.org/data> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+atc00012:ClassifiedDescriptionOfIndividual_1
+  rdf:type tpl:ClassifiedDescriptionOfIndividual ;
+  tpl:hasDescribed <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber#PossibleIndividual_1> ;
+  tpl:hasDescriptionType <http://rdl.rdlfacade.org/data#PROCESS_VARIATIONS_DESCRIPTION> ;
+  tpl:valDescriptor "This is some process variation description text."^^xsd:string ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.10 Process Variations"^^xsd:string ;
+  rdfs:label "Describe a process variation using text"^^xsd:string ;
+.

@@ -1,0 +1,25 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00008/atomic_test_case00008-DischargePressure
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber
+
+@prefix atc00008: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00008/atomic_test_case00008-DischargePressure#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00008/atomic_test_case00008-DischargePressure>
+  rdf:type owl:Ontology ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.6 Discharge Pressure"^^xsd:string ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+atc00008:IndividualHasIndirectPropertyWithValue_1
+  rdf:type tpl:IndividualHasIndirectPropertyWithValue ;
+  tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS361529> ;
+  tpl:hasPossessor <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber#PossibleIndividual_1> ;
+  tpl:hasScale <http://data.posccaesar.org/rdl/RDS1059963660> ;
+  tpl:valPropertyValue "8.8"^^xsd:float ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.6 Discharge Pressure"^^xsd:string ;
+  rdfs:label "Pump Discharge Pressure is 8.8 MegaPascalGuage"^^xsd:string ;
+.

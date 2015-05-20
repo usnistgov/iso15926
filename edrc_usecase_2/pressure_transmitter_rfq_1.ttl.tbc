@@ -1,0 +1,439 @@
+# baseURI: null
+
+@prefix composite: <http://www.topbraid.org/2007/05/composite.owl#> .
+@prefix forms: <http://www.topbraid.org/2007/01/forms.owl#> .
+@prefix inference: <http://www.topbraid.org/2007/06/inference.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix visual: <http://topbraid.org/visual#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[
+  rdf:type visual:Graph ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+      visual:height "197"^^xsd:int ;
+      visual:width "293"^^xsd:int ;
+      visual:x "18"^^xsd:int ;
+      visual:y "42"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id00394ae2-f71f-4d9b-b23e-0921320a2292> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "295"^^xsd:int ;
+      visual:x "29"^^xsd:int ;
+      visual:y "322"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id0109f0bf-ac9d-411f-85cd-785ee3194d9e> ;
+      visual:height "35"^^xsd:int ;
+      visual:width "292"^^xsd:int ;
+      visual:x "366"^^xsd:int ;
+      visual:y "454"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id96b6298e-8fe2-4939-9609-5cd47e0f0516> ;
+      visual:height "35"^^xsd:int ;
+      visual:width "295"^^xsd:int ;
+      visual:x "413"^^xsd:int ;
+      visual:y "192"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://posccaesar.org/rdl/R-c898dddf-932e-4216-bf99-0f40df3847f4> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "327"^^xsd:int ;
+      visual:x "380"^^xsd:int ;
+      visual:y "62"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://posccaesar.org/rdl/RDS354194> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "163"^^xsd:int ;
+      visual:x "722"^^xsd:int ;
+      visual:y "106"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://posccaesar.org/rdl/RDS462104> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "163"^^xsd:int ;
+      visual:x "435"^^xsd:int ;
+      visual:y "344"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#ClassOfInanimatePhysicalObject> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "256"^^xsd:int ;
+      visual:x "533"^^xsd:int ;
+      visual:y "377"^^xsd:int ;
+    ] ;
+  visual:depicts <http://example.org/data/TestData1#id0109f0bf-ac9d-411f-85cd-785ee3194d9e> ;
+  rdfs:label "PE_420-PT-5152 PartOf CO_R420-PT-5152" ;
+].
+[
+  rdf:type visual:Graph ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/tpl/ClassOfAssemblyDefinition> ;
+      visual:height "197"^^xsd:int ;
+      visual:width "293"^^xsd:int ;
+      visual:x "25"^^xsd:int ;
+      visual:y "24"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/tpl/SpecializationByCompoundType> ;
+      visual:height "197"^^xsd:int ;
+      visual:width "293"^^xsd:int ;
+      visual:x "338"^^xsd:int ;
+      visual:y "25"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+      visual:height "197"^^xsd:int ;
+      visual:width "293"^^xsd:int ;
+      visual:x "653"^^xsd:int ;
+      visual:y "24"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id00394ae2-f71f-4d9b-b23e-0921320a2292> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "295"^^xsd:int ;
+      visual:x "23"^^xsd:int ;
+      visual:y "293"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id0109f0bf-ac9d-411f-85cd-785ee3194d9e> ;
+      visual:height "35"^^xsd:int ;
+      visual:width "292"^^xsd:int ;
+      visual:x "170"^^xsd:int ;
+      visual:y "412"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id24bb682e-d3c8-4245-999c-d31cf54f664a> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "295"^^xsd:int ;
+      visual:x "465"^^xsd:int ;
+      visual:y "337"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#idc5c4e0d5-f495-4fc8-96f3-5e8fb8944fb6> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "286"^^xsd:int ;
+      visual:x "633"^^xsd:int ;
+      visual:y "447"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://posccaesar.org/rdl/RDS429389> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "163"^^xsd:int ;
+      visual:x "807"^^xsd:int ;
+      visual:y "328"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://posccaesar.org/rdl/RDS462104> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "163"^^xsd:int ;
+      visual:x "365"^^xsd:int ;
+      visual:y "256"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://posccaesar.org/rdl/RDS472229> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "163"^^xsd:int ;
+      visual:x "629"^^xsd:int ;
+      visual:y "250"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#ClassOfInanimatePhysicalObject> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "256"^^xsd:int ;
+      visual:x "319"^^xsd:int ;
+      visual:y "511"^^xsd:int ;
+    ] ;
+  visual:depicts <http://example.org/data/TestData1#id0109f0bf-ac9d-411f-85cd-785ee3194d9e> ;
+  rdfs:label "PE_R420-PT-5152" ;
+].
+[
+  rdf:type visual:Graph ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/tpl/ClassOfParticipationDefinition> ;
+      visual:height "197"^^xsd:int ;
+      visual:width "293"^^xsd:int ;
+      visual:x "474"^^xsd:int ;
+      visual:y "22"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/tpl/SpecializationOfClassOfIndividual> ;
+      visual:height "197"^^xsd:int ;
+      visual:width "293"^^xsd:int ;
+      visual:x "1054"^^xsd:int ;
+      visual:y "118"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id0c73c960-9164-46f3-959a-70a6fd5a31b2> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "294"^^xsd:int ;
+      visual:x "583"^^xsd:int ;
+      visual:y "310"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id69516a23-2029-4f05-a714-3d269cc78de5> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "297"^^xsd:int ;
+      visual:x "383"^^xsd:int ;
+      visual:y "442"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id75fe4685-a1f7-4e88-b4c5-9b0a9fa707fa> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "288"^^xsd:int ;
+      visual:x "11"^^xsd:int ;
+      visual:y "505"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id83f1614d-649b-4876-ae1e-34721972e9bc> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "298"^^xsd:int ;
+      visual:x "741"^^xsd:int ;
+      visual:y "236"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id84217d48-1196-439b-8dfe-cfcd7376b08c> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "296"^^xsd:int ;
+      visual:x "895"^^xsd:int ;
+      visual:y "373"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id96b6298e-8fe2-4939-9609-5cd47e0f0516> ;
+      visual:height "35"^^xsd:int ;
+      visual:width "295"^^xsd:int ;
+      visual:x "32"^^xsd:int ;
+      visual:y "254"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://posccaesar.org/rdl/R-9589eb0d-8276-40b8-9ada-8d79cf1c7101> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "338"^^xsd:int ;
+      visual:x "846"^^xsd:int ;
+      visual:y "481"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://posccaesar.org/rdl/R-c898dddf-932e-4216-bf99-0f40df3847f4> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "327"^^xsd:int ;
+      visual:x "22"^^xsd:int ;
+      visual:y "31"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://posccaesar.org/rdl/R-d2f7bbdf-0314-417b-b50b-b4fa4b6cd897> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "335"^^xsd:int ;
+      visual:x "184"^^xsd:int ;
+      visual:y "310"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://posccaesar.org/rdl/RDS13652847> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "176"^^xsd:int ;
+      visual:x "716"^^xsd:int ;
+      visual:y "416"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://posccaesar.org/rdl/RDS337196911> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "182"^^xsd:int ;
+      visual:x "949"^^xsd:int ;
+      visual:y "65"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://posccaesar.org/rdl/RDS354194> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "163"^^xsd:int ;
+      visual:x "15"^^xsd:int ;
+      visual:y "104"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://posccaesar.org/rdl/RDS9652247> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "169"^^xsd:int ;
+      visual:x "443"^^xsd:int ;
+      visual:y "516"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#ClassOfActivity> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "164"^^xsd:int ;
+      visual:x "453"^^xsd:int ;
+      visual:y "385"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#ClassOfArrangedIndividual> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "224"^^xsd:int ;
+      visual:x "789"^^xsd:int ;
+      visual:y "34"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#ClassOfInanimatePhysicalObject> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "256"^^xsd:int ;
+      visual:x "202"^^xsd:int ;
+      visual:y "83"^^xsd:int ;
+    ] ;
+  visual:depicts <http://example.org/data/TestData1#id0109f0bf-ac9d-411f-85cd-785ee3194d9e> ;
+  rdfs:label "Activity Participants" ;
+].
+[
+  rdf:type visual:Graph ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id00394ae2-f71f-4d9b-b23e-0921320a2292> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "285"^^xsd:int ;
+      visual:x "11"^^xsd:int ;
+      visual:y "250"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id1d2bf4dc-6b26-44a7-a5ba-96a4784ecd44> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "288"^^xsd:int ;
+      visual:x "20"^^xsd:int ;
+      visual:y "323"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id3ff4a9d3-be07-4679-84aa-e25c1daac45c> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "283"^^xsd:int ;
+      visual:x "13"^^xsd:int ;
+      visual:y "189"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id42d99e6e-a100-4574-865b-dcb1761ef742> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "288"^^xsd:int ;
+      visual:x "424"^^xsd:int ;
+      visual:y "622"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id75fe4685-a1f7-4e88-b4c5-9b0a9fa707fa> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "278"^^xsd:int ;
+      visual:x "585"^^xsd:int ;
+      visual:y "236"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id7cbfe727-ba44-49fe-83d2-50c5edb17e5d> ;
+      visual:height "53"^^xsd:int ;
+      visual:width "286"^^xsd:int ;
+      visual:x "34"^^xsd:int ;
+      visual:y "567"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#id96b6298e-8fe2-4939-9609-5cd47e0f0516> ;
+      visual:height "35"^^xsd:int ;
+      visual:width "285"^^xsd:int ;
+      visual:x "464"^^xsd:int ;
+      visual:y "500"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#idc10d6602-0aa9-4a71-8579-9e8c18dac8de> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "290"^^xsd:int ;
+      visual:x "25"^^xsd:int ;
+      visual:y "512"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#idef595e28-52b2-42fd-b714-1368087d85e7> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "286"^^xsd:int ;
+      visual:x "25"^^xsd:int ;
+      visual:y "391"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#idf2ad1e4e-7061-4a6a-867a-91f8e023a65b> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "284"^^xsd:int ;
+      visual:x "355"^^xsd:int ;
+      visual:y "172"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://example.org/data/TestData1#idfdc37bd5-690c-4596-b603-677ba6f7d88a> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "286"^^xsd:int ;
+      visual:x "53"^^xsd:int ;
+      visual:y "651"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://posccaesar.org/rdl/R-c898dddf-932e-4216-bf99-0f40df3847f4> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "317"^^xsd:int ;
+      visual:x "689"^^xsd:int ;
+      visual:y "549"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://posccaesar.org/rdl/RDS354194> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "153"^^xsd:int ;
+      visual:x "794"^^xsd:int ;
+      visual:y "435"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#ClassOfInanimatePhysicalObject> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "246"^^xsd:int ;
+      visual:x "707"^^xsd:int ;
+      visual:y "346"^^xsd:int ;
+    ] ;
+  visual:depicts <http://example.org/data/TestData1#id0109f0bf-ac9d-411f-85cd-785ee3194d9e> ;
+  rdfs:label "CO_R420-PT-5152 Relations" ;
+].

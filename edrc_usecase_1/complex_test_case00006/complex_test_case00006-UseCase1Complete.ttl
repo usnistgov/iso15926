@@ -1,0 +1,50 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00006/complex_test_case00006-UseCase1Complete
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00000-JobNumber
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00002/atomic_test_case00002-date
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00003/atomic_test_case00003-CapacityNormal
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00004/atomic_test_case00004-EnumeratedClassOfCapacity
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00005/atomic_test_case00005-CapacityRated
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00006/atomic_test_case00006-SuctionPressureMax
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00007/atomic_test_case00007-SuctionPressureRated
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00008/atomic_test_case00008-DischargePressure
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00009/atomic_test_case00009-DifferentialPressure
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00010/atomic_test_case00010-DifferentialHead
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00011/atomic_test_case00011-NPSHA
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00012/atomic_test_case00012-ProcessVariations
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00013/atomic_test_case00013-StartingConditions
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00014/atomic_test_case00014-StartsPerDay
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00002-RevisionNumber
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00003/complex_test_case00003-CapacityOther
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00004/complex_test_case00004-ServiceOperationDutyCycle
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00005/complex_test_case00005-ParallelOperationsRequired
+
+@prefix ctc00006: <http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00006/complex_test_case00006-UseCase1Complete#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00006/complex_test_case00006-UseCase1Complete>
+  rdf:type owl:Ontology ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00000-JobNumber> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00002/atomic_test_case00002-date> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00003/atomic_test_case00003-CapacityNormal> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00004/atomic_test_case00004-EnumeratedClassOfCapacity> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00005/atomic_test_case00005-CapacityRated> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00006/atomic_test_case00006-SuctionPressureMax> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00007/atomic_test_case00007-SuctionPressureRated> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00008/atomic_test_case00008-DischargePressure> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00009/atomic_test_case00009-DifferentialPressure> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00010/atomic_test_case00010-DifferentialHead> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00011/atomic_test_case00011-NPSHA> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00012/atomic_test_case00012-ProcessVariations> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00013/atomic_test_case00013-StartingConditions> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00014/atomic_test_case00014-StartsPerDay> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00002-RevisionNumber> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00003/complex_test_case00003-CapacityOther> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00004/complex_test_case00004-ServiceOperationDutyCycle> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00005/complex_test_case00005-ParallelOperationsRequired> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.

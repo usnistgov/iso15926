@@ -1,0 +1,25 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00011/atomic_test_case00011-NPSHA
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber
+
+@prefix atc00011: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00011/atomic_test_case00011-NPSHA#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00011/atomic_test_case00011-NPSHA>
+  rdf:type owl:Ontology ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.9 NPSHA"^^xsd:string ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+atc00011:IndividualHasIndirectPropertyWithValue_1
+  rdf:type tpl:IndividualHasIndirectPropertyWithValue ;
+  tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS362879> ;
+  tpl:hasPossessor <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber#PossibleIndividual_1> ;
+  tpl:hasScale <http://data.posccaesar.org/rdl/RDS1332674> ;
+  tpl:valPropertyValue "11.11"^^xsd:float ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.9 NPSHA"^^xsd:string ;
+  rdfs:label "Pump NPSHA is 11.11 Metre"^^xsd:string ;
+.

@@ -1,0 +1,39 @@
+# baseURI: http://www.mycompany.com/iso15926/edrc/refdata
+# imports: http://data.posccaesar.org/tpl/
+# imports: http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003
+
+@prefix atc00004: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00004/atomic_test_case00004-EnumeratedClassOfCapacity#> .
+@prefix ctc00004RD: <http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00004/complex_test_case00004-ServiceOperationDutyCycleRefData#> .
+@prefix dm: <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#> .
+@prefix myrd: <http://www.mycompany.com/iso15926/edrc/refdata#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.mycompany.com/iso15926/edrc/refdata>
+  rdf:type owl:Ontology ;
+  owl:imports tpl: ;
+  owl:imports <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+myrd:Classification_1
+  rdf:type dm:Classification ;
+  dm:hasClassified <http://data.posccaesar.org/rdl/RDS9705752> ;
+  dm:hasClassifier myrd:PUMP_OPERATION_DUTY_CYCLE_TYPE ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.12 Service Continuous 7.2.13 Service Intermittent"^^xsd:string ;
+  rdfs:label "INTERMITTENT OPERATION is a PUMP_OPERATION_DUTY_CYCLE_TYPE"^^xsd:string ;
+.
+myrd:Classification_2
+  rdf:type dm:Classification ;
+  dm:hasClassified <http://data.posccaesar.org/rdl/RDS9710162> ;
+  dm:hasClassifier myrd:PUMP_OPERATION_DUTY_CYCLE_TYPE ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.12 Service Continuous 7.2.13 Service Intermittent"^^xsd:string ;
+  rdfs:label "CONTINUOUS OPERATION is a PUMP_OPERATION_DUTY_CYCLE_TYPE"^^xsd:string ;
+.
+myrd:PUMP_OPERATION_DUTY_CYCLE_TYPE
+  rdf:type dm:ClassOfClassOfIndividual ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.12 Service Continuous 7.2.13 Service Intermittent"^^xsd:string ;
+  rdfs:label "PUMP OPERATION DUTY CYCLE TYPE"^^xsd:string ;
+.

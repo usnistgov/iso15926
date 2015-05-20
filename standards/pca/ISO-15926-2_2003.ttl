@@ -1,0 +1,3996 @@
+# baseURI: http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003
+# imports: http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl
+
+@prefix dm: <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#> .
+@prefix list: <http://www.co-ode.org/ontologies/list.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003>
+  rdf:type owl:Ontology ;
+  rdfs:comment """ISO 15926-2:2003: Industrial automation systems and integration -- Integration of life-cycle data for process plants including oil and gas production facilities -- Part 2: Data model.
+
+		This ontology is based on the EXPRESS schema lifecycle_integration_schema.exp, http://www.steptools.com/sc4/archive/oil-and-gas/15926-0002-lifecycle_integration.exp?rev=1.1&content-type=text/vnd.viewcvs-markup, which ISO 15926-2 annex B references.""" ;
+  owl:imports <http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+  owl:versionInfo "Generated 2008-02-21T17:29:19.558+01:00" ;
+.
+dm:AbstractObject
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Thing ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:Class
+          dm:MultidimensionalObject
+          dm:Relationship
+        ) ;
+    ] ;
+.
+dm:Activity
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:PossibleIndividual ;
+.
+dm:ActualIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:PossibleIndividual ;
+.
+dm:Approval
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasApprover ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Relationship ;
+      owl:onProperty dm:hasApproved ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasApproved ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasApprover ;
+    ] ;
+  owl:disjointWith dm:CauseOfEvent ;
+  owl:disjointWith dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:Classification ;
+  owl:disjointWith dm:ComparisonOfProperty ;
+  owl:disjointWith dm:CompositionOfIndividual ;
+  owl:disjointWith dm:ConnectionOfIndividual ;
+  owl:disjointWith dm:FunctionalMapping ;
+  owl:disjointWith dm:IndirectProperty ;
+  owl:disjointWith dm:IndividualUsedInConnection ;
+  owl:disjointWith dm:IntendedRoleAndDomain ;
+  owl:disjointWith dm:InvolvementByReference ;
+  owl:disjointWith dm:LifecycleStage ;
+  owl:disjointWith dm:OtherRelationship ;
+  owl:disjointWith dm:PossibleRoleAndDomain ;
+  owl:disjointWith dm:Recognition ;
+  owl:disjointWith dm:RelativeLocation ;
+  owl:disjointWith dm:RepresentationOfThing ;
+  owl:disjointWith dm:ResponsibilityForRepresentation ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:ArithmeticNumber
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClass ;
+  owl:disjointWith dm:ClassOfClassOfIndividual ;
+  owl:disjointWith dm:ClassOfClassOfRelationship ;
+  owl:disjointWith dm:ClassOfNumber ;
+  owl:disjointWith dm:ClassOfPropertySpace ;
+  owl:disjointWith dm:ClassOfShapeDimension ;
+.
+dm:ArrangedIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:PossibleIndividual ;
+.
+dm:ArrangementOfIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:CompositionOfIndividual ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ArrangedIndividual ;
+      owl:onProperty dm:hasWhole ;
+    ] ;
+  owl:disjointWith dm:Participation ;
+  owl:disjointWith dm:TemporalBounding ;
+  owl:disjointWith dm:TemporalWholePart ;
+.
+dm:AssemblyOfIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ArrangementOfIndividual ;
+  owl:disjointWith dm:FeatureWholePart ;
+.
+dm:Beginning
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:TemporalBounding ;
+.
+dm:BoundaryOfNumberSpace
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Specialization ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:NumberSpace ;
+      owl:onProperty dm:hasSubclass ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:NumberSpace ;
+      owl:onProperty dm:hasSuperclass ;
+    ] ;
+  owl:disjointWith dm:BoundaryOfPropertySpace ;
+  owl:disjointWith dm:SpecializationByDomain ;
+  owl:disjointWith dm:SpecializationByRole ;
+  owl:disjointWith dm:SpecializationOfIndividualDimensionFromProperty ;
+.
+dm:BoundaryOfPropertySpace
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Specialization ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PropertySpace ;
+      owl:onProperty dm:hasSubclass ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PropertySpace ;
+      owl:onProperty dm:hasSuperclass ;
+    ] ;
+  owl:disjointWith dm:SpecializationByDomain ;
+  owl:disjointWith dm:SpecializationByRole ;
+  owl:disjointWith dm:SpecializationOfIndividualDimensionFromProperty ;
+.
+dm:Cardinality
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:long ;
+      owl:onProperty dm:hasMaximumCardinality ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:long ;
+      owl:onProperty dm:hasMinimumCardinality ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasMaximumCardinality ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasMinimumCardinality ;
+    ] ;
+.
+dm:CauseOfEvent
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Activity ;
+      owl:onProperty dm:hasCauser ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Event ;
+      owl:onProperty dm:hasCaused ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasCaused ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasCauser ;
+    ] ;
+  owl:disjointWith dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:Classification ;
+  owl:disjointWith dm:ComparisonOfProperty ;
+  owl:disjointWith dm:CompositionOfIndividual ;
+  owl:disjointWith dm:ConnectionOfIndividual ;
+  owl:disjointWith dm:FunctionalMapping ;
+  owl:disjointWith dm:IndirectProperty ;
+  owl:disjointWith dm:IndividualUsedInConnection ;
+  owl:disjointWith dm:IntendedRoleAndDomain ;
+  owl:disjointWith dm:InvolvementByReference ;
+  owl:disjointWith dm:LifecycleStage ;
+  owl:disjointWith dm:OtherRelationship ;
+  owl:disjointWith dm:PossibleRoleAndDomain ;
+  owl:disjointWith dm:Recognition ;
+  owl:disjointWith dm:RelativeLocation ;
+  owl:disjointWith dm:RepresentationOfThing ;
+  owl:disjointWith dm:ResponsibilityForRepresentation ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:Class
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:AbstractObject ;
+.
+dm:ClassOfAbstractObject
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Class ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:ClassOfClass
+          dm:ClassOfMultidimensionalObject
+          dm:ClassOfRelationship
+        ) ;
+    ] ;
+.
+dm:ClassOfActivity
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangedIndividual ;
+.
+dm:ClassOfApproval
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfIndividual ;
+      owl:onProperty dm:hasClassOfApprover ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfRelationship ;
+      owl:onProperty dm:hasClassOfApproved ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfApproved ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfApprover ;
+    ] ;
+  owl:disjointWith dm:ClassOfApprovalByStatus ;
+  owl:disjointWith dm:ClassOfAssertion ;
+  owl:disjointWith dm:ClassOfCauseOfBeginningOfClassOfIndividual ;
+  owl:disjointWith dm:ClassOfCauseOfEndingOfClassOfIndividual ;
+  owl:disjointWith dm:ClassOfClassification ;
+  owl:disjointWith dm:ClassOfCompositionOfIndividual ;
+  owl:disjointWith dm:ClassOfConnectionOfIndividual ;
+  owl:disjointWith dm:ClassOfFunctionalMapping ;
+  owl:disjointWith dm:ClassOfIndirectProperty ;
+  owl:disjointWith dm:ClassOfIndividualUsedInConnection ;
+  owl:disjointWith dm:ClassOfIntendedRoleAndDomain ;
+  owl:disjointWith dm:ClassOfInvolvementByReference ;
+  owl:disjointWith dm:ClassOfLifecycleStage ;
+  owl:disjointWith dm:ClassOfPossibleRoleAndDomain ;
+  owl:disjointWith dm:ClassOfRecognition ;
+  owl:disjointWith dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:ClassOfRelativeLocation ;
+  owl:disjointWith dm:ClassOfRepresentationOfThing ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfApprovalByStatus
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  owl:disjointWith dm:ClassOfAssertion ;
+  owl:disjointWith dm:ClassOfCauseOfBeginningOfClassOfIndividual ;
+  owl:disjointWith dm:ClassOfCauseOfEndingOfClassOfIndividual ;
+  owl:disjointWith dm:ClassOfClassification ;
+  owl:disjointWith dm:ClassOfCompositionOfIndividual ;
+  owl:disjointWith dm:ClassOfConnectionOfIndividual ;
+  owl:disjointWith dm:ClassOfFunctionalMapping ;
+  owl:disjointWith dm:ClassOfIndirectProperty ;
+  owl:disjointWith dm:ClassOfIndividualUsedInConnection ;
+  owl:disjointWith dm:ClassOfIntendedRoleAndDomain ;
+  owl:disjointWith dm:ClassOfInvolvementByReference ;
+  owl:disjointWith dm:ClassOfLifecycleStage ;
+  owl:disjointWith dm:ClassOfPossibleRoleAndDomain ;
+  owl:disjointWith dm:ClassOfRecognition ;
+  owl:disjointWith dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:ClassOfRelativeLocation ;
+  owl:disjointWith dm:ClassOfRepresentationOfThing ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfArrangedIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfIndividual ;
+  owl:disjointWith dm:ClassOfPeriodInTime ;
+  owl:disjointWith dm:IndividualDimension ;
+  owl:disjointWith dm:Property ;
+  owl:disjointWith dm:Status ;
+.
+dm:ClassOfArrangementOfIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfCompositionOfIndividual ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfArrangedIndividual ;
+      owl:onProperty dm:hasClassOfWhole ;
+    ] ;
+  owl:disjointWith dm:ClassOfParticipation ;
+  owl:disjointWith dm:ClassOfTemporalWholePart ;
+.
+dm:ClassOfAssemblyOfIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangementOfIndividual ;
+  owl:disjointWith dm:Namespace ;
+.
+dm:ClassOfAssertion
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  owl:disjointWith dm:ClassOfPossibleRoleAndDomain ;
+  owl:disjointWith dm:ClassOfRecognition ;
+  owl:disjointWith dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:ClassOfRelativeLocation ;
+  owl:disjointWith dm:ClassOfRepresentationOfThing ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfAtom
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangedIndividual ;
+  owl:disjointWith dm:ClassOfBiologicalMatter ;
+  owl:disjointWith dm:ClassOfCompositeMaterial ;
+  owl:disjointWith dm:ClassOfCompound ;
+  owl:disjointWith dm:ClassOfFunctionalObject ;
+  owl:disjointWith dm:ClassOfInformationPresentation ;
+  owl:disjointWith dm:ClassOfInformationRepresentation ;
+  owl:disjointWith dm:ClassOfMolecule ;
+  owl:disjointWith dm:ClassOfParticulateMaterial ;
+  owl:disjointWith dm:ClassOfSubAtomicParticle ;
+  owl:disjointWith dm:CrystallineStructure ;
+  owl:disjointWith dm:Phase ;
+.
+dm:ClassOfBiologicalMatter
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangedIndividual ;
+  owl:disjointWith dm:ClassOfCompositeMaterial ;
+  owl:disjointWith dm:ClassOfCompound ;
+  owl:disjointWith dm:ClassOfFunctionalObject ;
+  owl:disjointWith dm:ClassOfInformationPresentation ;
+  owl:disjointWith dm:ClassOfInformationRepresentation ;
+  owl:disjointWith dm:ClassOfMolecule ;
+  owl:disjointWith dm:ClassOfParticulateMaterial ;
+  owl:disjointWith dm:ClassOfSubAtomicParticle ;
+  owl:disjointWith dm:CrystallineStructure ;
+  owl:disjointWith dm:Phase ;
+.
+dm:ClassOfCauseOfBeginningOfClassOfIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfActivity ;
+      owl:onProperty dm:hasClassOfCauser ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfIndividual ;
+      owl:onProperty dm:hasClassOfBegun ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfBegun ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfCauser ;
+    ] ;
+  owl:disjointWith dm:ClassOfAssertion ;
+  owl:disjointWith dm:ClassOfCauseOfEndingOfClassOfIndividual ;
+  owl:disjointWith dm:ClassOfClassification ;
+  owl:disjointWith dm:ClassOfCompositionOfIndividual ;
+  owl:disjointWith dm:ClassOfConnectionOfIndividual ;
+  owl:disjointWith dm:ClassOfFunctionalMapping ;
+  owl:disjointWith dm:ClassOfIndirectProperty ;
+  owl:disjointWith dm:ClassOfIndividualUsedInConnection ;
+  owl:disjointWith dm:ClassOfIntendedRoleAndDomain ;
+  owl:disjointWith dm:ClassOfInvolvementByReference ;
+  owl:disjointWith dm:ClassOfLifecycleStage ;
+  owl:disjointWith dm:ClassOfPossibleRoleAndDomain ;
+  owl:disjointWith dm:ClassOfRecognition ;
+  owl:disjointWith dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:ClassOfRelativeLocation ;
+  owl:disjointWith dm:ClassOfRepresentationOfThing ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfCauseOfEndingOfClassOfIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfActivity ;
+      owl:onProperty dm:hasClassOfCauser ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfIndividual ;
+      owl:onProperty dm:hasClassOfEnded ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfCauser ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfEnded ;
+    ] ;
+  owl:disjointWith dm:ClassOfAssertion ;
+  owl:disjointWith dm:ClassOfClassification ;
+  owl:disjointWith dm:ClassOfCompositionOfIndividual ;
+  owl:disjointWith dm:ClassOfConnectionOfIndividual ;
+  owl:disjointWith dm:ClassOfFunctionalMapping ;
+  owl:disjointWith dm:ClassOfIndirectProperty ;
+  owl:disjointWith dm:ClassOfIndividualUsedInConnection ;
+  owl:disjointWith dm:ClassOfIntendedRoleAndDomain ;
+  owl:disjointWith dm:ClassOfInvolvementByReference ;
+  owl:disjointWith dm:ClassOfLifecycleStage ;
+  owl:disjointWith dm:ClassOfPossibleRoleAndDomain ;
+  owl:disjointWith dm:ClassOfRecognition ;
+  owl:disjointWith dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:ClassOfRelativeLocation ;
+  owl:disjointWith dm:ClassOfRepresentationOfThing ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfClass
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfAbstractObject ;
+.
+dm:ClassOfClassOfComposition
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfClassOfIndividual ;
+      owl:onProperty dm:hasClassOfClassOfPart ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfClassOfIndividual ;
+      owl:onProperty dm:hasClassOfClassOfWhole ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfClassOfPart ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfClassOfWhole ;
+    ] ;
+  owl:disjointWith dm:ClassOfClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:ClassOfClassOfRepresentation ;
+  owl:disjointWith dm:ClassOfClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:ClassOfDimensionForShape ;
+  owl:disjointWith dm:ClassOfNamespace ;
+  owl:disjointWith dm:ClassOfScale ;
+  owl:disjointWith dm:DimensionOfShape ;
+  owl:disjointWith dm:PropertySpaceForClassOfShapeDimension ;
+.
+dm:ClassOfClassOfDefinition
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfRepresentation ;
+.
+dm:ClassOfClassOfDescription
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfRepresentation ;
+.
+dm:ClassOfClassOfIdentification
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfRepresentation ;
+.
+dm:ClassOfClassOfIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClass ;
+  owl:disjointWith dm:ClassOfClassOfRelationship ;
+  owl:disjointWith dm:ClassOfNumber ;
+  owl:disjointWith dm:ClassOfPropertySpace ;
+  owl:disjointWith dm:ClassOfShapeDimension ;
+.
+dm:ClassOfClassOfInformationRepresentation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfIndividual ;
+  owl:disjointWith dm:ClassOfProperty ;
+  owl:disjointWith dm:ClassOfStatus ;
+  owl:disjointWith dm:ShapeDimension ;
+.
+dm:ClassOfClassOfRelationship
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClass ;
+  owl:disjointWith dm:ClassOfNumber ;
+  owl:disjointWith dm:ClassOfPropertySpace ;
+  owl:disjointWith dm:ClassOfShapeDimension ;
+.
+dm:ClassOfClassOfRelationshipWithSignature
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfRelationship ;
+  rdfs:subClassOf dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:ClassOfClassOfRepresentation ;
+  owl:disjointWith dm:ClassOfClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:ClassOfDimensionForShape ;
+  owl:disjointWith dm:ClassOfNamespace ;
+  owl:disjointWith dm:ClassOfScale ;
+  owl:disjointWith dm:DimensionOfShape ;
+  owl:disjointWith dm:PropertySpaceForClassOfShapeDimension ;
+.
+dm:ClassOfClassOfRepresentation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Class ;
+      owl:onProperty dm:hasClassOfRepresented ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfClassOfInformationRepresentation ;
+      owl:onProperty dm:hasClassOfPattern ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfPattern ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfRepresented ;
+    ] ;
+  owl:disjointWith dm:ClassOfClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:ClassOfDimensionForShape ;
+  owl:disjointWith dm:ClassOfNamespace ;
+  owl:disjointWith dm:ClassOfScale ;
+  owl:disjointWith dm:DimensionOfShape ;
+  owl:disjointWith dm:PropertySpaceForClassOfShapeDimension ;
+.
+dm:ClassOfClassOfRepresentationTranslation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfClassOfInformationRepresentation ;
+      owl:onProperty dm:hasClassOfFirst ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfClassOfInformationRepresentation ;
+      owl:onProperty dm:hasClassOfSecond ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfFirst ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfSecond ;
+    ] ;
+  owl:disjointWith dm:ClassOfClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:ClassOfDimensionForShape ;
+  owl:disjointWith dm:ClassOfNamespace ;
+  owl:disjointWith dm:ClassOfScale ;
+  owl:disjointWith dm:DimensionOfShape ;
+  owl:disjointWith dm:PropertySpaceForClassOfShapeDimension ;
+.
+dm:ClassOfClassOfResponsibilityForRepresentation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfClassOfRepresentation ;
+      owl:onProperty dm:hasClassOfClassOfControlled ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasController ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfClassOfControlled ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasController ;
+    ] ;
+  owl:disjointWith dm:ClassOfClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:ClassOfDimensionForShape ;
+  owl:disjointWith dm:ClassOfNamespace ;
+  owl:disjointWith dm:ClassOfScale ;
+  owl:disjointWith dm:DimensionOfShape ;
+  owl:disjointWith dm:PropertySpaceForClassOfShapeDimension ;
+.
+dm:ClassOfClassOfUsageOfRepresentation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfClassOfRepresentation ;
+      owl:onProperty dm:hasClassOfClassOfUsed ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasUser ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfClassOfUsed ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasUser ;
+    ] ;
+  owl:disjointWith dm:ClassOfDimensionForShape ;
+  owl:disjointWith dm:ClassOfNamespace ;
+  owl:disjointWith dm:ClassOfScale ;
+  owl:disjointWith dm:DimensionOfShape ;
+  owl:disjointWith dm:PropertySpaceForClassOfShapeDimension ;
+.
+dm:ClassOfClassification
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Class ;
+      owl:onProperty dm:hasClassOfClassified ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfClass ;
+      owl:onProperty dm:hasClassOfClassifier ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfClassified ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfClassifier ;
+    ] ;
+  owl:disjointWith dm:ClassOfAssertion ;
+  owl:disjointWith dm:ClassOfCompositionOfIndividual ;
+  owl:disjointWith dm:ClassOfConnectionOfIndividual ;
+  owl:disjointWith dm:ClassOfFunctionalMapping ;
+  owl:disjointWith dm:ClassOfIndirectProperty ;
+  owl:disjointWith dm:ClassOfIndividualUsedInConnection ;
+  owl:disjointWith dm:ClassOfIntendedRoleAndDomain ;
+  owl:disjointWith dm:ClassOfInvolvementByReference ;
+  owl:disjointWith dm:ClassOfLifecycleStage ;
+  owl:disjointWith dm:ClassOfPossibleRoleAndDomain ;
+  owl:disjointWith dm:ClassOfRecognition ;
+  owl:disjointWith dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:ClassOfRelativeLocation ;
+  owl:disjointWith dm:ClassOfRepresentationOfThing ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfCompositeMaterial
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangedIndividual ;
+  owl:disjointWith dm:ClassOfCompound ;
+  owl:disjointWith dm:ClassOfFunctionalObject ;
+  owl:disjointWith dm:ClassOfInformationPresentation ;
+  owl:disjointWith dm:ClassOfInformationRepresentation ;
+  owl:disjointWith dm:ClassOfMolecule ;
+  owl:disjointWith dm:ClassOfParticulateMaterial ;
+  owl:disjointWith dm:ClassOfSubAtomicParticle ;
+  owl:disjointWith dm:CrystallineStructure ;
+  owl:disjointWith dm:Phase ;
+.
+dm:ClassOfCompositionOfIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfIndividual ;
+      owl:onProperty dm:hasClassOfPart ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfIndividual ;
+      owl:onProperty dm:hasClassOfWhole ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfPart ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfWhole ;
+    ] ;
+  owl:disjointWith dm:ClassOfAssertion ;
+  owl:disjointWith dm:ClassOfConnectionOfIndividual ;
+  owl:disjointWith dm:ClassOfFunctionalMapping ;
+  owl:disjointWith dm:ClassOfIndirectProperty ;
+  owl:disjointWith dm:ClassOfIndividualUsedInConnection ;
+  owl:disjointWith dm:ClassOfIntendedRoleAndDomain ;
+  owl:disjointWith dm:ClassOfInvolvementByReference ;
+  owl:disjointWith dm:ClassOfLifecycleStage ;
+  owl:disjointWith dm:ClassOfPossibleRoleAndDomain ;
+  owl:disjointWith dm:ClassOfRecognition ;
+  owl:disjointWith dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:ClassOfRelativeLocation ;
+  owl:disjointWith dm:ClassOfRepresentationOfThing ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfCompound
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangedIndividual ;
+  owl:disjointWith dm:ClassOfFunctionalObject ;
+  owl:disjointWith dm:ClassOfInformationPresentation ;
+  owl:disjointWith dm:ClassOfInformationRepresentation ;
+  owl:disjointWith dm:ClassOfMolecule ;
+  owl:disjointWith dm:ClassOfParticulateMaterial ;
+  owl:disjointWith dm:ClassOfSubAtomicParticle ;
+  owl:disjointWith dm:CrystallineStructure ;
+  owl:disjointWith dm:Phase ;
+.
+dm:ClassOfConnectionOfIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfIndividual ;
+      owl:onProperty dm:hasClassOfSide1 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfIndividual ;
+      owl:onProperty dm:hasClassOfSide2 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfSide1 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfSide2 ;
+    ] ;
+  owl:disjointWith dm:ClassOfAssertion ;
+  owl:disjointWith dm:ClassOfFunctionalMapping ;
+  owl:disjointWith dm:ClassOfIndirectProperty ;
+  owl:disjointWith dm:ClassOfIndividualUsedInConnection ;
+  owl:disjointWith dm:ClassOfIntendedRoleAndDomain ;
+  owl:disjointWith dm:ClassOfInvolvementByReference ;
+  owl:disjointWith dm:ClassOfLifecycleStage ;
+  owl:disjointWith dm:ClassOfPossibleRoleAndDomain ;
+  owl:disjointWith dm:ClassOfRecognition ;
+  owl:disjointWith dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:ClassOfRelativeLocation ;
+  owl:disjointWith dm:ClassOfRepresentationOfThing ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:ClassOfDirectConnection
+          dm:ClassOfIndirectConnection
+        ) ;
+    ] ;
+.
+dm:ClassOfContainmentOfIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelativeLocation ;
+.
+dm:ClassOfDefinition
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRepresentationOfThing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Class ;
+      owl:onProperty dm:hasRepresented ;
+    ] ;
+.
+dm:ClassOfDescription
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRepresentationOfThing ;
+.
+dm:ClassOfDimensionForShape
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfShape ;
+      owl:onProperty dm:hasClassOfShape ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfShapeDimension ;
+      owl:onProperty dm:hasClassOfDimension ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfDimension ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfShape ;
+    ] ;
+  owl:disjointWith dm:ClassOfNamespace ;
+  owl:disjointWith dm:ClassOfScale ;
+  owl:disjointWith dm:DimensionOfShape ;
+  owl:disjointWith dm:PropertySpaceForClassOfShapeDimension ;
+.
+dm:ClassOfDirectConnection
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfConnectionOfIndividual ;
+  owl:disjointWith dm:ClassOfIndirectConnection ;
+.
+dm:ClassOfEvent
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfIndividual ;
+  owl:disjointWith dm:ClassOfArrangedIndividual ;
+  owl:disjointWith dm:ClassOfPeriodInTime ;
+  owl:disjointWith dm:IndividualDimension ;
+  owl:disjointWith dm:Property ;
+  owl:disjointWith dm:Status ;
+.
+dm:ClassOfExpressInformationRepresentation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfInformationRepresentation ;
+  owl:disjointWith dm:RepresentationOfGregorianDateAndUtcTime ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:ExpressBinary
+          dm:ExpressBoolean
+          dm:ExpressInteger
+          dm:ExpressLogical
+          dm:ExpressReal
+          dm:ExpressString
+        ) ;
+    ] ;
+.
+dm:ClassOfFeature
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangedIndividual ;
+.
+dm:ClassOfFeatureWholePart
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangementOfIndividual ;
+  owl:disjointWith dm:ClassOfAssemblyOfIndividual ;
+  owl:disjointWith dm:Namespace ;
+.
+dm:ClassOfFunctionalMapping
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Class ;
+      owl:onProperty dm:hasCodomain ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Class ;
+      owl:onProperty dm:hasDomain ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasCodomain ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasDomain ;
+    ] ;
+  owl:disjointWith dm:ClassOfAssertion ;
+  owl:disjointWith dm:ClassOfIndirectProperty ;
+  owl:disjointWith dm:ClassOfIndividualUsedInConnection ;
+  owl:disjointWith dm:ClassOfIntendedRoleAndDomain ;
+  owl:disjointWith dm:ClassOfInvolvementByReference ;
+  owl:disjointWith dm:ClassOfLifecycleStage ;
+  owl:disjointWith dm:ClassOfPossibleRoleAndDomain ;
+  owl:disjointWith dm:ClassOfRecognition ;
+  owl:disjointWith dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:ClassOfRelativeLocation ;
+  owl:disjointWith dm:ClassOfRepresentationOfThing ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfFunctionalObject
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangedIndividual ;
+  owl:disjointWith dm:ClassOfInformationPresentation ;
+  owl:disjointWith dm:ClassOfInformationRepresentation ;
+  owl:disjointWith dm:ClassOfMolecule ;
+  owl:disjointWith dm:ClassOfParticulateMaterial ;
+  owl:disjointWith dm:ClassOfSubAtomicParticle ;
+  owl:disjointWith dm:CrystallineStructure ;
+  owl:disjointWith dm:Phase ;
+.
+dm:ClassOfIdentification
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRepresentationOfThing ;
+.
+dm:ClassOfInanimatePhysicalObject
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangedIndividual ;
+.
+dm:ClassOfIndirectConnection
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfConnectionOfIndividual ;
+.
+dm:ClassOfIndirectProperty
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfIndividual ;
+      owl:onProperty dm:hasClassOfPossessor ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PropertySpace ;
+      owl:onProperty dm:hasPropertySpace ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfPossessor ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasPropertySpace ;
+    ] ;
+  owl:disjointWith dm:ClassOfAssertion ;
+  owl:disjointWith dm:ClassOfIndividualUsedInConnection ;
+  owl:disjointWith dm:ClassOfIntendedRoleAndDomain ;
+  owl:disjointWith dm:ClassOfInvolvementByReference ;
+  owl:disjointWith dm:ClassOfLifecycleStage ;
+  owl:disjointWith dm:ClassOfPossibleRoleAndDomain ;
+  owl:disjointWith dm:ClassOfRecognition ;
+  owl:disjointWith dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:ClassOfRelativeLocation ;
+  owl:disjointWith dm:ClassOfRepresentationOfThing ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Class ;
+  owl:disjointWith dm:ClassOfAbstractObject ;
+.
+dm:ClassOfIndividualUsedInConnection
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfConnectionOfIndividual ;
+      owl:onProperty dm:hasClassOfConnection ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfIndividual ;
+      owl:onProperty dm:hasClassOfUsage ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfConnection ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfUsage ;
+    ] ;
+  owl:disjointWith dm:ClassOfAssertion ;
+  owl:disjointWith dm:ClassOfIntendedRoleAndDomain ;
+  owl:disjointWith dm:ClassOfInvolvementByReference ;
+  owl:disjointWith dm:ClassOfLifecycleStage ;
+  owl:disjointWith dm:ClassOfPossibleRoleAndDomain ;
+  owl:disjointWith dm:ClassOfRecognition ;
+  owl:disjointWith dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:ClassOfRelativeLocation ;
+  owl:disjointWith dm:ClassOfRepresentationOfThing ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfInformationObject
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangedIndividual ;
+.
+dm:ClassOfInformationPresentation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangedIndividual ;
+  owl:disjointWith dm:ClassOfInformationRepresentation ;
+  owl:disjointWith dm:ClassOfMolecule ;
+  owl:disjointWith dm:ClassOfParticulateMaterial ;
+  owl:disjointWith dm:ClassOfSubAtomicParticle ;
+  owl:disjointWith dm:CrystallineStructure ;
+  owl:disjointWith dm:Phase ;
+.
+dm:ClassOfInformationRepresentation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangedIndividual ;
+  owl:disjointWith dm:ClassOfMolecule ;
+  owl:disjointWith dm:ClassOfParticulateMaterial ;
+  owl:disjointWith dm:ClassOfSubAtomicParticle ;
+  owl:disjointWith dm:CrystallineStructure ;
+  owl:disjointWith dm:Phase ;
+.
+dm:ClassOfIntendedRoleAndDomain
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfIndividual ;
+      owl:onProperty dm:hasClassOfPlayer ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:RoleAndDomain ;
+      owl:onProperty dm:hasPlayed ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfPlayer ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasPlayed ;
+    ] ;
+  owl:disjointWith dm:ClassOfAssertion ;
+  owl:disjointWith dm:ClassOfInvolvementByReference ;
+  owl:disjointWith dm:ClassOfLifecycleStage ;
+  owl:disjointWith dm:ClassOfPossibleRoleAndDomain ;
+  owl:disjointWith dm:ClassOfRecognition ;
+  owl:disjointWith dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:ClassOfRelativeLocation ;
+  owl:disjointWith dm:ClassOfRepresentationOfThing ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfInvolvementByReference
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfActivity ;
+      owl:onProperty dm:hasClassOfInvolver ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:RoleAndDomain ;
+      owl:onProperty dm:hasClassOfInvolved ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfInvolved ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfInvolver ;
+    ] ;
+  owl:disjointWith dm:ClassOfAssertion ;
+  owl:disjointWith dm:ClassOfLifecycleStage ;
+  owl:disjointWith dm:ClassOfPossibleRoleAndDomain ;
+  owl:disjointWith dm:ClassOfRecognition ;
+  owl:disjointWith dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:ClassOfRelativeLocation ;
+  owl:disjointWith dm:ClassOfRepresentationOfThing ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfIsomorphicFunctionalMapping
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfFunctionalMapping ;
+.
+dm:ClassOfLeftNamespace
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfNamespace ;
+  owl:disjointWith dm:ClassOfRightNamespace ;
+.
+dm:ClassOfLifecycleStage
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  owl:disjointWith dm:ClassOfAssertion ;
+  owl:disjointWith dm:ClassOfPossibleRoleAndDomain ;
+  owl:disjointWith dm:ClassOfRecognition ;
+  owl:disjointWith dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:ClassOfRelativeLocation ;
+  owl:disjointWith dm:ClassOfRepresentationOfThing ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfMolecule
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangedIndividual ;
+  owl:disjointWith dm:ClassOfParticulateMaterial ;
+  owl:disjointWith dm:ClassOfSubAtomicParticle ;
+  owl:disjointWith dm:CrystallineStructure ;
+  owl:disjointWith dm:Phase ;
+.
+dm:ClassOfMultidimensionalObject
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfAbstractObject ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:Class ;
+          owl:intersectionOf (
+              list:OWLList
+              [
+                rdf:type owl:Restriction ;
+                owl:allValuesFrom dm:Cardinality ;
+                owl:onProperty list:hasContents ;
+              ]
+              [
+                rdf:type owl:Restriction ;
+                owl:allValuesFrom [
+                    rdf:type owl:Class ;
+                    owl:intersectionOf (
+                        list:OWLList
+                        [
+                          rdf:type owl:Restriction ;
+                          owl:allValuesFrom dm:Cardinality ;
+                          owl:onProperty list:hasContents ;
+                        ]
+                      ) ;
+                  ] ;
+                owl:onProperty list:isFollowedBy ;
+              ]
+            ) ;
+        ] ;
+      owl:onProperty dm:hasCardinalities ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:Class ;
+          owl:intersectionOf (
+              list:OWLList
+              [
+                rdf:type owl:Restriction ;
+                owl:allValuesFrom dm:ExpressBoolean ;
+                owl:onProperty list:hasContents ;
+              ]
+              [
+                rdf:type owl:Restriction ;
+                owl:allValuesFrom [
+                    rdf:type owl:Class ;
+                    owl:intersectionOf (
+                        list:OWLList
+                        [
+                          rdf:type owl:Restriction ;
+                          owl:allValuesFrom dm:ExpressBoolean ;
+                          owl:onProperty list:hasContents ;
+                        ]
+                      ) ;
+                  ] ;
+                owl:onProperty list:isFollowedBy ;
+              ]
+            ) ;
+        ] ;
+      owl:onProperty dm:hasOptionalElement ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:Class ;
+          owl:intersectionOf (
+              list:OWLList
+              [
+                rdf:type owl:Restriction ;
+                owl:allValuesFrom dm:ExpressInteger ;
+                owl:onProperty list:hasContents ;
+              ]
+              [
+                rdf:type owl:Restriction ;
+                owl:allValuesFrom [
+                    rdf:type owl:Class ;
+                    owl:intersectionOf (
+                        list:OWLList
+                        [
+                          rdf:type owl:Restriction ;
+                          owl:allValuesFrom dm:ExpressInteger ;
+                          owl:onProperty list:hasContents ;
+                        ]
+                      ) ;
+                  ] ;
+                owl:onProperty list:isFollowedBy ;
+              ]
+            ) ;
+        ] ;
+      owl:onProperty dm:hasParameterPosition ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:Class ;
+          owl:intersectionOf (
+              list:OWLList
+              [
+                rdf:type owl:Restriction ;
+                owl:allValuesFrom dm:RoleAndDomain ;
+                owl:onProperty list:hasContents ;
+              ]
+              [
+                rdf:type owl:Restriction ;
+                owl:allValuesFrom [
+                    rdf:type owl:Class ;
+                    owl:intersectionOf (
+                        list:OWLList
+                        [
+                          rdf:type owl:Restriction ;
+                          owl:allValuesFrom dm:RoleAndDomain ;
+                          owl:onProperty list:hasContents ;
+                        ]
+                      ) ;
+                  ] ;
+                owl:onProperty list:isFollowedBy ;
+              ]
+            ) ;
+        ] ;
+      owl:onProperty dm:hasRoles ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:Class ;
+          owl:intersectionOf (
+              list:OWLList
+              [
+                rdf:type owl:Restriction ;
+                owl:allValuesFrom dm:Thing ;
+                owl:onProperty list:hasContents ;
+              ]
+              [
+                rdf:type owl:Restriction ;
+                owl:allValuesFrom [
+                    rdf:type owl:Class ;
+                    owl:intersectionOf (
+                        list:OWLList
+                        [
+                          rdf:type owl:Restriction ;
+                          owl:allValuesFrom dm:Thing ;
+                          owl:onProperty list:hasContents ;
+                        ]
+                      ) ;
+                  ] ;
+                owl:onProperty list:isFollowedBy ;
+              ]
+            ) ;
+        ] ;
+      owl:onProperty dm:hasParameters ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasOptionalElement ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasRoles ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasCardinalities ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasParameterPosition ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasParameters ;
+    ] ;
+.
+dm:ClassOfNamespace
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfClassOfInformationRepresentation ;
+      owl:onProperty dm:hasClassOfClassOfWhole ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfInformationRepresentation ;
+      owl:onProperty dm:hasClassOfPart ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfClassOfWhole ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfPart ;
+    ] ;
+  owl:disjointWith dm:ClassOfScale ;
+  owl:disjointWith dm:DimensionOfShape ;
+  owl:disjointWith dm:PropertySpaceForClassOfShapeDimension ;
+.
+dm:ClassOfNumber
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClass ;
+  owl:disjointWith dm:ClassOfPropertySpace ;
+  owl:disjointWith dm:ClassOfShapeDimension ;
+.
+dm:ClassOfOrganism
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangedIndividual ;
+  owl:disjointWith dm:ClassOfInanimatePhysicalObject ;
+.
+dm:ClassOfOrganization
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangedIndividual ;
+.
+dm:ClassOfParticipation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfCompositionOfIndividual ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfActivity ;
+      owl:onProperty dm:hasClassOfWhole ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ParticipatingRoleAndDomain ;
+      owl:onProperty dm:hasClassOfPart ;
+    ] ;
+.
+dm:ClassOfParticulateMaterial
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangedIndividual ;
+  owl:disjointWith dm:ClassOfSubAtomicParticle ;
+  owl:disjointWith dm:CrystallineStructure ;
+  owl:disjointWith dm:Phase ;
+.
+dm:ClassOfPeriodInTime
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfIndividual ;
+  owl:disjointWith dm:IndividualDimension ;
+  owl:disjointWith dm:Property ;
+  owl:disjointWith dm:Status ;
+.
+dm:ClassOfPerson
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfOrganism ;
+.
+dm:ClassOfPointInTime
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfEvent ;
+.
+dm:ClassOfPossibleRoleAndDomain
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfIndividual ;
+      owl:onProperty dm:hasClassOfPlayer ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:RoleAndDomain ;
+      owl:onProperty dm:hasPlayed ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfPlayer ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasPlayed ;
+    ] ;
+  owl:disjointWith dm:ClassOfRecognition ;
+  owl:disjointWith dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:ClassOfRelativeLocation ;
+  owl:disjointWith dm:ClassOfRepresentationOfThing ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfProperty
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfIndividual ;
+  owl:disjointWith dm:ClassOfStatus ;
+  owl:disjointWith dm:ShapeDimension ;
+.
+dm:ClassOfPropertySpace
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClass ;
+  owl:disjointWith dm:ClassOfShapeDimension ;
+.
+dm:ClassOfRecognition
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Class ;
+      owl:onProperty dm:hasClassOfRecognized ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfActivity ;
+      owl:onProperty dm:hasClassOfRecognizing ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfRecognized ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfRecognizing ;
+    ] ;
+  owl:disjointWith dm:ClassOfRelationshipWithSignature ;
+  owl:disjointWith dm:ClassOfRelativeLocation ;
+  owl:disjointWith dm:ClassOfRepresentationOfThing ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfRelationship
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfAbstractObject ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Cardinality ;
+      owl:onProperty dm:hasEnd1Cardinality ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Cardinality ;
+      owl:onProperty dm:hasEnd2Cardinality ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasEnd1Cardinality ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasEnd2Cardinality ;
+    ] ;
+.
+dm:ClassOfRelationshipWithRelatedEnd1
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Thing ;
+      owl:onProperty dm:hasRelated ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasRelated ;
+    ] ;
+  owl:disjointWith dm:ClassOfRelationshipWithRelatedEnd2 ;
+.
+dm:ClassOfRelationshipWithRelatedEnd2
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Thing ;
+      owl:onProperty dm:hasRelated ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasRelated ;
+    ] ;
+.
+dm:ClassOfRelationshipWithSignature
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:RoleAndDomain ;
+      owl:onProperty dm:hasClassOfEnd1 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:RoleAndDomain ;
+      owl:onProperty dm:hasClassOfEnd2 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfEnd1 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfEnd2 ;
+    ] ;
+  owl:disjointWith dm:ClassOfRelativeLocation ;
+  owl:disjointWith dm:ClassOfRepresentationOfThing ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:Classification ;
+  owl:disjointWith dm:ComparisonOfProperty ;
+  owl:disjointWith dm:CompositionOfIndividual ;
+  owl:disjointWith dm:ConnectionOfIndividual ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:FunctionalMapping ;
+  owl:disjointWith dm:IndirectProperty ;
+  owl:disjointWith dm:IndividualUsedInConnection ;
+  owl:disjointWith dm:IntendedRoleAndDomain ;
+  owl:disjointWith dm:InvolvementByReference ;
+  owl:disjointWith dm:LifecycleStage ;
+  owl:disjointWith dm:OtherRelationship ;
+  owl:disjointWith dm:PossibleRoleAndDomain ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+  owl:disjointWith dm:Recognition ;
+  owl:disjointWith dm:RelativeLocation ;
+  owl:disjointWith dm:RepresentationOfThing ;
+  owl:disjointWith dm:ResponsibilityForRepresentation ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:ClassOfRelativeLocation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfIndividual ;
+      owl:onProperty dm:hasClassOfLocated ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfIndividual ;
+      owl:onProperty dm:hasClassOfLocator ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfLocated ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfLocator ;
+    ] ;
+  owl:disjointWith dm:ClassOfRepresentationOfThing ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfRepresentationOfThing
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfInformationRepresentation ;
+      owl:onProperty dm:hasPattern ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Thing ;
+      owl:onProperty dm:hasRepresented ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasPattern ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasRepresented ;
+    ] ;
+  owl:disjointWith dm:ClassOfRepresentationTranslation ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfRepresentationTranslation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfInformationRepresentation ;
+      owl:onProperty dm:hasClassOfFirst ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfInformationRepresentation ;
+      owl:onProperty dm:hasClassOfSecond ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfFirst ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfSecond ;
+    ] ;
+  owl:disjointWith dm:ClassOfResponsibilityForRepresentation ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfResponsibilityForRepresentation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfRepresentationOfThing ;
+      owl:onProperty dm:hasClassOfControlled ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasController ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfControlled ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasController ;
+    ] ;
+  owl:disjointWith dm:ClassOfSpecialization ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfRightNamespace
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfNamespace ;
+.
+dm:ClassOfScale
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfRelationship ;
+  owl:disjointWith dm:DimensionOfShape ;
+  owl:disjointWith dm:PropertySpaceForClassOfShapeDimension ;
+.
+dm:ClassOfScaleConversion
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfIsomorphicFunctionalMapping ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Scale ;
+      owl:onProperty dm:hasCodomain ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Scale ;
+      owl:onProperty dm:hasDomain ;
+    ] ;
+.
+dm:ClassOfShape
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:PropertySpace ;
+.
+dm:ClassOfShapeDimension
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClass ;
+.
+dm:ClassOfSpecialization
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfClass ;
+      owl:onProperty dm:hasClassOfSubclass ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfClass ;
+      owl:onProperty dm:hasClassOfSuperclass ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfSubclass ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfSuperclass ;
+    ] ;
+  owl:disjointWith dm:ClassOfTemporalSequence ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfStatus
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfIndividual ;
+  owl:disjointWith dm:ShapeDimension ;
+.
+dm:ClassOfSubAtomicParticle
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangedIndividual ;
+  owl:disjointWith dm:CrystallineStructure ;
+  owl:disjointWith dm:Phase ;
+.
+dm:ClassOfTemporalSequence
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfIndividual ;
+      owl:onProperty dm:hasClassOfPredecessor ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfIndividual ;
+      owl:onProperty dm:hasClassOfSuccessor ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfPredecessor ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfSuccessor ;
+    ] ;
+  owl:disjointWith dm:ClassOfUsageOfRepresentation ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:ClassOfTemporalWholePart
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfCompositionOfIndividual ;
+  owl:disjointWith dm:ClassOfParticipation ;
+.
+dm:ClassOfUsageOfRepresentation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfRepresentationOfThing ;
+      owl:onProperty dm:hasClassOfUsed ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasUser ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfUsed ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasUser ;
+    ] ;
+  owl:disjointWith dm:DimensionOfIndividual ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:Classification
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Class ;
+      owl:onProperty dm:hasClassifier ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Thing ;
+      owl:onProperty dm:hasClassified ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassified ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassifier ;
+    ] ;
+  owl:disjointWith dm:ComparisonOfProperty ;
+  owl:disjointWith dm:CompositionOfIndividual ;
+  owl:disjointWith dm:ConnectionOfIndividual ;
+  owl:disjointWith dm:FunctionalMapping ;
+  owl:disjointWith dm:IndirectProperty ;
+  owl:disjointWith dm:IndividualUsedInConnection ;
+  owl:disjointWith dm:IntendedRoleAndDomain ;
+  owl:disjointWith dm:InvolvementByReference ;
+  owl:disjointWith dm:LifecycleStage ;
+  owl:disjointWith dm:OtherRelationship ;
+  owl:disjointWith dm:PossibleRoleAndDomain ;
+  owl:disjointWith dm:Recognition ;
+  owl:disjointWith dm:RelativeLocation ;
+  owl:disjointWith dm:RepresentationOfThing ;
+  owl:disjointWith dm:ResponsibilityForRepresentation ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:ComparisonOfProperty
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Property ;
+      owl:onProperty dm:hasGreaterElement ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Property ;
+      owl:onProperty dm:hasLesserElement ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasGreaterElement ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasLesserElement ;
+    ] ;
+  owl:disjointWith dm:CompositionOfIndividual ;
+  owl:disjointWith dm:ConnectionOfIndividual ;
+  owl:disjointWith dm:FunctionalMapping ;
+  owl:disjointWith dm:IndirectProperty ;
+  owl:disjointWith dm:IndividualUsedInConnection ;
+  owl:disjointWith dm:IntendedRoleAndDomain ;
+  owl:disjointWith dm:InvolvementByReference ;
+  owl:disjointWith dm:LifecycleStage ;
+  owl:disjointWith dm:OtherRelationship ;
+  owl:disjointWith dm:PossibleRoleAndDomain ;
+  owl:disjointWith dm:Recognition ;
+  owl:disjointWith dm:RelativeLocation ;
+  owl:disjointWith dm:RepresentationOfThing ;
+  owl:disjointWith dm:ResponsibilityForRepresentation ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:CompositionOfIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasWhole ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasPart ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasWhole ;
+    ] ;
+  owl:disjointWith dm:ConnectionOfIndividual ;
+  owl:disjointWith dm:FunctionalMapping ;
+  owl:disjointWith dm:IndirectProperty ;
+  owl:disjointWith dm:IndividualUsedInConnection ;
+  owl:disjointWith dm:IntendedRoleAndDomain ;
+  owl:disjointWith dm:InvolvementByReference ;
+  owl:disjointWith dm:LifecycleStage ;
+  owl:disjointWith dm:OtherRelationship ;
+  owl:disjointWith dm:PossibleRoleAndDomain ;
+  owl:disjointWith dm:Recognition ;
+  owl:disjointWith dm:RelativeLocation ;
+  owl:disjointWith dm:RepresentationOfThing ;
+  owl:disjointWith dm:ResponsibilityForRepresentation ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:ConnectionOfIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasSide1 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasSide2 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasSide1 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasSide2 ;
+    ] ;
+  owl:disjointWith dm:FunctionalMapping ;
+  owl:disjointWith dm:IndirectProperty ;
+  owl:disjointWith dm:IndividualUsedInConnection ;
+  owl:disjointWith dm:IntendedRoleAndDomain ;
+  owl:disjointWith dm:InvolvementByReference ;
+  owl:disjointWith dm:LifecycleStage ;
+  owl:disjointWith dm:OtherRelationship ;
+  owl:disjointWith dm:PossibleRoleAndDomain ;
+  owl:disjointWith dm:Recognition ;
+  owl:disjointWith dm:RelativeLocation ;
+  owl:disjointWith dm:RepresentationOfThing ;
+  owl:disjointWith dm:ResponsibilityForRepresentation ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:ContainmentOfIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:RelativeLocation ;
+.
+dm:CoordinateSystem
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:MultidimensionalScale ;
+.
+dm:CrystallineStructure
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangedIndividual ;
+  owl:disjointWith dm:Phase ;
+.
+dm:Definition
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:RepresentationOfThing ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Class ;
+      owl:onProperty dm:hasRepresented ;
+    ] ;
+.
+dm:Description
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:RepresentationOfThing ;
+.
+dm:DifferenceOfSetOfClass
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:FunctionalMapping ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Class ;
+      owl:onProperty dm:hasResult ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:EnumeratedSetOfClass ;
+      owl:onProperty dm:hasInput ;
+    ] ;
+.
+dm:DimensionOfIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:IndividualDimension ;
+      owl:onProperty dm:hasIndividualDimension ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasIndividual ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasIndividual ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasIndividualDimension ;
+    ] ;
+  owl:disjointWith dm:PropertyForShapeDimension ;
+.
+dm:DimensionOfShape
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Shape ;
+      owl:onProperty dm:hasShape ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ShapeDimension ;
+      owl:onProperty dm:hasDimension ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasDimension ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasShape ;
+    ] ;
+  owl:disjointWith dm:PropertySpaceForClassOfShapeDimension ;
+.
+dm:DirectConnection
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ConnectionOfIndividual ;
+  owl:disjointWith dm:IndirectConnection ;
+.
+dm:DocumentDefinition
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfInformationRepresentation ;
+.
+dm:Ending
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:TemporalBounding ;
+  owl:disjointWith dm:Beginning ;
+.
+dm:EnumeratedNumberSet
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfNumber ;
+  rdfs:subClassOf dm:EnumeratedSetOfClass ;
+.
+dm:EnumeratedPropertySet
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfProperty ;
+  rdfs:subClassOf dm:EnumeratedSetOfClass ;
+.
+dm:EnumeratedSetOfClass
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClass ;
+.
+dm:Event
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:PossibleIndividual ;
+.
+dm:ExpressBinary
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfExpressInformationRepresentation ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:hexBinary ;
+      owl:onProperty dm:hasContent ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasContent ;
+    ] ;
+.
+dm:ExpressBoolean
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfExpressInformationRepresentation ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:boolean ;
+      owl:onProperty dm:hasContent ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasContent ;
+    ] ;
+  owl:disjointWith dm:ExpressBinary ;
+.
+dm:ExpressInteger
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfExpressInformationRepresentation ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:long ;
+      owl:onProperty dm:hasContent ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasContent ;
+    ] ;
+  owl:disjointWith dm:ExpressBinary ;
+  owl:disjointWith dm:ExpressBoolean ;
+  owl:disjointWith dm:ExpressLogical ;
+  owl:disjointWith dm:ExpressReal ;
+.
+dm:ExpressLogical
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfExpressInformationRepresentation ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:DataRange ;
+          owl:oneOf (
+              "true"^^xsd:string
+              "false"^^xsd:string
+              "unknown"^^xsd:string
+            ) ;
+        ] ;
+      owl:onProperty dm:hasContent ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasContent ;
+    ] ;
+  owl:disjointWith dm:ExpressBinary ;
+  owl:disjointWith dm:ExpressBoolean ;
+.
+dm:ExpressReal
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfExpressInformationRepresentation ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:double ;
+      owl:onProperty dm:hasContent ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasContent ;
+    ] ;
+  owl:disjointWith dm:ExpressBinary ;
+  owl:disjointWith dm:ExpressBoolean ;
+  owl:disjointWith dm:ExpressLogical ;
+.
+dm:ExpressString
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfExpressInformationRepresentation ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:normalizedString ;
+      owl:onProperty dm:hasContent ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasContent ;
+    ] ;
+  owl:disjointWith dm:ExpressBinary ;
+  owl:disjointWith dm:ExpressBoolean ;
+  owl:disjointWith dm:ExpressInteger ;
+  owl:disjointWith dm:ExpressLogical ;
+  owl:disjointWith dm:ExpressReal ;
+.
+dm:FeatureWholePart
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ArrangementOfIndividual ;
+.
+dm:FunctionalMapping
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Thing ;
+      owl:onProperty dm:hasInput ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Thing ;
+      owl:onProperty dm:hasResult ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasInput ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasResult ;
+    ] ;
+  owl:disjointWith dm:IndirectProperty ;
+  owl:disjointWith dm:IndividualUsedInConnection ;
+  owl:disjointWith dm:IntendedRoleAndDomain ;
+  owl:disjointWith dm:InvolvementByReference ;
+  owl:disjointWith dm:LifecycleStage ;
+  owl:disjointWith dm:OtherRelationship ;
+  owl:disjointWith dm:PossibleRoleAndDomain ;
+  owl:disjointWith dm:Recognition ;
+  owl:disjointWith dm:RelativeLocation ;
+  owl:disjointWith dm:RepresentationOfThing ;
+  owl:disjointWith dm:ResponsibilityForRepresentation ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:FunctionalPhysicalObject
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:PhysicalObject ;
+.
+dm:Identification
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:RepresentationOfThing ;
+.
+dm:IndirectConnection
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ConnectionOfIndividual ;
+.
+dm:IndirectProperty
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasPossessor ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Property ;
+      owl:onProperty dm:hasProperty ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasPossessor ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasProperty ;
+    ] ;
+  owl:disjointWith dm:IndividualUsedInConnection ;
+  owl:disjointWith dm:IntendedRoleAndDomain ;
+  owl:disjointWith dm:InvolvementByReference ;
+  owl:disjointWith dm:LifecycleStage ;
+  owl:disjointWith dm:OtherRelationship ;
+  owl:disjointWith dm:PossibleRoleAndDomain ;
+  owl:disjointWith dm:Recognition ;
+  owl:disjointWith dm:RelativeLocation ;
+  owl:disjointWith dm:RepresentationOfThing ;
+  owl:disjointWith dm:ResponsibilityForRepresentation ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:IndividualDimension
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfIndividual ;
+  owl:disjointWith dm:Property ;
+  owl:disjointWith dm:Status ;
+.
+dm:IndividualUsedInConnection
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ConnectionOfIndividual ;
+      owl:onProperty dm:hasConnection ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasUsage ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasConnection ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasUsage ;
+    ] ;
+  owl:disjointWith dm:IntendedRoleAndDomain ;
+  owl:disjointWith dm:InvolvementByReference ;
+  owl:disjointWith dm:LifecycleStage ;
+  owl:disjointWith dm:OtherRelationship ;
+  owl:disjointWith dm:PossibleRoleAndDomain ;
+  owl:disjointWith dm:Recognition ;
+  owl:disjointWith dm:RelativeLocation ;
+  owl:disjointWith dm:RepresentationOfThing ;
+  owl:disjointWith dm:ResponsibilityForRepresentation ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:IntegerNumber
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ArithmeticNumber ;
+  owl:disjointWith dm:MultidimensionalNumber ;
+.
+dm:IntendedRoleAndDomain
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasPlayer ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:RoleAndDomain ;
+      owl:onProperty dm:hasPlayed ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasPlayed ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasPlayer ;
+    ] ;
+  owl:disjointWith dm:InvolvementByReference ;
+  owl:disjointWith dm:LifecycleStage ;
+  owl:disjointWith dm:OtherRelationship ;
+  owl:disjointWith dm:PossibleRoleAndDomain ;
+  owl:disjointWith dm:Recognition ;
+  owl:disjointWith dm:RelativeLocation ;
+  owl:disjointWith dm:RepresentationOfThing ;
+  owl:disjointWith dm:ResponsibilityForRepresentation ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:IntersectionOfSetOfClass
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:FunctionalMapping ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Class ;
+      owl:onProperty dm:hasResult ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:EnumeratedSetOfClass ;
+      owl:onProperty dm:hasInput ;
+    ] ;
+.
+dm:InvolvementByReference
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Activity ;
+      owl:onProperty dm:hasInvolver ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Thing ;
+      owl:onProperty dm:hasInvolved ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasInvolved ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasInvolver ;
+    ] ;
+  owl:disjointWith dm:LifecycleStage ;
+  owl:disjointWith dm:OtherRelationship ;
+  owl:disjointWith dm:PossibleRoleAndDomain ;
+  owl:disjointWith dm:Recognition ;
+  owl:disjointWith dm:RelativeLocation ;
+  owl:disjointWith dm:RepresentationOfThing ;
+  owl:disjointWith dm:ResponsibilityForRepresentation ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:Language
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfInformationRepresentation ;
+  owl:disjointWith dm:DocumentDefinition ;
+.
+dm:LeftNamespace
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Namespace ;
+.
+dm:LifecycleStage
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasInterest ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasInterested ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasInterest ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasInterested ;
+    ] ;
+  owl:disjointWith dm:OtherRelationship ;
+  owl:disjointWith dm:PossibleRoleAndDomain ;
+  owl:disjointWith dm:Recognition ;
+  owl:disjointWith dm:RelativeLocation ;
+  owl:disjointWith dm:RepresentationOfThing ;
+  owl:disjointWith dm:ResponsibilityForRepresentation ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:LowerBoundOfNumberRange
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Classification ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ArithmeticNumber ;
+      owl:onProperty dm:hasClassified ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:NumberRange ;
+      owl:onProperty dm:hasClassifier ;
+    ] ;
+.
+dm:LowerBoundOfPropertyRange
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Classification ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Property ;
+      owl:onProperty dm:hasClassified ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PropertyRange ;
+      owl:onProperty dm:hasClassifier ;
+    ] ;
+.
+dm:MaterializedPhysicalObject
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:PhysicalObject ;
+.
+dm:MultidimensionalNumber
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ArithmeticNumber ;
+  rdfs:subClassOf dm:MultidimensionalObject ;
+  owl:disjointWith dm:MultidimensionalNumberSpace ;
+  owl:disjointWith dm:MultidimensionalProperty ;
+  owl:disjointWith dm:MultidimensionalScale ;
+.
+dm:MultidimensionalNumberSpace
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:MultidimensionalObject ;
+  rdfs:subClassOf dm:NumberSpace ;
+  owl:disjointWith dm:MultidimensionalScale ;
+.
+dm:MultidimensionalObject
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:AbstractObject ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:Class ;
+          owl:intersectionOf (
+              list:OWLList
+              [
+                rdf:type owl:Restriction ;
+                owl:allValuesFrom dm:ExpressInteger ;
+                owl:onProperty list:hasContents ;
+              ]
+              [
+                rdf:type owl:Restriction ;
+                owl:allValuesFrom [
+                    rdf:type owl:Class ;
+                    owl:intersectionOf (
+                        list:OWLList
+                        [
+                          rdf:type owl:Restriction ;
+                          owl:allValuesFrom dm:ExpressInteger ;
+                          owl:onProperty list:hasContents ;
+                        ]
+                      ) ;
+                  ] ;
+                owl:onProperty list:isFollowedBy ;
+              ]
+            ) ;
+        ] ;
+      owl:onProperty dm:hasPosition ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom [
+          rdf:type owl:Class ;
+          owl:intersectionOf (
+              list:OWLList
+              [
+                rdf:type owl:Restriction ;
+                owl:allValuesFrom dm:Thing ;
+                owl:onProperty list:hasContents ;
+              ]
+              [
+                rdf:type owl:Restriction ;
+                owl:allValuesFrom [
+                    rdf:type owl:Class ;
+                    owl:intersectionOf (
+                        list:OWLList
+                        [
+                          rdf:type owl:Restriction ;
+                          owl:allValuesFrom dm:Thing ;
+                          owl:onProperty list:hasContents ;
+                        ]
+                      ) ;
+                  ] ;
+                owl:onProperty list:isFollowedBy ;
+              ]
+            ) ;
+        ] ;
+      owl:onProperty dm:hasElements ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasElements ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasPosition ;
+    ] ;
+.
+dm:MultidimensionalProperty
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:MultidimensionalObject ;
+  rdfs:subClassOf dm:Property ;
+  owl:disjointWith dm:MultidimensionalNumberSpace ;
+  owl:disjointWith dm:MultidimensionalScale ;
+.
+dm:MultidimensionalPropertySpace
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:MultidimensionalObject ;
+  rdfs:subClassOf dm:PropertySpace ;
+  owl:disjointWith dm:MultidimensionalNumber ;
+  owl:disjointWith dm:MultidimensionalNumberSpace ;
+  owl:disjointWith dm:MultidimensionalProperty ;
+  owl:disjointWith dm:MultidimensionalScale ;
+.
+dm:MultidimensionalScale
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:MultidimensionalObject ;
+  rdfs:subClassOf dm:Scale ;
+.
+dm:Namespace
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangementOfIndividual ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfInformationRepresentation ;
+      owl:onProperty dm:hasClassOfPart ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfInformationRepresentation ;
+      owl:onProperty dm:hasClassOfWhole ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:LeftNamespace
+          dm:RightNamespace
+        ) ;
+    ] ;
+.
+dm:NumberRange
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:NumberSpace ;
+  owl:disjointWith dm:MultidimensionalNumberSpace ;
+.
+dm:NumberSpace
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfNumber ;
+  owl:disjointWith dm:EnumeratedNumberSet ;
+.
+dm:OtherRelationship
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Thing ;
+      owl:onProperty dm:hasEnd1 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Thing ;
+      owl:onProperty dm:hasEnd2 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasEnd1 ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasEnd2 ;
+    ] ;
+  owl:disjointWith dm:PossibleRoleAndDomain ;
+  owl:disjointWith dm:Recognition ;
+  owl:disjointWith dm:RelativeLocation ;
+  owl:disjointWith dm:RepresentationOfThing ;
+  owl:disjointWith dm:ResponsibilityForRepresentation ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:ParticipatingRoleAndDomain
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfIndividual ;
+  rdfs:subClassOf dm:RoleAndDomain ;
+.
+dm:Participation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:CompositionOfIndividual ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Activity ;
+      owl:onProperty dm:hasWhole ;
+    ] ;
+  owl:disjointWith dm:TemporalBounding ;
+.
+dm:PeriodInTime
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:PossibleIndividual ;
+.
+dm:Phase
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfArrangedIndividual ;
+.
+dm:PhysicalObject
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:PossibleIndividual ;
+.
+dm:PointInTime
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Event ;
+.
+dm:PossibleIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Thing ;
+  owl:disjointWith dm:AbstractObject ;
+.
+dm:PossibleRoleAndDomain
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasPlayer ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:RoleAndDomain ;
+      owl:onProperty dm:hasPlayed ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasPlayed ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasPlayer ;
+    ] ;
+  owl:disjointWith dm:Recognition ;
+  owl:disjointWith dm:RelativeLocation ;
+  owl:disjointWith dm:RepresentationOfThing ;
+  owl:disjointWith dm:ResponsibilityForRepresentation ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:Property
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfIndividual ;
+  owl:disjointWith dm:Status ;
+.
+dm:PropertyForShapeDimension
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Property ;
+      owl:onProperty dm:hasProperty ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ShapeDimension ;
+      owl:onProperty dm:hasShapeDimension ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasProperty ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasShapeDimension ;
+    ] ;
+.
+dm:PropertyQuantification
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:FunctionalMapping ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ArithmeticNumber ;
+      owl:onProperty dm:hasResult ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Property ;
+      owl:onProperty dm:hasInput ;
+    ] ;
+.
+dm:PropertyRange
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:PropertySpace ;
+.
+dm:PropertySpace
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfProperty ;
+  owl:disjointWith dm:EnumeratedPropertySet ;
+.
+dm:PropertySpaceForClassOfShapeDimension
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfRelationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfShapeDimension ;
+      owl:onProperty dm:hasClassOfShapeDimension ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PropertySpace ;
+      owl:onProperty dm:hasPropertySpace ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasClassOfShapeDimension ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasPropertySpace ;
+    ] ;
+.
+dm:RealNumber
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ArithmeticNumber ;
+  owl:disjointWith dm:IntegerNumber ;
+  owl:disjointWith dm:MultidimensionalNumber ;
+.
+dm:Recognition
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Activity ;
+      owl:onProperty dm:hasRecognizing ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Thing ;
+      owl:onProperty dm:hasRecognized ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasRecognized ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasRecognizing ;
+    ] ;
+  owl:disjointWith dm:RelativeLocation ;
+  owl:disjointWith dm:RepresentationOfThing ;
+  owl:disjointWith dm:ResponsibilityForRepresentation ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:Relationship
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:AbstractObject ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:Approval
+          dm:CauseOfEvent
+          dm:ClassOfRelationshipWithSignature
+          dm:Classification
+          dm:ComparisonOfProperty
+          dm:CompositionOfIndividual
+          dm:ConnectionOfIndividual
+          dm:FunctionalMapping
+          dm:IndirectProperty
+          dm:IndividualUsedInConnection
+          dm:IntendedRoleAndDomain
+          dm:InvolvementByReference
+          dm:LifecycleStage
+          dm:OtherRelationship
+          dm:PossibleRoleAndDomain
+          dm:Recognition
+          dm:RelativeLocation
+          dm:RepresentationOfThing
+          dm:ResponsibilityForRepresentation
+          dm:Specialization
+          dm:TemporalSequence
+          dm:UsageOfRepresentation
+        ) ;
+    ] ;
+.
+dm:RelativeLocation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasLocated ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasLocator ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasLocated ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasLocator ;
+    ] ;
+  owl:disjointWith dm:RepresentationOfThing ;
+  owl:disjointWith dm:ResponsibilityForRepresentation ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:RepresentationForm
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfInformationRepresentation ;
+  owl:disjointWith dm:DocumentDefinition ;
+  owl:disjointWith dm:Language ;
+.
+dm:RepresentationOfGregorianDateAndUtcTime
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfInformationRepresentation ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:double ;
+      owl:onProperty dm:hasSecond ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:long ;
+      owl:onProperty dm:hasDay ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:long ;
+      owl:onProperty dm:hasHour ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:long ;
+      owl:onProperty dm:hasMinute ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:long ;
+      owl:onProperty dm:hasMonth ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:long ;
+      owl:onProperty dm:hasYear ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasYear ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasDay ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasHour ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasMinute ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasMonth ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasSecond ;
+    ] ;
+.
+dm:RepresentationOfThing
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasSign ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Thing ;
+      owl:onProperty dm:hasRepresented ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasRepresented ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasSign ;
+    ] ;
+  owl:disjointWith dm:ResponsibilityForRepresentation ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:ResponsibilityForRepresentation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasController ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:RepresentationOfThing ;
+      owl:onProperty dm:hasControlled ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasControlled ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasController ;
+    ] ;
+  owl:disjointWith dm:Specialization ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:RightNamespace
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Namespace ;
+  owl:disjointWith dm:LeftNamespace ;
+.
+dm:Role
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:RoleAndDomain ;
+.
+dm:RoleAndDomain
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Class ;
+.
+dm:Scale
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfIsomorphicFunctionalMapping ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:NumberSpace ;
+      owl:onProperty dm:hasCodomain ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PropertySpace ;
+      owl:onProperty dm:hasDomain ;
+    ] ;
+  owl:disjointWith dm:ClassOfScaleConversion ;
+.
+dm:Shape
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Property ;
+.
+dm:ShapeDimension
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfClassOfIndividual ;
+.
+dm:SinglePropertyDimension
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:PropertySpace ;
+.
+dm:SpatialLocation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:PhysicalObject ;
+.
+dm:Specialization
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Class ;
+      owl:onProperty dm:hasSubclass ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Class ;
+      owl:onProperty dm:hasSuperclass ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasSubclass ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasSuperclass ;
+    ] ;
+  owl:disjointWith dm:TemporalSequence ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:SpecializationByDomain
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Specialization ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:RoleAndDomain ;
+      owl:onProperty dm:hasSubclass ;
+    ] ;
+  owl:disjointWith dm:SpecializationByRole ;
+  owl:disjointWith dm:SpecializationOfIndividualDimensionFromProperty ;
+.
+dm:SpecializationByRole
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Specialization ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Role ;
+      owl:onProperty dm:hasSuperclass ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:RoleAndDomain ;
+      owl:onProperty dm:hasSubclass ;
+    ] ;
+  owl:disjointWith dm:SpecializationOfIndividualDimensionFromProperty ;
+.
+dm:SpecializationOfIndividualDimensionFromProperty
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Specialization ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:IndividualDimension ;
+      owl:onProperty dm:hasSubclass ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Property ;
+      owl:onProperty dm:hasSuperclass ;
+    ] ;
+.
+dm:Status
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:ClassOfIndividual ;
+.
+dm:Stream
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:PhysicalObject ;
+.
+dm:TemporalBounding
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:CompositionOfIndividual ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Event ;
+      owl:onProperty dm:hasPart ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:Beginning
+          dm:Ending
+        ) ;
+    ] ;
+.
+dm:TemporalSequence
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasPredecessor ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasSuccessor ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasPredecessor ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasSuccessor ;
+    ] ;
+  owl:disjointWith dm:UsageOfRepresentation ;
+.
+dm:TemporalWholePart
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:CompositionOfIndividual ;
+  owl:disjointWith dm:Participation ;
+  owl:disjointWith dm:TemporalBounding ;
+.
+dm:Thing
+  rdf:type owl:Class ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ClassOfInformationRepresentation ;
+      owl:onProperty dm:hasWhyDeleted ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasRecordCreator ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:RepresentationOfGregorianDateAndUtcTime ;
+      owl:onProperty dm:hasRecordCopyCreated ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:RepresentationOfGregorianDateAndUtcTime ;
+      owl:onProperty dm:hasRecordCreated ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:RepresentationOfGregorianDateAndUtcTime ;
+      owl:onProperty dm:hasRecordLogicallyDeleted ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom xsd:normalizedString ;
+      owl:onProperty dm:hasId ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasId ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasRecordCopyCreated ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasRecordCreated ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasRecordCreator ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasRecordLogicallyDeleted ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasWhyDeleted ;
+    ] ;
+  owl:equivalentClass [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:AbstractObject
+          dm:PossibleIndividual
+        ) ;
+    ] ;
+.
+dm:UnionOfSetOfClass
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:FunctionalMapping ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Class ;
+      owl:onProperty dm:hasResult ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:EnumeratedSetOfClass ;
+      owl:onProperty dm:hasInput ;
+    ] ;
+.
+dm:UpperBoundOfNumberRange
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Classification ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:ArithmeticNumber ;
+      owl:onProperty dm:hasClassified ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:NumberRange ;
+      owl:onProperty dm:hasClassifier ;
+    ] ;
+.
+dm:UpperBoundOfPropertyRange
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Classification ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:Property ;
+      owl:onProperty dm:hasClassified ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PropertyRange ;
+      owl:onProperty dm:hasClassifier ;
+    ] ;
+.
+dm:UsageOfRepresentation
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:Relationship ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:PossibleIndividual ;
+      owl:onProperty dm:hasUser ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:allValuesFrom dm:RepresentationOfThing ;
+      owl:onProperty dm:hasUsed ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasUsed ;
+    ] ;
+  rdfs:subClassOf [
+      rdf:type owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dm:hasUser ;
+    ] ;
+.
+dm:WholeLifeIndividual
+  rdf:type owl:Class ;
+  rdfs:subClassOf dm:PossibleIndividual ;
+.
+dm:hasApproved
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:Approval ;
+.
+dm:hasApprover
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:Approval ;
+.
+dm:hasCardinalities
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfMultidimensionalObject ;
+.
+dm:hasCaused
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:CauseOfEvent ;
+.
+dm:hasCauser
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:CauseOfEvent ;
+.
+dm:hasClassOfApproved
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfApproval ;
+.
+dm:hasClassOfApprover
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfApproval ;
+.
+dm:hasClassOfBegun
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfCauseOfBeginningOfClassOfIndividual ;
+.
+dm:hasClassOfCauser
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:ClassOfCauseOfBeginningOfClassOfIndividual
+          dm:ClassOfCauseOfEndingOfClassOfIndividual
+        ) ;
+    ] ;
+.
+dm:hasClassOfClassOfControlled
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfClassOfResponsibilityForRepresentation ;
+.
+dm:hasClassOfClassOfPart
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfClassOfComposition ;
+.
+dm:hasClassOfClassOfUsed
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfClassOfUsageOfRepresentation ;
+.
+dm:hasClassOfClassOfWhole
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:ClassOfClassOfComposition
+          dm:ClassOfNamespace
+        ) ;
+    ] ;
+.
+dm:hasClassOfClassified
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfClassification ;
+.
+dm:hasClassOfClassifier
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfClassification ;
+.
+dm:hasClassOfConnection
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfIndividualUsedInConnection ;
+.
+dm:hasClassOfControlled
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfResponsibilityForRepresentation ;
+.
+dm:hasClassOfDimension
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfDimensionForShape ;
+.
+dm:hasClassOfEnd1
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfRelationshipWithSignature ;
+.
+dm:hasClassOfEnd2
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfRelationshipWithSignature ;
+.
+dm:hasClassOfEnded
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfCauseOfEndingOfClassOfIndividual ;
+.
+dm:hasClassOfFirst
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:ClassOfClassOfRepresentationTranslation
+          dm:ClassOfRepresentationTranslation
+        ) ;
+    ] ;
+.
+dm:hasClassOfInvolved
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfInvolvementByReference ;
+.
+dm:hasClassOfInvolver
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfInvolvementByReference ;
+.
+dm:hasClassOfLocated
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfRelativeLocation ;
+.
+dm:hasClassOfLocator
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfRelativeLocation ;
+.
+dm:hasClassOfPart
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:ClassOfCompositionOfIndividual
+          dm:ClassOfNamespace
+        ) ;
+    ] ;
+.
+dm:hasClassOfPattern
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfClassOfRepresentation ;
+.
+dm:hasClassOfPlayer
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:ClassOfIntendedRoleAndDomain
+          dm:ClassOfPossibleRoleAndDomain
+        ) ;
+    ] ;
+.
+dm:hasClassOfPossessor
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfIndirectProperty ;
+.
+dm:hasClassOfPredecessor
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfTemporalSequence ;
+.
+dm:hasClassOfRecognized
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfRecognition ;
+.
+dm:hasClassOfRecognizing
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfRecognition ;
+.
+dm:hasClassOfRepresented
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfClassOfRepresentation ;
+.
+dm:hasClassOfSecond
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:ClassOfClassOfRepresentationTranslation
+          dm:ClassOfRepresentationTranslation
+        ) ;
+    ] ;
+.
+dm:hasClassOfShape
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfDimensionForShape ;
+.
+dm:hasClassOfShapeDimension
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:PropertySpaceForClassOfShapeDimension ;
+.
+dm:hasClassOfSide1
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfConnectionOfIndividual ;
+.
+dm:hasClassOfSide2
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfConnectionOfIndividual ;
+.
+dm:hasClassOfSubclass
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfSpecialization ;
+.
+dm:hasClassOfSuccessor
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfTemporalSequence ;
+.
+dm:hasClassOfSuperclass
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfSpecialization ;
+.
+dm:hasClassOfUsage
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfIndividualUsedInConnection ;
+.
+dm:hasClassOfUsed
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfUsageOfRepresentation ;
+.
+dm:hasClassOfWhole
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfCompositionOfIndividual ;
+.
+dm:hasClassified
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:Classification ;
+.
+dm:hasClassifier
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:Classification ;
+.
+dm:hasCodomain
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfFunctionalMapping ;
+.
+dm:hasConnection
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:IndividualUsedInConnection ;
+.
+dm:hasContent
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:ExpressBinary
+          dm:ExpressBoolean
+          dm:ExpressInteger
+          dm:ExpressLogical
+          dm:ExpressReal
+          dm:ExpressString
+        ) ;
+    ] ;
+.
+dm:hasControlled
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ResponsibilityForRepresentation ;
+.
+dm:hasController
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:ClassOfClassOfResponsibilityForRepresentation
+          dm:ClassOfResponsibilityForRepresentation
+          dm:ResponsibilityForRepresentation
+        ) ;
+    ] ;
+.
+dm:hasDay
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain dm:RepresentationOfGregorianDateAndUtcTime ;
+.
+dm:hasDimension
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:DimensionOfShape ;
+.
+dm:hasDomain
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfFunctionalMapping ;
+.
+dm:hasElements
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:MultidimensionalObject ;
+.
+dm:hasEnd1
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:OtherRelationship ;
+.
+dm:hasEnd1Cardinality
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfRelationship ;
+.
+dm:hasEnd2
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:OtherRelationship ;
+.
+dm:hasEnd2Cardinality
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfRelationship ;
+.
+dm:hasGreaterElement
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ComparisonOfProperty ;
+.
+dm:hasHour
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain dm:RepresentationOfGregorianDateAndUtcTime ;
+.
+dm:hasId
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain dm:Thing ;
+.
+dm:hasIndividual
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:DimensionOfIndividual ;
+.
+dm:hasIndividualDimension
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:DimensionOfIndividual ;
+.
+dm:hasInput
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:FunctionalMapping ;
+.
+dm:hasInterest
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:LifecycleStage ;
+.
+dm:hasInterested
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:LifecycleStage ;
+.
+dm:hasInvolved
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:InvolvementByReference ;
+.
+dm:hasInvolver
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:InvolvementByReference ;
+.
+dm:hasLesserElement
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ComparisonOfProperty ;
+.
+dm:hasLocated
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:RelativeLocation ;
+.
+dm:hasLocator
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:RelativeLocation ;
+.
+dm:hasMaximumCardinality
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain dm:Cardinality ;
+.
+dm:hasMinimumCardinality
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain dm:Cardinality ;
+.
+dm:hasMinute
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain dm:RepresentationOfGregorianDateAndUtcTime ;
+.
+dm:hasMonth
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain dm:RepresentationOfGregorianDateAndUtcTime ;
+.
+dm:hasOptionalElement
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfMultidimensionalObject ;
+.
+dm:hasParameterPosition
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfMultidimensionalObject ;
+.
+dm:hasParameters
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfMultidimensionalObject ;
+.
+dm:hasPart
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:CompositionOfIndividual ;
+.
+dm:hasPattern
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfRepresentationOfThing ;
+.
+dm:hasPlayed
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:ClassOfIntendedRoleAndDomain
+          dm:ClassOfPossibleRoleAndDomain
+          dm:IntendedRoleAndDomain
+          dm:PossibleRoleAndDomain
+        ) ;
+    ] ;
+.
+dm:hasPlayer
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:IntendedRoleAndDomain
+          dm:PossibleRoleAndDomain
+        ) ;
+    ] ;
+.
+dm:hasPosition
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:MultidimensionalObject ;
+.
+dm:hasPossessor
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:IndirectProperty ;
+.
+dm:hasPredecessor
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:TemporalSequence ;
+.
+dm:hasProperty
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:IndirectProperty
+          dm:PropertyForShapeDimension
+        ) ;
+    ] ;
+.
+dm:hasPropertySpace
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:ClassOfIndirectProperty
+          dm:PropertySpaceForClassOfShapeDimension
+        ) ;
+    ] ;
+.
+dm:hasRecognized
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:Recognition ;
+.
+dm:hasRecognizing
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:Recognition ;
+.
+dm:hasRecordCopyCreated
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:Thing ;
+.
+dm:hasRecordCreated
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:Thing ;
+.
+dm:hasRecordCreator
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:Thing ;
+.
+dm:hasRecordLogicallyDeleted
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:Thing ;
+.
+dm:hasRelated
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:ClassOfRelationshipWithRelatedEnd1
+          dm:ClassOfRelationshipWithRelatedEnd2
+        ) ;
+    ] ;
+.
+dm:hasRepresented
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:ClassOfRepresentationOfThing
+          dm:RepresentationOfThing
+        ) ;
+    ] ;
+.
+dm:hasResult
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:FunctionalMapping ;
+.
+dm:hasRoles
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ClassOfMultidimensionalObject ;
+.
+dm:hasSecond
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain dm:RepresentationOfGregorianDateAndUtcTime ;
+.
+dm:hasShape
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:DimensionOfShape ;
+.
+dm:hasShapeDimension
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:PropertyForShapeDimension ;
+.
+dm:hasSide1
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ConnectionOfIndividual ;
+.
+dm:hasSide2
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:ConnectionOfIndividual ;
+.
+dm:hasSign
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:RepresentationOfThing ;
+.
+dm:hasSubclass
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:Specialization ;
+.
+dm:hasSuccessor
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:TemporalSequence ;
+.
+dm:hasSuperclass
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:Specialization ;
+.
+dm:hasUsage
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:IndividualUsedInConnection ;
+.
+dm:hasUsed
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:UsageOfRepresentation ;
+.
+dm:hasUser
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain [
+      rdf:type owl:Class ;
+      owl:unionOf (
+          dm:ClassOfClassOfUsageOfRepresentation
+          dm:ClassOfUsageOfRepresentation
+          dm:UsageOfRepresentation
+        ) ;
+    ] ;
+.
+dm:hasWhole
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:CompositionOfIndividual ;
+.
+dm:hasWhyDeleted
+  rdf:type owl:ObjectProperty ;
+  rdfs:domain dm:Thing ;
+.
+dm:hasYear
+  rdf:type owl:DatatypeProperty ;
+  rdfs:domain dm:RepresentationOfGregorianDateAndUtcTime ;
+.

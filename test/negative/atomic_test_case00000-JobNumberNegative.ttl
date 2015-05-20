@@ -1,0 +1,59 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00000-JobNumberNegative
+# imports: http://data.posccaesar.org/tpl/
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00000/atomic_test_case00000-JobNumberRefData
+
+@prefix atc00000: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00000-JobNumberNegative#> .
+@prefix dm: <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#> .
+@prefix meta: <http://standards.iso.org/iso/15926/meta#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00000-JobNumberNegative>
+  rdf:type owl:Ontology ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.1 Define Document"^^xsd:string ;
+  owl:imports tpl: ;
+  owl:imports <http://rdl.rdlfacade.org/data> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+atc00000:ClassOfIndividual_1
+  rdf:type dm:ClassOfInformationObject ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.1 Define Document (ClassificationOfClassOfIndividual)"^^xsd:string ;
+  rdfs:label "Define Document (ClassificationOfClassOfIndividual)"^^xsd:string ;
+.
+atc00000:ClassificationOfClassOfIndividual_1
+  rdf:type tpl:ClassificationOfClassOfIndividual ;
+  tpl:hasClassified atc00000:ClassOfIndividual_1 ;
+  tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS6826559> ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.1 Define Document (ClassificationOfClassOfIndividual)"^^xsd:string ;
+  rdfs:label "Define Document (ClassificationOfClassOfIndividual)"^^xsd:string ;
+.
+atc00000:ClassificationOfIndividual_2
+  rdf:type tpl:ClassificationOfIndividual ;
+  tpl:hasClassified atc00000:PossibleIndividual_2 ;
+  tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS9629> ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.1 Define Project Activity (ClassificationOfIndividual)"^^xsd:string ;
+  rdfs:label "Define Project Activity"^^xsd:string ;
+.
+atc00000:ClassifiedIdentificationOfIndividual_1
+  rdf:type tpl:ClassifiedIdentificationOfIndividual ;
+  tpl:hasIdentificationType <http://rdl.rdlfacade.org/data#RA279224C9180470BAE922CFCBA21A78F> ;
+  tpl:hasIdentified atc00000:PossibleIndividual_2 ;
+  tpl:valIdentifier "JN-1213A"^^xsd:string ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.1 Add Identification to Project  (ClassifiedIdentificationOfIndividual)"^^xsd:string ;
+  rdfs:label "Add Identification to Project (ClassifiedIdentificationOfIndividual)"^^xsd:string ;
+.
+atc00000:PossibleIndividual_2
+  rdf:type dm:Activity ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.1 Define Project Activity (ClassificationOfIndividual)"^^xsd:string ;
+  rdfs:label "Define Project Activity"^^xsd:string ;
+.
+atc00000:ReferenceToIndividualOnDocument_1
+  rdf:type tpl:ReferenceToIndividualOnDocument ;
+  tpl:hasDocument atc00000:ClassOfIndividual_1 ;
+  tpl:hasReferred atc00000:PossibleIndividual_2 ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.1 Define relationship between the Document and Engineering Work Package (ReferenceToIndividualOnDocument)"^^xsd:string ;
+  rdfs:label "Define relationship between the Document and Engineering Work Package (ReferenceToIndividualOnDocument)"^^xsd:string ;
+.

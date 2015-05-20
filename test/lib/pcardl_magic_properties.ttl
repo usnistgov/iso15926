@@ -1,0 +1,325 @@
+# baseURI: http://iso15926.fiatech.org/test/lib/pcardl_magic_properties
+# imports: http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003
+# imports: http://spinrdf.org/spl
+
+@prefix arg: <http://spinrdf.org/arg#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pcardlprop: <http://iso15926.fiatech.org/test/lib/pcardl_magic_properties#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sp: <http://spinrdf.org/sp#> .
+@prefix spin: <http://spinrdf.org/spin#> .
+@prefix spl: <http://spinrdf.org/spl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://iso15926.fiatech.org/test/lib/pcardl_magic_properties>
+  rdf:type owl:Ontology ;
+  owl:imports <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003> ;
+  owl:imports <http://spinrdf.org/spl> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+pcardlprop:classifier
+  rdf:type spin:MagicProperty ;
+  spin:body [
+      rdf:type sp:Select ;
+      sp:resultVariables (
+          [
+            sp:varName "classifier"^^xsd:string ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  rdf:type sp:Service ;
+                  sp:elements (
+                      [
+                        sp:object spin:_arg1 ;
+                        sp:predicate <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#hasClassified> ;
+                        sp:subject [
+                            sp:varName "classification"^^xsd:string ;
+                          ] ;
+                      ]
+                      [
+                        sp:object [
+                            sp:varName "classifier"^^xsd:string ;
+                          ] ;
+                        sp:predicate <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#hasClassifier> ;
+                        sp:subject [
+                            sp:varName "classification"^^xsd:string ;
+                          ] ;
+                      ]
+                    ) ;
+                  sp:serviceURI <http://data.posccaesar.org/rdl/> ;
+                ]
+              ) ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:optional "false"^^xsd:boolean ;
+      spl:predicate sp:arg1 ;
+      spl:valueType xsd:anyURI ;
+      rdfs:comment "the PCA RD item"^^xsd:string ;
+    ] ;
+  spin:returnType xsd:anyURI ;
+  rdfs:comment "return the  the classes by which arg1 is classified in the PCA RDL"^^xsd:string ;
+  rdfs:label "classifier"^^xsd:string ;
+  rdfs:subClassOf spin:MagicProperties ;
+.
+pcardlprop:classifierDesignation
+  rdf:type spin:MagicProperty ;
+  spin:body [
+      rdf:type sp:Select ;
+      sp:resultVariables (
+          [
+            sp:varName "designation"^^xsd:string ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  rdf:type sp:Service ;
+                  sp:elements (
+                      [
+                        sp:object spin:_arg1 ;
+                        sp:predicate <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#hasClassified> ;
+                        sp:subject [
+                            sp:varName "classification"^^xsd:string ;
+                          ] ;
+                      ]
+                      [
+                        sp:object [
+                            sp:varName "classifier"^^xsd:string ;
+                          ] ;
+                        sp:predicate <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#hasClassifier> ;
+                        sp:subject [
+                            sp:varName "classification"^^xsd:string ;
+                          ] ;
+                      ]
+                      [
+                        sp:object [
+                            sp:varName "designation"^^xsd:string ;
+                          ] ;
+                        sp:predicate <http://data.posccaesar.org/rdl/hasDesignation> ;
+                        sp:subject [
+                            sp:varName "classifier"^^xsd:string ;
+                          ] ;
+                      ]
+                    ) ;
+                  sp:serviceURI <http://data.posccaesar.org/rdl/> ;
+                ]
+              ) ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:optional "false"^^xsd:boolean ;
+      spl:predicate sp:arg1 ;
+      spl:valueType <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#Thing> ;
+      rdfs:comment "the Thing with the designation"^^xsd:string ;
+    ] ;
+  spin:returnType xsd:string ;
+  rdfs:comment "return the designation of the classes by which arg1 is classified in the PCA RDL"^^xsd:string ;
+  rdfs:label "classifier designation"^^xsd:string ;
+  rdfs:subClassOf spin:MagicProperties ;
+.
+pcardlprop:designation
+  rdf:type spin:MagicProperty ;
+  spin:body [
+      rdf:type sp:Select ;
+      sp:resultVariables (
+          [
+            sp:varName "designation"^^xsd:string ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  rdf:type sp:Service ;
+                  sp:elements (
+                      [
+                        sp:object [
+                            sp:varName "designation"^^xsd:string ;
+                          ] ;
+                        sp:predicate <http://data.posccaesar.org/rdl/hasDesignation> ;
+                        sp:subject spin:_arg1 ;
+                      ]
+                    ) ;
+                  sp:serviceURI <http://data.posccaesar.org/rdl/> ;
+                ]
+              ) ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:optional "false"^^xsd:boolean ;
+      spl:predicate sp:arg1 ;
+      spl:valueType <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#Thing> ;
+      rdfs:comment "the Thing with the designation"^^xsd:string ;
+    ] ;
+  spin:returnType xsd:string ;
+  rdfs:label "designation"^^xsd:string ;
+  rdfs:subClassOf spin:MagicProperties ;
+.
+pcardlprop:rdftype
+  rdf:type spin:MagicProperty ;
+  spin:body [
+      rdf:type sp:Select ;
+      sp:resultVariables (
+          [
+            sp:varName "type"^^xsd:string ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  rdf:type sp:Service ;
+                  sp:elements (
+                      [
+                        sp:object [
+                            sp:varName "type"^^xsd:string ;
+                          ] ;
+                        sp:predicate rdf:type ;
+                        sp:subject spin:_arg1 ;
+                      ]
+                    ) ;
+                  sp:serviceURI <http://data.posccaesar.org/rdl/> ;
+                ]
+              ) ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:optional "true"^^xsd:boolean ;
+      spl:predicate sp:arg1 ;
+      spl:valueType xsd:anyURI ;
+      rdfs:comment "the PCA RD item"^^xsd:string ;
+    ] ;
+  spin:returnType xsd:anyURI ;
+  rdfs:comment "return the rdf type of arg1 in the PCA RDL"^^xsd:string ;
+  rdfs:label "rdf type"^^xsd:string ;
+  rdfs:subClassOf spin:MagicProperties ;
+.
+pcardlprop:superclass
+  rdf:type spin:MagicProperty ;
+  spin:body [
+      rdf:type sp:Select ;
+      sp:resultVariables (
+          [
+            sp:varName "super"^^xsd:string ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  rdf:type sp:Service ;
+                  sp:elements (
+                      [
+                        sp:object spin:_arg1 ;
+                        sp:predicate <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#hasSubclass> ;
+                        sp:subject [
+                            sp:varName "specialization"^^xsd:string ;
+                          ] ;
+                      ]
+                      [
+                        sp:object [
+                            sp:varName "super"^^xsd:string ;
+                          ] ;
+                        sp:predicate <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#hasSuperclass> ;
+                        sp:subject [
+                            sp:varName "specialization"^^xsd:string ;
+                          ] ;
+                      ]
+                    ) ;
+                  sp:serviceURI <http://data.posccaesar.org/rdl/> ;
+                ]
+              ) ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:optional "false"^^xsd:boolean ;
+      spl:predicate sp:arg1 ;
+      spl:valueType xsd:anyURI ;
+      rdfs:comment "the Thing with the designation"^^xsd:string ;
+    ] ;
+  spin:returnType xsd:anyURI ;
+  rdfs:comment "return the classes of which arg1 is an immediate specialization in the PCA RDL"^^xsd:string ;
+  rdfs:label "superclass"^^xsd:string ;
+  rdfs:subClassOf spin:MagicProperties ;
+.
+pcardlprop:superclassDesignation
+  rdf:type spin:MagicProperty ;
+  spin:body [
+      rdf:type sp:Select ;
+      sp:resultVariables (
+          [
+            sp:varName "designation"^^xsd:string ;
+          ]
+        ) ;
+      sp:where (
+          [
+            rdf:type sp:Optional ;
+            sp:elements (
+                [
+                  rdf:type sp:Service ;
+                  sp:elements (
+                      [
+                        sp:object spin:_arg1 ;
+                        sp:predicate <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#hasSubclass> ;
+                        sp:subject [
+                            sp:varName "specialization"^^xsd:string ;
+                          ] ;
+                      ]
+                      [
+                        sp:object [
+                            sp:varName "super"^^xsd:string ;
+                          ] ;
+                        sp:predicate <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#hasSuperclass> ;
+                        sp:subject [
+                            sp:varName "specialization"^^xsd:string ;
+                          ] ;
+                      ]
+                      [
+                        sp:object [
+                            sp:varName "designation"^^xsd:string ;
+                          ] ;
+                        sp:predicate <http://data.posccaesar.org/rdl/hasDesignation> ;
+                        sp:subject [
+                            sp:varName "super"^^xsd:string ;
+                          ] ;
+                      ]
+                    ) ;
+                  sp:serviceURI <http://data.posccaesar.org/rdl/> ;
+                ]
+              ) ;
+          ]
+        ) ;
+    ] ;
+  spin:constraint [
+      rdf:type spl:Argument ;
+      spl:optional "false"^^xsd:boolean ;
+      spl:predicate sp:arg1 ;
+      spl:valueType <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#Thing> ;
+      rdfs:comment "the Thing with the designation"^^xsd:string ;
+    ] ;
+  spin:returnType xsd:string ;
+  rdfs:comment "return the designation of the classes of which arg1 is an immediate specialization in the PCA RDL"^^xsd:string ;
+  rdfs:label "superclass designation"^^xsd:string ;
+  rdfs:subClassOf spin:MagicProperties ;
+.

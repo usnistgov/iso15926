@@ -1,0 +1,16 @@
+SELECT ?PumpIdentifier ?DifferentialPressureMegaPascalGuage
+WHERE {
+    ?classificationofindividual tpl:hasClassified ?possibleindividual .
+    ?classificationofindividual tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS416834> .
+    ?classificationofindividual rdf:type tpl:ClassificationOfIndividual .
+    ?possibleindividual rdf:type dm:PossibleIndividual .
+    ?individualhasindirectpropertywithvalue tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS361574> .
+    ?individualhasindirectpropertywithvalue tpl:hasPossessor ?possibleindividual .
+    ?individualhasindirectpropertywithvalue tpl:hasScale <http://data.posccaesar.org/rdl/RDS1059963660> .
+    ?individualhasindirectpropertywithvalue rdf:type tpl:IndividualHasIndirectPropertyWithValue .
+    ?classifiedidentificationofindividual tpl:hasIdentified ?possibleindividual .
+    ?classifiedidentificationofindividual tpl:hasIdentificationType <http://data.posccaesar.org/rdl/RDS2100944981> .
+    ?classifiedidentificationofindividual rdf:type ?class .
+    ?individualhasindirectpropertywithvalue tpl:valPropertyValue ?DifferentialPressureMegaPascalGuage.
+    ?classifiedidentificationofindividual tpl:valIdentifier ?PumpIdentifier .
+}

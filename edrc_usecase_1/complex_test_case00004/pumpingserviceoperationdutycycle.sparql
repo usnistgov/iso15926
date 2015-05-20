@@ -1,0 +1,21 @@
+SELECT ?PumpIdentifierRolePUMPEROfTypeCONTINUOUS_OPERATION
+WHERE {
+    ?classificationofindividual2 tpl:hasClassified ?possibleindividual .
+    ?classificationofindividual2 tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS416834> .
+    ?classificationofindividual2 rdf:type tpl:ClassificationOfIndividual .
+    ?classificationofindividual tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS9710162> .
+    ?classificationofindividual rdf:type tpl:ClassificationOfIndividual .
+    ?classificationofindividual tpl:hasClassified ?activity .
+    ?classifiedidentificationofindividual tpl:hasIdentified ?possibleindividual .
+    ?classifiedidentificationofindividual rdf:type tpl:ClassifiedIdentificationOfIndividual .
+    ?classifiedidentificationofindividual tpl:hasIdentificationType <http://data.posccaesar.org/rdl/RDS2100944981> .
+    ?activity rdf:type dm:Activity .
+    ?classificationofindividual1 tpl:hasClassified ?activity .
+    ?classificationofindividual1 tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS9657917> .
+    ?classificationofindividual1 rdf:type tpl:ClassificationOfIndividual .
+    ?possibleindividual rdf:type dm:PossibleIndividual .
+	?classificationasdutycycle a dm:Classification .
+	?classificationasdutycycle dm:hasClassified  <http://data.posccaesar.org/rdl/RDS9710162> .
+	?classificationasdutycycle dm:hasClassifier myrd:PUMP_OPERATION_DUTY_CYCLE_TYPE .
+    ?classifiedidentificationofindividual tpl:valIdentifier ?PumpIdentifierRolePUMPEROfTypeCONTINUOUS_OPERATION .
+}

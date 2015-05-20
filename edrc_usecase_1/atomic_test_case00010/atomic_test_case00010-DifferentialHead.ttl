@@ -1,0 +1,25 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00010/atomic_test_case00010-DifferentialHead
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber
+
+@prefix atc00010: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00010/atomic_test_case00010-DifferentialHead#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00010/atomic_test_case00010-DifferentialHead>
+  rdf:type owl:Ontology ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.8 Differential Head"^^xsd:string ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+atc00010:IndividualHasIndirectPropertyWithValue_1
+  rdf:type tpl:IndividualHasIndirectPropertyWithValue ;
+  tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS401219> ;
+  tpl:hasPossessor <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber#PossibleIndividual_1> ;
+  tpl:hasScale <http://data.posccaesar.org/rdl/RDS1061454811> ;
+  tpl:valPropertyValue "10.10"^^xsd:float ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.8 Differential Head"^^xsd:string ;
+  rdfs:label "Pump Differential Head is 10.10 METRE H2O AT 4 DEGREE CELCIUS"^^xsd:string ;
+.

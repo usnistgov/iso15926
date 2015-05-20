@@ -1,0 +1,44 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00002-RevisionNumber
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00000-JobNumber
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber
+# imports: http://rdl.rdlfacade.org/data
+
+@prefix ctc00002: <http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00002-RevisionNumber#> .
+@prefix dm: <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00002-RevisionNumber>
+  rdf:type owl:Ontology ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.3 Revision Number"^^xsd:string ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00000-JobNumber> ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber> ;
+  owl:imports <http://rdl.rdlfacade.org/data> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+ctc00002:ClassifiedIdentificationOfClassOfIndividual_1
+  rdf:type tpl:ClassifiedIdentificationOfClassOfIndividual ;
+  tpl:hasIdentificationType <http://data.posccaesar.org/rdl/RDS2102408551> ;
+  tpl:hasIdentified <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00000-JobNumber#ClassOfIndividual_1> ;
+  tpl:valIdentifier "DS-1234"^^xsd:string ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.3 Revision Number Define Identification (ClassifiedIdentificationOfClassOfIndividual)"^^xsd:string ;
+  rdfs:label "Define Identification (ClassifiedIdentificationOfClassOfIndividual)"^^xsd:string ;
+.
+ctc00002:ClassifiedIdentificationOfClassOfIndividual_2
+  rdf:type tpl:ClassifiedIdentificationOfClassOfIndividual ;
+  tpl:hasIdentificationType <http://rdl.rdlfacade.org/data#REVISION_CODE_ASSIGNMENT_CLASS> ;
+  tpl:hasIdentified <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00000-JobNumber#ClassOfIndividual_1> ;
+  tpl:valIdentifier "Rev 1"^^xsd:string ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.3 Revision Number Define Revision Number (ClassifiedIdentificationOfClassOfIndividual)"^^xsd:string ;
+  rdfs:label "Define Revision Number (ClassifiedIdentificationOfClassOfIndividual)"^^xsd:string ;
+.
+ctc00002:ReferenceToIndividualOnDocument_1
+  rdf:type tpl:ReferenceToIndividualOnDocument ;
+  tpl:hasDocument <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00000-JobNumber#ClassOfIndividual_1> ;
+  tpl:hasReferred <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber#PossibleIndividual_1> ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.3 Revision Number Pump Referenced on Data Sheet (ReferenceToIndividualOnDocument)"^^xsd:string ;
+  rdfs:label "Pump Referenced on Data Sheet (ReferenceToIndividualOnDocument)"^^xsd:string ;
+.

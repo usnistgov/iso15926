@@ -1,0 +1,112 @@
+# baseURI: null
+
+@prefix composite: <http://www.topbraid.org/2007/05/composite.owl#> .
+@prefix forms: <http://www.topbraid.org/2007/01/forms.owl#> .
+@prefix inference: <http://www.topbraid.org/2007/06/inference.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix visual: <http://topbraid.org/visual#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[
+  rdf:type visual:Graph ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/rdl/RDS1321064> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "308"^^xsd:int ;
+      visual:x "348"^^xsd:int ;
+      visual:y "262"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/rdl/RDS2100944981> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "328"^^xsd:int ;
+      visual:x "651"^^xsd:int ;
+      visual:y "428"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/rdl/RDS416834> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "302"^^xsd:int ;
+      visual:x "689"^^xsd:int ;
+      visual:y "266"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/rdl/RDS7354451> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "308"^^xsd:int ;
+      visual:x "8"^^xsd:int ;
+      visual:y "289"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/tpl/ClassificationOfIndividual> ;
+      visual:height "197"^^xsd:int ;
+      visual:width "293"^^xsd:int ;
+      visual:x "444"^^xsd:int ;
+      visual:y "21"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/tpl/ClassifiedIdentificationOfIndividual> ;
+      visual:height "197"^^xsd:int ;
+      visual:width "293"^^xsd:int ;
+      visual:x "780"^^xsd:int ;
+      visual:y "27"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/tpl/IndividualHasIndirectPropertyWithValue> ;
+      visual:height "197"^^xsd:int ;
+      visual:width "293"^^xsd:int ;
+      visual:x "130"^^xsd:int ;
+      visual:y "19"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber#ClassificationOfIndividual_1> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "262"^^xsd:int ;
+      visual:x "583"^^xsd:int ;
+      visual:y "340"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber#ClassifiedIdentificationOfIndividual_1> ;
+      visual:height "35"^^xsd:int ;
+      visual:width "311"^^xsd:int ;
+      visual:x "708"^^xsd:int ;
+      visual:y "498"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber#PossibleIndividual_1> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "224"^^xsd:int ;
+      visual:x "365"^^xsd:int ;
+      visual:y "460"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00003/atomic_test_case00003-CapacityNormal#IndividualHasIndirectPropertyWithValue_1> ;
+      visual:height "35"^^xsd:int ;
+      visual:width "336"^^xsd:int ;
+      visual:x "52"^^xsd:int ;
+      visual:y "519"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#PossibleIndividual> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "176"^^xsd:int ;
+      visual:x "401"^^xsd:int ;
+      visual:y "392"^^xsd:int ;
+    ] ;
+  visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00003/atomic_test_case00003-CapacityNormal#IndividualHasIndirectPropertyWithValue_1> ;
+  rdfs:label "CapacityNormalGraph" ;
+].

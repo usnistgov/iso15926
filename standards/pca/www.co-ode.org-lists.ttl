@@ -1,0 +1,67 @@
+# Saved by TopBraid on Mon Aug 22 12:32:52 BST 2011
+# baseURI: http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl
+
+@prefix :        <http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl#> .
+@prefix list:    <http://www.co-ode.org/ontologies/list.owl#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+list:EmptyList
+      rdf:type owl:Class ;
+      owl:equivalentClass
+              [ rdf:type owl:Class ;
+                owl:intersectionOf (list:OWLList [ rdf:type owl:Class ;
+                            owl:complementOf
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty list:hasContents ;
+                                      owl:someValuesFrom owl:Thing
+                                    ]
+                          ])
+              ] ;
+      owl:equivalentClass
+              [ rdf:type owl:Class ;
+                owl:intersectionOf (list:OWLList [ rdf:type owl:Class ;
+                            owl:complementOf
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty list:isFollowedBy ;
+                                      owl:someValuesFrom owl:Thing
+                                    ]
+                          ])
+              ] .
+
+list:OWLList
+      rdf:type owl:Class ;
+      rdfs:subClassOf owl:Thing ;
+      rdfs:subClassOf
+              [ rdf:type owl:Restriction ;
+                owl:allValuesFrom list:OWLList ;
+                owl:onProperty list:isFollowedBy
+              ] .
+
+list:hasContents
+      rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+      rdfs:subPropertyOf list:hasListProperty .
+
+list:hasListProperty
+      rdf:type owl:ObjectProperty ;
+      rdfs:domain list:OWLList .
+
+list:hasNext
+      rdf:type owl:ObjectProperty , owl:FunctionalProperty ;
+      rdfs:subPropertyOf list:isFollowedBy .
+
+list:isFollowedBy
+      rdf:type owl:ObjectProperty , owl:TransitiveProperty ;
+      rdfs:range list:OWLList ;
+      rdfs:subPropertyOf list:hasListProperty .
+
+<http://www.co-ode.org/ontologies/lists/2008/09/11/list.owl>
+      rdf:type owl:Ontology ;
+      rdfs:comment "For use in ReportingHub with POSC/Caesar reference data."^^xsd:string , "A set of entities used to describe the OWL list pattern." ;
+      rdfs:seeAlso "http://owl-workshop.man.ac.uk/acceptedLong/submission_12.pdf"^^xsd:anyURI ;
+      owl:versionInfo "1.0.0" , "Created with TopBraid Composer"^^xsd:string .
+
+owl:Thing
+      rdf:type owl:Class .

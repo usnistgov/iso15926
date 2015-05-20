@@ -1,0 +1,214 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_2/pressure_transmitter_rfq_1_reply
+# imports: http://data.posccaesar.org/tpl/
+
+@prefix : <http://iso15926.fiatech.org/edrc_usecase_2/pressure_transmitter_rfq_1_reply#> .
+@prefix basens: <http://example.org/> .
+@prefix dm: <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix pcardl: <http://posccaesar.org/rdl/> .
+@prefix pressure_transmitter_rfq_1_reply: <http://iso15926.fiatech.org/edrc_usecase_2/pressure_transmitter_rfq_1_reply#> .
+@prefix qn2: <http://data.emerson.com/> .
+@prefix qn3: <http://example.org/data/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+qn3:id00394ae2-f71f-4d9b-b23e-0921320a2292
+  rdf:type tpl:ClassOfAssemblyDefinition ;
+  tpl:hasClassOfPart qn3:id0109f0bf-ac9d-411f-85cd-785ee3194d9e ;
+  tpl:hasClassOfWhole qn3:id96b6298e-8fe2-4939-9609-5cd47e0f0516 ;
+.
+qn3:id0109f0bf-ac9d-411f-85cd-785ee3194d9e
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "PE_R420-PT-5152" ;
+  rdfs:subClassOf pcardl:RDS462104 ;
+.
+qn3:id05796c76-5f03-4e11-9a02-a1db079abec7
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:subClassOf pcardl:RDS11008205 ;
+.
+qn3:id05c6754c-b2b7-4a7f-89c1-5e31940b5516
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "S_R420-PT-5152" ;
+  rdfs:subClassOf pcardl:RDS13026796 ;
+.
+qn3:id0c73c960-9164-46f3-959a-70a6fd5a31b2
+  rdf:type tpl:ClassOfParticipationDefinition ;
+  tpl:hasActivityType qn3:id69516a23-2029-4f05-a714-3d269cc78de5 ;
+  tpl:hasParticipantRole pcardl:RDS13652847 ;
+  tpl:hasParticipantType qn3:id83f1614d-649b-4876-ae1e-34721972e9bc ;
+.
+qn3:id0e7d3ad9-ab84-43f9-9f1a-9b980dfe7973
+  rdf:type tpl:SpecializationOfClassOfIndividual ;
+  tpl:hasSubClass qn3:id73806964-ca9a-4b2a-a997-13d6a57d4c6d ;
+  tpl:hasSuperClass pcardl:RDS9062776044 ;
+.
+qn3:id1395ad4b-81d5-4f46-a90b-7593f98edd32
+  rdf:type tpl:ClassifiedIdentificationOfIndividual ;
+  tpl:hasIdentificationType pcardl:R-0d8da6d3-bf11-4e17-bdeb-fcfcbeb32490 ;
+  tpl:hasIdentified qn3:id91a437fa-20de-470b-83d0-2cdfe4a61914 ;
+  tpl:valIdentifier "R420-PT-5152" ;
+.
+qn3:id1d2bf4dc-6b26-44a7-a5ba-96a4784ecd44
+  rdf:type tpl:ClassOfFeatureWholePartDefinition ;
+  tpl:hasClassOfPart qn3:id73806964-ca9a-4b2a-a997-13d6a57d4c6d ;
+  tpl:hasClassOfWhole qn3:id96b6298e-8fe2-4939-9609-5cd47e0f0516 ;
+.
+qn3:id1f575f73-ea84-43ab-8980-b647f73965d4
+  rdf:type tpl:SpecializationByCompoundType ;
+  tpl:hasSubClass qn3:id05796c76-5f03-4e11-9a02-a1db079abec7 ;
+  tpl:hasSuperClass pcardl:RDS480059 ;
+.
+qn3:id20a39ca3-eb99-44be-aacf-8dae3b3f99cb
+  rdf:type pcardl:R-4d2153f8-2b65-4bee-9efb-a2fcac12f284 ;
+  rdf:type dm:ClassOfInformationRepresentation ;
+  rdfs:label "RFQ-001" ;
+.
+qn3:id24bb682e-d3c8-4245-999c-d31cf54f664a
+  rdf:type tpl:SpecializationByCompoundType ;
+  tpl:hasSubClass qn3:id0109f0bf-ac9d-411f-85cd-785ee3194d9e ;
+  tpl:hasSuperClass pcardl:RDS472229 ;
+.
+qn3:id3dd5e9f4-f0ed-4e88-90e8-47cee5debf9c
+  rdf:type pcardl:R-a3107083-c97f-458d-aa24-d3785a0a1835 ;
+  rdf:type dm:ClassOfInformationRepresentation ;
+  rdfs:label "1" ;
+.
+qn3:id3ff4a9d3-be07-4679-84aa-e25c1daac45c
+  rdf:type tpl:ClassOfAssemblyDefinition ;
+  tpl:hasClassOfPart qn3:id05796c76-5f03-4e11-9a02-a1db079abec7 ;
+  tpl:hasClassOfWhole qn3:id96b6298e-8fe2-4939-9609-5cd47e0f0516 ;
+.
+qn3:id42d99e6e-a100-4574-865b-dcb1761ef742
+  rdf:type tpl:SpecializationOfClassOfIndividual ;
+  tpl:hasSubClass qn3:id96b6298e-8fe2-4939-9609-5cd47e0f0516 ;
+  tpl:hasSuperClass pcardl:R-1ea100f5-e301-4528-bc51-9ab95b73d5f5 ;
+.
+qn3:id5a5afdec-c690-4a37-a869-6b33d15dd92a
+  rdf:type tpl:ClassOfIndividualHasIndirectPropertyWithValue ;
+  tpl:hasIndirectPropertyType pcardl:RDS369629 ;
+  tpl:hasPossessorType qn3:id05c6754c-b2b7-4a7f-89c1-5e31940b5516 ;
+  tpl:hasScale pcardl:RDS1348874 ;
+  tpl:valPropertyValue "10" ;
+.
+qn3:id69516a23-2029-4f05-a714-3d269cc78de5
+  rdf:type dm:ClassOfActivity ;
+  rdfs:subClassOf pcardl:RDS9652247 ;
+.
+qn3:id7176e82f-fe79-43eb-b7c3-6f8132751085
+  rdf:type dm:ClassOfArrangedIndividual ;
+  rdfs:subClassOf pcardl:RDS9551659 ;
+.
+qn3:id73806964-ca9a-4b2a-a997-13d6a57d4c6d
+  rdf:type dm:ClassOfArrangedIndividual ;
+  rdfs:subClassOf pcardl:RDS1442382761 ;
+.
+qn3:id75fe4685-a1f7-4e88-b4c5-9b0a9fa707fa
+  rdf:type tpl:ClassOfParticipationDefinition ;
+  tpl:hasActivityType qn3:id69516a23-2029-4f05-a714-3d269cc78de5 ;
+  tpl:hasParticipantRole pcardl:R-d2f7bbdf-0314-417b-b50b-b4fa4b6cd897 ;
+  tpl:hasParticipantType qn3:id96b6298e-8fe2-4939-9609-5cd47e0f0516 ;
+.
+qn3:id7cbfe727-ba44-49fe-83d2-50c5edb17e5d
+  rdf:type tpl:ClassOfIndividualHasIndirectPropertyWithBoundingValues ;
+  tpl:hasIndirectPropertyType pcardl:R-172326ab-22d4-4ba0-be6e-f2f4890e8185 ;
+  tpl:hasPossessorType qn3:id96b6298e-8fe2-4939-9609-5cd47e0f0516 ;
+  tpl:hasScale pcardl:RDS1348874 ;
+  tpl:valLowerBound "0" ;
+  tpl:valUpperBound "30.0" ;
+.
+qn3:id83f1614d-649b-4876-ae1e-34721972e9bc
+  rdf:type dm:ClassOfArrangedIndividual ;
+  rdfs:subClassOf pcardl:RDS337196911 ;
+.
+qn3:id84217d48-1196-439b-8dfe-cfcd7376b08c
+  rdf:type tpl:SpecializationOfClassOfIndividual ;
+  tpl:hasSubClass qn3:id83f1614d-649b-4876-ae1e-34721972e9bc ;
+  tpl:hasSuperClass pcardl:R-9589eb0d-8276-40b8-9ada-8d79cf1c7101 ;
+.
+qn3:id91a437fa-20de-470b-83d0-2cdfe4a61914
+  rdf:type dm:FunctionalPhysicalObject ;
+  rdfs:label "R420-PT-5152" ;
+.
+qn3:id96b6298e-8fe2-4939-9609-5cd47e0f0516
+  rdf:type pcardl:R-c898dddf-932e-4216-bf99-0f40df3847f4 ;
+  rdf:type dm:ClassOfInanimatePhysicalObject ;
+  rdfs:label "CO_R420-PT-5152" ;
+  rdfs:subClassOf pcardl:RDS354194 ;
+.
+qn3:idc10d6602-0aa9-4a71-8579-9e8c18dac8de
+  rdf:type tpl:ClassOfContainmentDefinition ;
+  tpl:hasClassOfContained qn3:id05c6754c-b2b7-4a7f-89c1-5e31940b5516 ;
+  tpl:hasClassOfContainer qn3:id96b6298e-8fe2-4939-9609-5cd47e0f0516 ;
+.
+qn3:idc1b54729-7deb-4764-a16a-0a9d29b1582e
+  rdf:type tpl:CompositionOfClassOfInformationRepresentation ;
+  tpl:hasPart qn3:id3dd5e9f4-f0ed-4e88-90e8-47cee5debf9c ;
+  tpl:hasWhole qn3:id20a39ca3-eb99-44be-aacf-8dae3b3f99cb ;
+.
+qn3:idc5c4e0d5-f495-4fc8-96f3-5e8fb8944fb6
+  rdf:type tpl:SpecializationOfClassOfIndividual ;
+  tpl:hasSubClass qn3:id0109f0bf-ac9d-411f-85cd-785ee3194d9e ;
+  tpl:hasSuperClass pcardl:RDS429389 ;
+.
+qn3:idef595e28-52b2-42fd-b714-1368087d85e7
+  rdf:type tpl:ClassOfFeatureWholePartDefinition ;
+  tpl:hasClassOfPart qn3:id7176e82f-fe79-43eb-b7c3-6f8132751085 ;
+  tpl:hasClassOfWhole qn3:id96b6298e-8fe2-4939-9609-5cd47e0f0516 ;
+.
+qn3:idf2ad1e4e-7061-4a6a-867a-91f8e023a65b
+  rdf:type tpl:ClassifiedDefinitionOfClassOfIndividualByCOIR ;
+  tpl:hasDefined qn3:id96b6298e-8fe2-4939-9609-5cd47e0f0516 ;
+  tpl:hasDefinition qn3:id3dd5e9f4-f0ed-4e88-90e8-47cee5debf9c ;
+  tpl:hasDefinitionType pcardl:R-67680ea6-21d0-4951-baec-de09bbe4f41d ;
+.
+qn3:idf84912f2-0994-4ac5-b0b1-dd64376dd345
+  rdf:type tpl:ClassOfIndividualHasIndirectPropertyWithValue ;
+  tpl:hasIndirectPropertyType pcardl:RDS369674 ;
+  tpl:hasPossessorType qn3:id05c6754c-b2b7-4a7f-89c1-5e31940b5516 ;
+  tpl:hasScale pcardl:RDS1322684 ;
+  tpl:valPropertyValue "95.0" ;
+.
+qn3:idf9f811d7-6344-49f1-82aa-1da40a7c2db0
+  rdf:type tpl:SpecializationOfClassOfIndividual ;
+  tpl:hasSubClass qn3:id7176e82f-fe79-43eb-b7c3-6f8132751085 ;
+  tpl:hasSuperClass pcardl:RDS1459162771 ;
+.
+qn3:idfdc37bd5-690c-4596-b603-677ba6f7d88a
+  rdf:type tpl:ClassificationOfIndividual ;
+  tpl:hasClassified qn3:id91a437fa-20de-470b-83d0-2cdfe4a61914 ;
+  tpl:hasClassifier qn3:id96b6298e-8fe2-4939-9609-5cd47e0f0516 ;
+.
+<http://iso15926.fiatech.org/edrc_usecase_2/pressure_transmitter_rfq_1_reply>
+  rdf:type owl:Ontology ;
+  owl:imports tpl: ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+pressure_transmitter_rfq_1_reply:id09596342-9f7b-41b2-9609-ff5a88ded337
+  rdf:type dm:ClassOfArrangedIndividual ;
+.
+pressure_transmitter_rfq_1_reply:id2d28890e-6acc-4e7f-a83f-a5656d145a76
+  rdf:type pcardl:R-bd9e51e1-7182-421d-887e-e5cb37e34653 ;
+  rdf:type dm:ClassOfInformationRepresentation ;
+  rdfs:label "RFQ-001_Rep" ;
+.
+pressure_transmitter_rfq_1_reply:id3161308c-abbc-49c9-aeba-be0cce92e7e1
+  rdf:type tpl:ProductClassFulfilsClassOfFunctionPlace ;
+  tpl:hasClassOfFulfilled pressure_transmitter_rfq_1_reply:id09596342-9f7b-41b2-9609-ff5a88ded337 ;
+  tpl:hasFunctionPlaceClass qn3:id96b6298e-8fe2-4939-9609-5cd47e0f0516 ;
+  tpl:hasProductClass qn2:id_2051TG2A2B21BE1 ;
+.
+pressure_transmitter_rfq_1_reply:id3e56ba39-663b-47e2-9ac4-00849a35c53b
+  rdf:type tpl:ClassOfIndividualHasMonetaryValue ;
+  tpl:hasCostType pcardl:RDS8503440 ;
+  tpl:hasCurrency pcardl:R-c8311bd1-e698-4a73-80d8-df27417a17ee ;
+  tpl:hasPossessorType qn2:id_2051TG2A2B21BE1 ;
+  tpl:valPropertyValue "1732.0" ;
+.
+pressure_transmitter_rfq_1_reply:id4ec28a4d-aab7-4f5b-936b-8820d731830e
+  rdf:type tpl:ClassifiedDescriptionOfClassOfIndividualByCOIR ;
+  tpl:hasDescribed qn3:id96b6298e-8fe2-4939-9609-5cd47e0f0516 ;
+  tpl:hasDescriptionType pcardl:R-ea7087c4-3149-4b75-a7db-aff7b7e5e6af ;
+  tpl:hasDescriptor pressure_transmitter_rfq_1_reply:id2d28890e-6acc-4e7f-a83f-a5656d145a76 ;
+.

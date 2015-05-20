@@ -1,0 +1,37 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber
+# imports: http://data.posccaesar.org/tpl/
+
+@prefix atc00001: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber#> .
+@prefix dm: <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber>
+  rdf:type owl:Ontology ;
+  owl:imports tpl: ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.2 Item Number"^^xsd:string ;
+.
+atc00001:ClassificationOfIndividual_1
+  rdf:type tpl:ClassificationOfIndividual ;
+  tpl:hasClassified atc00001:PossibleIndividual_1 ;
+  rdfs:label "Pump is CENTRIFUGAL PUMP"^^xsd:string ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.2 Item Number"^^xsd:string ;
+  tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS416834> ;
+.
+atc00001:ClassifiedIdentificationOfIndividual_1
+  rdf:type tpl:ClassifiedIdentificationOfIndividual ;
+  tpl:hasIdentificationType <http://data.posccaesar.org/rdl/RDS2100944981> ;
+  tpl:hasIdentified atc00001:PossibleIndividual_1 ;
+    rdfs:label "Pump P-11100A"^^xsd:string ;
+  tpl:valIdentifier "P-11100A"^^xsd:string ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.2 Item Number"^^xsd:string ;
+.
+atc00001:PossibleIndividual_1
+  rdf:type dm:PossibleIndividual ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.2 Item Number"^^xsd:string ;
+  rdfs:label "Pump"^^xsd:string ;
+.

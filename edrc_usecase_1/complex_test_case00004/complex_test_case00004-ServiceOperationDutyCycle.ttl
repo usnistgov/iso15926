@@ -1,0 +1,47 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00004/complex_test_case00004-ServiceOperationDutyCycle
+# imports: http://data.posccaesar.org/tpl/
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber
+# imports: http://www.mycompany.com/iso15926/edrc/refdata
+
+@prefix ctc00004: <http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00004/complex_test_case00004-ServiceOperationDutyCycle#> .
+@prefix dm: <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00004/complex_test_case00004-ServiceOperationDutyCycle>
+  rdf:type owl:Ontology ;
+  owl:imports tpl: ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber> ;
+  owl:imports <http://www.mycompany.com/iso15926/edrc/refdata> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+ctc00004:Activity_1
+  rdf:type dm:Activity ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.12 Service Continuous 7.2.13 Service Intermittent"^^xsd:string ;
+  rdfs:label "Pumping Activity"^^xsd:string ;
+.
+ctc00004:ClassificationOfIndividual_1
+  rdf:type tpl:ClassificationOfIndividual ;
+  tpl:hasClassified ctc00004:Activity_1 ;
+  tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS9710162> ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.12 Service Continuous 7.2.13 Service Intermittent"^^xsd:string ;
+  rdfs:label "Activity is Intermittent Operation"^^xsd:string ;
+.
+ctc00004:ClassificationOfIndividual_2
+  rdf:type tpl:ClassificationOfIndividual ;
+  tpl:hasClassified ctc00004:Activity_1 ;
+  tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS9657917> ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.12 Service Continuous 7.2.13 Service Intermittent"^^xsd:string ;
+  rdfs:label "Activity is Pumping"^^xsd:string ;
+.
+<http://www.mycompany.com/iso15926/edrc/refdata#Classification_1>
+  rdfs:comment "EDRC Use Case 1 Section 7.2.12 Service Continuous 7.2.13 Service Intermittent"^^xsd:string ;
+  rdfs:label "INTERMITTENT OPERATION is PUMP_OPERATION_DUTY_CYCLE_TYPE"^^xsd:string ;
+.
+<http://www.mycompany.com/iso15926/edrc/refdata#Classification_2>
+  rdfs:comment "EDRC Use Case 1 Section 7.2.12 Service Continuous 7.2.13 Service Intermittent"^^xsd:string ;
+  rdfs:label "CONTINUOUS OPERATION is PUMP_OPERATION_DUTY_CYCLE_TYPE"^^xsd:string ;
+.

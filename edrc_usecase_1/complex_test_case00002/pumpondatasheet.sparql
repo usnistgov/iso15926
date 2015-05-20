@@ -1,0 +1,22 @@
+SELECT ?PumpIdentifier ?DatasheetIdentifier
+WHERE {
+    ?classificationofindividual rdf:type tpl:ClassificationOfIndividual .
+    ?classificationofindividual tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS416834> .
+    ?classificationofindividual tpl:hasClassified ?possibleindividual .
+    ?classifiedidentificationofindividual rdf:type tpl:ClassifiedIdentificationOfIndividual .
+    ?classifiedidentificationofindividual tpl:hasIdentificationType <http://data.posccaesar.org/rdl/RDS2100944981> .
+    ?classifiedidentificationofindividual tpl:hasIdentified ?possibleindividual .
+    ?classificationofclassofindividual tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS345689> .
+    ?classificationofclassofindividual tpl:hasClassified ?classofinformationobject .
+    ?classificationofclassofindividual rdf:type tpl:ClassificationOfClassOfIndividual .
+    ?classifiedidentificationofclassofindividual tpl:hasIdentified ?classofinformationobject .
+    ?classifiedidentificationofclassofindividual tpl:hasIdentificationType <http://data.posccaesar.org/rdl/RDS2102408551> .
+    ?classifiedidentificationofclassofindividual rdf:type tpl:ClassifiedIdentificationOfClassOfIndividual .
+    ?possibleindividual rdf:type dm:PossibleIndividual .
+    ?classofinformationobject rdf:type dm:ClassOfInformationObject .
+    ?referencetoindividualondocument tpl:hasDocument ?classofinformationobject .
+    ?referencetoindividualondocument rdf:type tpl:ReferenceToIndividualOnDocument .
+    ?referencetoindividualondocument tpl:hasReferred ?possibleindividual .
+    ?classifiedidentificationofindividual tpl:valIdentifier ?PumpIdentifier .
+    ?classifiedidentificationofclassofindividual tpl:valIdentifier ?DatasheetIdentifier .
+}

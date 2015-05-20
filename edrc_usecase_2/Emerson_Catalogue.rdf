@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+  <!ENTITY dm "http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#" >
+  <!ENTITY basens "http://data.emerson.com/" >
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+  <!ENTITY p7tm "http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#" >
+  <!ENTITY owllist "http://www.co-ode.org/ontologies/list.owl#" >
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+  <!ENTITY meta "http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/metadata#" >
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+  <!ENTITY rdl "http://posccaesar.org/rdl/" >
+]>
+
+<rdf:RDF 
+  xmlns="http://data.emerson.com/"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dm="http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#"
+  xmlns:basens="http://data.emerson.com/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:p7tm="http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#"
+  xmlns:owllist="http://www.co-ode.org/ontologies/list.owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:meta="http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/metadata#"
+  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xmlns:rdl="http://posccaesar.org/rdl/"
+>
+<rdf:Description rdf:about="&basens;id_2051TG2A2B21BE1">
+<rdfs:label>2051TG2A2B21BE1</rdfs:label>
+<rdf:type rdf:resource="&dm;ClassOfInanimatePhysicalObject" />
+<rdf:type rdf:resource="&basens;id8877cae0-afc5-4a4c-bda1-5b0724fb0c8b" />
+<rdfs:subClassOf rdf:resource="&rdl;RDS743399" />
+</rdf:Description>
+<rdf:Description rdf:about="&basens;id_2051TG3A2B21BE1">
+<rdfs:label>2051TG3A2B21BE1</rdfs:label>
+<rdf:type rdf:resource="&basens;id8877cae0-afc5-4a4c-bda1-5b0724fb0c8b" />
+<rdf:type rdf:resource="&dm;ClassOfInanimatePhysicalObject" />
+<rdfs:subClassOf rdf:resource="&rdl;RDS743399" />
+</rdf:Description>
+<dm:ClassOfClassOfIndividual rdf:about="&basens;id8877cae0-afc5-4a4c-bda1-5b0724fb0c8b">
+<rdfs:subClassOf rdf:resource="&rdl;RDS8615020" />
+<rdfs:label>EMERSON EQUIPMENT CLASS</rdfs:label>
+</dm:ClassOfClassOfIndividual>
+</rdf:RDF>

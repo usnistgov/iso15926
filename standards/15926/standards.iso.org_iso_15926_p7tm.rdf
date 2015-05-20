@@ -1,0 +1,578 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY p7tm  "http://standards.iso.org/iso/15926/tm#" >
+    <!ENTITY dm "http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#" >
+]>
+
+
+<rdf:RDF xmlns="http://standards.iso.org/iso/15926/tm#"
+     xml:base="http://standards.iso.org/iso/15926/tm"
+     xmlns:p7tm="http://standards.iso.org/iso/15926/tm#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:dm="http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#">
+    <owl:Ontology rdf:about="">
+        <rdfs:comment
+            >This ontology provides basic classes for representing ISO 15926-8 template signatures. It depends on an OWL taxonomy representation of ISO 15926-2 entity types.</rdfs:comment>
+        <owl:imports rdf:resource="http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003"/>
+    </owl:Ontology>
+
+
+
+
+
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#hasBaseTemplateObjectRoleFiller -->
+
+    <owl:ObjectProperty rdf:about="#hasBaseTemplateObjectRoleFiller">
+        <rdfs:label
+            >hasBaseTemplateObjectRoleFiller</rdfs:label>
+        <rdfs:comment
+            >This is a super-property for properties used in ordinary template statements, used to carry data (and not for characterizing templates themselves). A &quot;content&quot; template may not refer to templates or template roles themselves: Therefore the range of this property is dm:Thing.</rdfs:comment>
+        <rdfs:range rdf:resource="&dm;Thing"/>
+        <rdfs:domain rdf:resource="#BaseTemplateStatement"/>
+        <rdfs:subPropertyOf rdf:resource="#hasObjectRoleFiller"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#hasMetaTemplateObjectRoleFiller -->
+
+    <owl:ObjectProperty rdf:about="#hasMetaTemplateObjectRoleFiller">
+        <rdfs:label
+            >hasMetaTemplateObjectRoleFiller</rdfs:label>
+        <rdfs:comment
+            >This property is a super-property for properties used in meta-template statements, i.e., properties used to characterize templates.</rdfs:comment>
+        <rdfs:domain rdf:resource="#MetaTemplateStatement"/>
+        <rdfs:subPropertyOf rdf:resource="#hasObjectRoleFiller"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#hasObjectRoleFiller -->
+
+    <owl:ObjectProperty rdf:about="#hasObjectRoleFiller">
+        <rdfs:label
+            >hasObjectRoleFiller</rdfs:label>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#hasRole -->
+
+    <owl:ObjectProperty rdf:about="#hasRole">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>role</rdfs:label>
+        <rdfs:comment
+            >Used in meta-template TemplateRoleDescription to indicate which role is being described.</rdfs:comment>
+        <rdfs:range rdf:resource="#TemplateRole"/>
+        <rdfs:domain rdf:resource="#TemplateRoleDescription"/>
+        <rdfs:subPropertyOf rdf:resource="#hasMetaTemplateObjectRoleFiller"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#hasRoleFillerType -->
+
+    <owl:ObjectProperty rdf:about="#hasRoleFillerType">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>type</rdfs:label>
+        <rdfs:comment
+            >Used in meta-template TemplateRoleDescription to indicate which class any role-filler needs to belong to. That is, this property records the type constraint on individuals filling this role.</rdfs:comment>
+        <rdfs:range rdf:resource="&dm;Class"/>
+        <rdfs:domain rdf:resource="#TemplateRoleDescription"/>
+        <rdfs:subPropertyOf rdf:resource="#hasMetaTemplateObjectRoleFiller"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#hasSubTemplate -->
+
+    <owl:ObjectProperty rdf:about="#hasSubTemplate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>hasSubTemplate</rdfs:label>
+        <rdfs:comment
+            >Used in meta-template TemplateSpecialization to indicate which template is the sub-template in a specialization relationship. Use this property to indicate the template which is more constrained than its supertemplate.</rdfs:comment>
+        <rdfs:range rdf:resource="#Template"/>
+        <rdfs:domain rdf:resource="#TemplateSpecialization"/>
+        <rdfs:subPropertyOf rdf:resource="#hasMetaTemplateObjectRoleFiller"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#hasSuperTemplate -->
+
+    <owl:ObjectProperty rdf:about="#hasSuperTemplate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label
+            >hasSuperTemplate</rdfs:label>
+        <rdfs:comment
+            >Used in meta-template TemplateSpecialization to indicate which template is the super-template  in a specialization relationship. Use this property to indicate the template which is less constrained than its subtemplate.</rdfs:comment>
+        <rdfs:range rdf:resource="#Template"/>
+        <rdfs:domain rdf:resource="#TemplateSpecialization"/>
+        <rdfs:subPropertyOf rdf:resource="#hasMetaTemplateObjectRoleFiller"/>
+    </owl:ObjectProperty>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#hasTemplate -->
+
+    <owl:ObjectProperty rdf:about="#hasTemplate">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:label>isAboutTemplate</rdfs:label>
+        <rdfs:comment
+            >Used in meta-templates TemplateDescription and TemplateRoleDescription to record which template a statement applies to: which template is being described.</rdfs:comment>
+        <rdfs:range rdf:resource="#Template"/>
+        <rdfs:subPropertyOf rdf:resource="#hasMetaTemplateObjectRoleFiller"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#TemplateDescription"/>
+                    <rdf:Description rdf:about="#TemplateRoleDescription"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#valBaseTemplateDataRoleFiller -->
+
+    <owl:DatatypeProperty rdf:about="#valBaseTemplateDataRoleFiller">
+        <rdfs:label
+            >valBaseTemplateDataRoleFiller</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="#valDataRoleFiller"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#valDataRoleFiller -->
+
+    <owl:DatatypeProperty rdf:about="#valDataRoleFiller">
+        <rdfs:label
+            >valDataRoleFiller</rdfs:label>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#valMetaTemplateDataRoleFiller -->
+
+    <owl:DatatypeProperty rdf:about="#valMetaTemplateDataRoleFiller">
+        <rdfs:label
+            >valMetaTemplateDataRoleFiller</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="#valDataRoleFiller"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#valNumberOfRoles -->
+
+    <owl:DatatypeProperty rdf:about="#valNumberOfRoles">
+        <rdfs:label>numberOfRoles</rdfs:label>
+        <rdfs:comment
+            >Used in meta-template TemplateDescription to say how many roles a template is defined to have.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#valMetaTemplateDataRoleFiller"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#valRoleIndex -->
+
+    <owl:DatatypeProperty rdf:about="#valRoleIndex">
+        <rdfs:label
+            >positionInTemplate</rdfs:label>
+        <rdfs:comment
+            >Used in meta-template TemplateRoleDescription to record the position of a role in a template.</rdfs:comment>
+        <rdfs:subPropertyOf rdf:resource="#valMetaTemplateDataRoleFiller"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/data-model#Class -->
+
+    <owl:Class rdf:about="&dm;Class"/>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/data-model#Thing -->
+
+    <owl:Class rdf:about="&dm;Thing">
+        <owl:disjointWith rdf:resource="#Template"/>
+        <owl:disjointWith rdf:resource="#TemplateRole"/>
+        <owl:disjointWith rdf:resource="#TemplateStatement"/>
+    </owl:Class>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#BaseTemplate -->
+
+    <owl:Class rdf:about="#BaseTemplate">
+        <rdfs:label>BaseTemplate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Template"/>
+        <owl:disjointWith rdf:resource="#RDLTemplate"/>
+        <rdfs:comment
+            >A base template makes no reference to entities beyond the generic types defined in ISO 15926-2.</rdfs:comment>
+    </owl:Class>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#BaseTemplateStatement -->
+
+    <owl:Class rdf:about="#BaseTemplateStatement">
+        <rdfs:label
+            >BaseTemplateStatement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TemplateStatement"/>
+        <owl:disjointWith rdf:resource="#MetaTemplateStatement"/>
+        <rdfs:comment
+            >The class of &quot;base&quot; template statements covers all the typical cases of statements used to carry data. It is distinguished from template meta-statements, which are used to characterize templates themselves.</rdfs:comment>
+    </owl:Class>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#MetaTemplateStatement -->
+
+    <owl:Class rdf:about="#MetaTemplateStatement">
+        <rdfs:label
+            >MetaTemplateStatement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#TemplateStatement"/>
+        <rdfs:comment
+            >A template statement (template instance) that characterizes a template. For templates themselves, we record the number of roles. For roles, we record for each template their type constraints and positions.
+Various provenance information about templates would also belong here.</rdfs:comment>
+    </owl:Class>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#RDLTemplate -->
+
+    <owl:Class rdf:about="#RDLTemplate">
+        <rdfs:label>CoreTemplate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#Template"/>
+        <rdfs:comment
+            >An RDL template makes reference to entities defined in at least one Reference Data Library.
+Note. This does not in itself mean that the template has roles constrained to RDL classes. The reference to RDL content may be embedded in the intended use of the template; or in the expansion rule of the template, as given according to ISO 15926-7.
+Note. Any RDL template should be defined as a template specialization of a base template.</rdfs:comment>
+    </owl:Class>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#RDLTemplateStatement -->
+
+    <owl:Class rdf:about="#RDLTemplateStatement">
+        <rdfs:label
+            >RDLTemplateStatement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#BaseTemplateStatement"/>
+        <rdfs:comment
+            >An RDLtemplateStatement is an instance of an RDL template. See the definition of RDLTemplate.</rdfs:comment>
+    </owl:Class>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#RDLcoreTemplate -->
+
+    <owl:Class rdf:about="#RDLcoreTemplate">
+        <rdfs:label>RDLcoreTemplate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RDLTemplate"/>
+        <owl:disjointWith rdf:resource="#RDLindustryTemplate"/>
+        <rdfs:comment
+            >An RDLcoreTemplate is an RDL template for references to RDL content  are restricted to core (highly generic, not industry specific) RDL entities.</rdfs:comment>
+    </owl:Class>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#RDLcoreTemplateStatement -->
+
+    <owl:Class rdf:about="#RDLcoreTemplateStatement">
+        <rdfs:label
+            >RDLcoreTemplateStatement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RDLTemplateStatement"/>
+    </owl:Class>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#RDLindustryTemplate -->
+
+    <owl:Class rdf:about="#RDLindustryTemplate">
+        <rdfs:label
+            >RDLindustryTemplate</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RDLTemplate"/>
+        <rdfs:comment
+            >An RDL industry template is an RDL template which makes some reference to industry-specific RDL entities.</rdfs:comment>
+    </owl:Class>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#RDLindustryTemplateStatement -->
+
+    <owl:Class rdf:about="#RDLindustryTemplateStatement">
+        <rdfs:label
+            >RDLindustryTemplateStatement</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#RDLTemplateStatement"/>
+    </owl:Class>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#Template -->
+
+    <owl:Class rdf:about="#Template">
+        <rdfs:label>Template</rdfs:label>
+        <rdfs:comment
+            >A Template is a predicate defined according to ISO 15926-7 template signature specification requirements. For this OWL representation, the transparent OWL 2 punning mechanism is relied upon for treating templates, which are really classes, as individuals. The individuals in this class are punned templates.</rdfs:comment>
+    </owl:Class>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#TemplateDescription -->
+
+    <owl:Class rdf:about="#TemplateDescription">
+        <rdfs:label
+            >TemplateDescription</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#MetaTemplateStatement"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#valNumberOfRoles"/>
+                        <owl:allValuesFrom rdf:resource="&xsd;positiveInteger"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#valNumberOfRoles"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;positiveInteger"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasTemplate"/>
+                        <owl:allValuesFrom rdf:resource="#Template"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasTemplate"/>
+                        <owl:onClass rdf:resource="#Template"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#TemplateRole -->
+
+    <owl:Class rdf:about="#TemplateRole">
+        <rdfs:label>TemplateRole</rdfs:label>
+        <rdfs:comment
+            >A TemplateRole is a role defined according to ISO 15926-7 template signature specification requirements. For this OWL representation, the transparent OWL 2 punning mechanism is relied upon for treating template roles, which are really relations, as individuals. The individuals in this class are punned template roles.</rdfs:comment>
+    </owl:Class>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#TemplateRoleDescription -->
+
+    <owl:Class rdf:about="#TemplateRoleDescription">
+        <rdfs:label
+            >TemplateRoleDescription</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#MetaTemplateStatement"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasTemplate"/>
+                        <owl:allValuesFrom rdf:resource="#Template"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasTemplate"/>
+                        <owl:onClass rdf:resource="#Template"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#valRoleIndex"/>
+                        <owl:allValuesFrom rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#valRoleIndex"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                        <owl:onDataRange rdf:resource="&xsd;integer"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasRoleFillerType"/>
+                        <owl:allValuesFrom rdf:resource="&dm;Class"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasRoleFillerType"/>
+                        <owl:onClass rdf:resource="&dm;Class"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasRole"/>
+                        <owl:allValuesFrom rdf:resource="#TemplateRole"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasRole"/>
+                        <owl:onClass rdf:resource="#TemplateRole"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#TemplateSpecialization -->
+
+    <owl:Class rdf:about="#TemplateSpecialization">
+        <rdfs:label
+            >TemplateSpecialization</rdfs:label>
+        <rdfs:subClassOf rdf:resource="#MetaTemplateStatement"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasSuperTemplate"/>
+                        <owl:allValuesFrom rdf:resource="#Template"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasSuperTemplate"/>
+                        <owl:onClass rdf:resource="#Template"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasSubTemplate"/>
+                        <owl:allValuesFrom rdf:resource="#Template"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="#hasSubTemplate"/>
+                        <owl:onClass rdf:resource="#Template"/>
+                        <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+
+
+
+    <!-- http://standards.iso.org/iso/ts/15926/-8/ed-1/tech/reference-data/p7tm#TemplateStatement -->
+
+    <owl:Class rdf:about="#TemplateStatement">
+        <rdfs:label
+            >TemplateStatement</rdfs:label>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BaseTemplateStatement"/>
+                    <rdf:Description rdf:about="#MetaTemplateStatement"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment
+            >A template statement is an instance of a template. Example: Given a template F with signature specifying the roles R1, R2 of types, resp., T1, T2. If a and b are individuals, then F(a,b) is a template statement.</rdfs:comment>
+    </owl:Class>
+
+
+
+    <!--
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#Template"/>
+            <rdf:Description rdf:about="#TemplateRole"/>
+            <rdf:Description rdf:about="#TemplateStatement"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="&owl;AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="#TemplateDescription"/>
+            <rdf:Description rdf:about="#TemplateRoleDescription"/>
+            <rdf:Description rdf:about="#TemplateSpecialization"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 2.2.1.1138) http://owlapi.sourceforge.net -->
+

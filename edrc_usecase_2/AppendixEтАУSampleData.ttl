@@ -1,0 +1,263 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_2/AppendixE–SampleData
+# imports: http://data.posccaesar.org/tpl/
+
+@prefix proj: <http://iso15926.fiatech.org/edrc_usecase_2/AppendixE–SampleData#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix emrs: <http://data.emerson.com/>.
+@prefix dm: <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#> .
+@prefix meta: <http://standards.iso.org/iso/15926/meta#> .
+
+<http://iso15926.fiatech.org/edrc_usecase_2/AppendixE–SampleData>
+  rdf:type owl:Ontology ;
+  owl:imports tpl: ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+
+#RFQ document declaration (B.3.1)
+
+proj:id9a7f09fa-b99c-4c96-8111-6fb015c07f0b
+rdf:type dm:ClassOfInformationRepresentation;
+rdf:type <http://data.posccaesar.org/rdl/R-4d2153f8-2b65-4bee-9efb-a2fcac12f284>; 
+# REQUEST FOR QUOTATION from RDL extension
+rdfs:label "RFQ-001".
+
+#Line No 1 in the RFQ document declaration (B.3.7)
+
+proj:idfd27c5c8-d9b5-4cbd-88c6-92a8abeef820
+rdf:type dm:ClassOfInformationRepresentation;
+rdf:type <http://data.posccaesar.org/rdl/R-a3107083-c97f-458d-aa24-d3785a0a1835>; # RFQ ITEM from RDL extension
+rdfs:label "1".
+
+#RFQ Reply document declaration (B.3.6)
+
+proj:idfbe63756-b013-4e56-997f-b127e85cc104
+rdf:type dm:ClassOfInformationRepresentation;
+rdf:type <http://data.posccaesar.org/rdl/R-bd9e51e1-7182-421d-887e-e5cb37e34653>; # QUOTATION from RDL extension
+rdfs:label "RFQ-001-Rep".
+
+#Tagged Item declaration (B.3.2)
+
+proj:id81021f6c-0e2c-44df-9926-ba1e2b636454
+rdf:type dm:FunctionalPhysicalObject;
+rdfs:label "R420-PT-5152".
+
+#Required Class for the Tagged Item declaration (B.3.3)
+
+proj:ida84aa2b7-25ee-45ea-a777-6422c78fd15d
+rdf:type dm:ClassOfInanimatePhysicalObject;
+rdf:type <http://data.posccaesar.org/rdl/R-c898dddf-932e-4216-bf99-0f40df3847f4>; # REQUIRED ITEM CLASS from RDL extension
+rdfs:label "CO_R420-PT-5152";
+rdfs:subClassOf <http://data.posccaesar.org/rdl/RDS743399>.
+
+#Pressure Element Class for the Required Class declaration (B.3.4)
+
+proj:id6c604657-df1b-4acf-beff-c9d365fda9ab
+rdf:type dm:ClassOfInanimatePhysicalObject;
+rdfs:label "PE_R420-PT-5152";
+rdfs:subClassOf <http://data.posccaesar.org/rdl/RDS462104>. # PRESSURE ELEMENT from RDL
+
+#Stream Class for the Required Class declaration (B.3.5)
+
+proj:id1b1ae18d-1d62-4ca5-9b2a-bfd417c027bb
+rdf:type dm:ClassOfInanimatePhysicalObject;
+rdfs:label "S_R420-PT-5152";
+rdfs:subClassOf <http://data.posccaesar.org/rdl/RDS13026796>. # STREAM from RDL 
+
+#Tag Number pattern (B.4.1)
+
+proj:idedb97be2-3e97-4626-9822-8ac4f4718f8b
+tpl:hasIdentificationType <http://data.posccaesar.org/rdl/R-0d8da6d3-bf11-4e17-bdeb-fcfcbeb32490>; # TAG ASSIGNMENT CLASS from RDL extension
+tpl:hasIdentified proj:id81021f6c-0e2c-44df-9926-ba1e2b636454; #Tagged Item 
+tpl:valIdentifier "R420-PT-5152";
+rdf:type tpl:ClassifiedIdentificationOfIndividual.
+
+proj:idee0a0937-26e9-4d72-ba50-46538db4794e
+tpl:hasClassified proj:id81021f6c-0e2c-44df-9926-ba1e2b636454; #Tagged Item 
+tpl:hasClassifier proj:ida84aa2b7-25ee-45ea-a777-6422c78fd15d; #Required Class
+rdf:type tpl:ClassificationOfIndividual.
+
+#Operating Pressure pattern (B.4.2)
+
+proj:id249f46a1-cfa7-4c98-9403-a03bd9832004
+tpl:hasClassOfContained proj:id1b1ae18d-1d62-4ca5-9b2a-bfd417c027bb; #Stream Class
+tpl:hasClassOfContainer proj:ida84aa2b7-25ee-45ea-a777-6422c78fd15d; #Required Class
+rdf:type tpl:ClassOfContainmentDefinition.
+
+proj:idbb2b58ce-7a71-4bdc-b023-9b95ebe5146e
+tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS369629>; # NORMAL OPERATING PRESSURE from RDL
+tpl:hasPossessorType proj:id1b1ae18d-1d62-4ca5-9b2a-bfd417c027bb; #Stream Class
+tpl:hasScale <http://data.posccaesar.org/rdl/RDS1348874>; # BAR GAUGE from RDL
+tpl:valPropertyValue "19.2";
+rdf:type tpl:ClassOfIndividualHasIndirectPropertyWithValue.
+
+#Operating Temperature pattern (B.4.3)
+
+#First template instance of the pattern is the same ClassOfContainmentDefinition instance from Operating Pressure pattern (B.4.2) above
+
+proj:id1cc809c0-acf2-4498-89d7-fc5c0a1ae85f
+tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS369674>; #NORMAL OPERATING TEMPERATURE from RDL
+tpl:hasPossessorType proj:id1b1ae18d-1d62-4ca5-9b2a-bfd417c027bb; #Stream Class
+tpl:hasScale <http://data.posccaesar.org/rdl/RDS1322684>; #DEGREE CELCIUS from RDL
+tpl:valPropertyValue "95.0";
+rdf:type tpl:ClassOfIndividualHasIndirectPropertyWithValue.
+
+#Calibration Range pattern (B.4.4)
+
+proj:id75a52a3d-b322-4340-a0bc-1fde1a27d270
+tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/R-172326ab-22d4-4ba0-be6e-f2f4890e8185>; #CALIBRATION RANGE from RDL extension
+tpl:hasPossessorType proj:ida84aa2b7-25ee-45ea-a777-6422c78fd15d; #Required Class
+tpl:hasScale <http://data.posccaesar.org/rdl/RDS1348874>; #BAR GAUGE from RDL
+tpl:valMaxValue "30.0";
+rdf:type tpl:ClassOfIndividualHasIndirectPropertyWithMaximumValue.
+
+#Product Certification pattern (B.4.5)
+
+proj:id41297031-6b5b-422e-8954-19035cb3af1c
+tpl:hasSubClass proj:ida84aa2b7-25ee-45ea-a777-6422c78fd15d; #Required Class
+tpl:hasSuperClass <http://data.posccaesar.org/rdl/R-1ea100f5-e301-4528-bc51-9ab95b73d5f5>; #ATEX FLAME PROOF from RDL extension
+rdf:type tpl:SpecializationOfClassOfIndividual.
+
+#Output pattern (B.4.6)
+
+#Signal Class declaration
+proj:idad9bcef5-0822-4a5a-b5d4-ddfafebda2b2
+rdf:type dm:ClassOfArrangedIndividual;
+rdfs:subClassOf <http://data.posccaesar.org/rdl/RDS337196911>. #SIGNAL from RDL
+
+#Transmitting activity class declaration
+proj:id73ce4ff8-f31d-48e3-b384-ec357cbd8a69
+rdf:type dm:ClassOfActivity;
+rdfs:subClassOf <http://data.posccaesar.org/rdl/RDS9652247>. #TRANSMITTING from RDL
+
+proj:id8257b053-877e-4f3e-827d-e4451cba4c7f
+tpl:hasSubClass proj:idad9bcef5-0822-4a5a-b5d4-ddfafebda2b2; #Signal Class
+tpl:hasSuperClass <http://data.posccaesar.org/rdl/R-9589eb0d-8276-40b8-9ada-8d79cf1c7101>; #4-20 mA, HART from RDL extension
+rdf:type tpl:SpecializationOfClassOfIndividual.
+
+proj:idbed2ff73-58ce-4ee1-bd6a-4c0a7bf3766e
+tpl:hasActivityType proj:id73ce4ff8-f31d-48e3-b384-ec357cbd8a69; #Transmitting Activity
+tpl:hasParticipantRole <http://data.posccaesar.org/rdl/R-d2f7bbdf-0314-417b-b50b-b4fa4b6cd897>; #PERFORMER from RDL extension
+tpl:hasParticipantType proj:ida84aa2b7-25ee-45ea-a777-6422c78fd15d; #Required Class
+rdf:type tpl:ClassOfParticipationDefinition.
+
+proj:idceb95fd3-5283-4200-9364-668a15d2eaf3
+tpl:hasActivityType proj:id73ce4ff8-f31d-48e3-b384-ec357cbd8a69; #Transmitting Activity
+tpl:hasParticipantRole <http://data.posccaesar.org/rdl/RDS13652847>; #OUTPUT from RDL
+tpl:hasParticipantType proj:idad9bcef5-0822-4a5a-b5d4-ddfafebda2b2; #Signal Class
+rdf:type tpl:ClassOfParticipationDefinition.
+
+#Element Type pattern (B.4.7)
+
+proj:id91b549c8-9248-486c-a765-ef20b5fe92ff
+tpl:hasClassOfPart proj:id6c604657-df1b-4acf-beff-c9d365fda9ab;
+tpl:hasClassOfWhole proj:ida84aa2b7-25ee-45ea-a777-6422c78fd15d; #Required Class
+rdf:type tpl:ClassOfAssemblyDefinition.
+
+proj:id5696f533-3e50-4139-819f-0c9932dd6578
+tpl:hasSubClass proj:id6c604657-df1b-4acf-beff-c9d365fda9ab;
+tpl:hasSuperClass <http://data.posccaesar.org/rdl/RDS429389>;  # ISOLATING DIAPHRAGM from RDL 
+rdf:type tpl:SpecializationOfClassOfIndividual.
+
+#Element Material pattern (B.4.8)
+
+#First template instance of the pattern is the same ClassOfAssemblyDefinition instance from Element Type pattern (B.4.7) above
+
+proj:id2f2e9d7c-1bae-4863-8aa7-9665809f3c33
+tpl:hasSubClass proj:id6c604657-df1b-4acf-beff-c9d365fda9ab;
+tpl:hasSuperClass <http://data.posccaesar.org/rdl/RDS472229>; # ASTM GRADE 316L from RDL 
+rdf:type tpl:SpecializationByCompoundType.
+
+#Housing Material Pattern (B.4.9)
+
+#Housing Class declaration
+proj:idd7008514-7fab-45e9-976a-1c0bbfc526e0
+rdf:type dm:ClassOfInanimatePhysicalObject;
+rdfs:subClassOf <http://data.posccaesar.org/rdl/RDS11008205>.
+
+proj:id0d0654af-6447-4097-a9fa-2b99f229b7c8
+tpl:hasClassOfPart proj:idd7008514-7fab-45e9-976a-1c0bbfc526e0;
+tpl:hasClassOfWhole proj:ida84aa2b7-25ee-45ea-a777-6422c78fd15d; #Required Class
+rdf:type tpl:ClassOfAssemblyDefinition.
+
+proj:id3d3fdd69-2429-438d-abf5-20b9c45fe6dc
+tpl:hasSubClass proj:idd7008514-7fab-45e9-976a-1c0bbfc526e0;
+tpl:hasSuperClass <http://data.posccaesar.org/rdl/RDS480059>;
+rdf:type tpl:SpecializationByCompoundType.
+
+#Electrical Connection Type pattern (B.4.10)
+
+#Electical Connection Class declaration
+proj:id88dcb730-067c-4fbe-a35c-dff51d240e95
+rdf:type dm:ClassOfArrangedIndividual;
+rdfs:subClassOf <http://data.posccaesar.org/rdl/RDS9551659>.
+
+proj:id340bfeeb-d2cf-4eae-92d6-b80d3617668c
+tpl:hasClassOfPart proj:id88dcb730-067c-4fbe-a35c-dff51d240e95;
+tpl:hasClassOfWhole proj:ida84aa2b7-25ee-45ea-a777-6422c78fd15d; #Required Class
+rdf:type tpl:ClassOfFeatureWholePartDefinition.
+
+proj:idb4f0df1d-0d97-4e7e-a193-851cf80fb688
+tpl:hasSubClass proj:id88dcb730-067c-4fbe-a35c-dff51d240e95;
+tpl:hasSuperClass <http://data.posccaesar.org/rdl/RDS1459162771>;
+rdf:type tpl:SpecializationOfClassOfIndividual.
+
+#Process Connection Type pattern (B.4.11)
+
+#Process Connection Class declaration
+proj:id3a220838-4e96-4f7d-bee5-9af18715a788
+rdf:type dm:ClassOfArrangedIndividual;
+rdfs:subClassOf <http://data.posccaesar.org/rdl/RDS1442382761>.
+
+proj:id54c587d3-1628-4ad5-b689-c5f79e85329c
+tpl:hasClassOfPart proj:id3a220838-4e96-4f7d-bee5-9af18715a788;
+tpl:hasClassOfWhole proj:ida84aa2b7-25ee-45ea-a777-6422c78fd15d; #Required Class
+rdf:type tpl:ClassOfFeatureWholePartDefinition.
+
+proj:idceb5153b-7d4d-4d38-98b1-ed534cf7a7e4
+tpl:hasSubClass proj:id3a220838-4e96-4f7d-bee5-9af18715a788;
+tpl:hasSuperClass <http://data.posccaesar.org/rdl/RDS9062776044>;
+rdf:type tpl:SpecializationOfClassOfIndividual.
+
+#Definition of Class by RFQ Document pattern (B.4.12)
+
+proj:idff843720-2a2a-42cc-b2d4-9aeff9ceb766
+tpl:hasPart proj:idfd27c5c8-d9b5-4cbd-88c6-92a8abeef820;
+tpl:hasWhole proj:id9a7f09fa-b99c-4c96-8111-6fb015c07f0b;
+rdf:type tpl:CompositionOfClassOfInformationRepresentation.
+
+proj:id057ceff9-8b74-442c-b666-ed8c2a53a90f
+tpl:hasDefined proj:ida84aa2b7-25ee-45ea-a777-6422c78fd15d; #Required Class
+tpl:hasDefinition proj:idfd27c5c8-d9b5-4cbd-88c6-92a8abeef820;
+tpl:hasDefinitionType <http://data.posccaesar.org/rdl/R-67680ea6-21d0-4951-baec-de09bbe4f41d>;
+rdf:type tpl:ClassifiedDefinitionOfClassOfIndividualByCOIR.
+
+#Model Number pattern (B.4.13)
+
+#Class of Fulfilled Declaration
+proj:ideaf2d222-6eb6-44b2-b8bd-d90d625ded09
+rdf:type dm:ClassOfArrangedIndividual.
+
+proj:idc714e593-a73c-4207-946d-ec44045c6166
+tpl:hasDescribed proj:ida84aa2b7-25ee-45ea-a777-6422c78fd15d; #Required Class
+tpl:hasDescriptionType <http://data.posccaesar.org/rdl/R-ea7087c4-3149-4b75-a7db-aff7b7e5e6af>;
+tpl:hasDescriptor proj:idfbe63756-b013-4e56-997f-b127e85cc104;
+rdf:type tpl:ClassifiedDescriptionOfClassOfIndividualByCOIR.
+
+proj:id07e129c8-775d-49a9-8c88-ae0d4bd8e2f2
+tpl:hasClassOfFulfilled proj:ideaf2d222-6eb6-44b2-b8bd-d90d625ded09;
+tpl:hasFunctionPlaceClass proj:ida84aa2b7-25ee-45ea-a777-6422c78fd15d; #Required Class
+tpl:hasProductClass emrs:id_2051TG3A2B21BE1; #Product model class suggested by the manufacturer
+rdf:type tpl:ProductClassFulfilsClassOfFunctionPlace.
+
+proj:id02d517d9-e2c4-432e-9b6a-34b00a1a05f5
+tpl:hasCostType <http://data.posccaesar.org/rdl/RDS8503440>;
+tpl:hasCurrency <http://data.posccaesar.org/rdl/R-c8311bd1-e698-4a73-80d8-df27417a17ee>;
+tpl:hasPossessorType emrs:id_2051TG3A2B21BE1; #Product model class suggested by the manufacturer
+tpl:valPropertyValue "1715.0";
+rdf:type tpl:ClassOfIndividualHasMonetaryValue.
+
+

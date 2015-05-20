@@ -1,0 +1,16 @@
+# baseURI: http://iso15926.fiatech.org/test/complex_test_case00006/use_magic_properties
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00006/UseCase1CompleteSingleFile
+# imports: http://iso15926.fiatech.org/test/lib/pcardl_magic_properties
+
+@prefix magic: <http://iso15926.fiatech.org/test/complex_test_case00006/use_magic_properties#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://iso15926.fiatech.org/test/complex_test_case00006/use_magic_properties>
+  rdf:type owl:Ontology ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00006/UseCase1CompleteSingleFile> ;
+  owl:imports <http://iso15926.fiatech.org/test/lib/pcardl_magic_properties> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.

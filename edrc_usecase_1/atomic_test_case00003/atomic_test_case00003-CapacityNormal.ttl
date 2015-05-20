@@ -1,0 +1,25 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00003/atomic_test_case00003-CapacityNormal
+# imports: http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber
+
+@prefix atc00003: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00003/atomic_test_case00003-CapacityNormal#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00003/atomic_test_case00003-CapacityNormal>
+  rdf:type owl:Ontology ;
+  owl:imports <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber> ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.1 Pump Capacity Normal"^^xsd:string ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+atc00003:IndividualHasIndirectPropertyWithValue_1
+  rdf:type tpl:IndividualHasIndirectPropertyWithValue ;
+  tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS7354451> ;
+  tpl:hasPossessor <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber#PossibleIndividual_1> ;
+  tpl:hasScale <http://data.posccaesar.org/rdl/RDS1321064> ;
+  tpl:valPropertyValue "1.1"^^xsd:float ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.1 Pump Capacity Normal"^^xsd:string ;
+  rdfs:label "Pump Capacity Normal is 1.1 Metre Cubed Per Hour"^^xsd:string ;
+.

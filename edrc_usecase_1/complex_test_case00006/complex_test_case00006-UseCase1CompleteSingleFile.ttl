@@ -1,0 +1,304 @@
+# baseURI: http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00006/UseCase1CompleteSingleFile
+# imports: http://data.posccaesar.org/tpl/
+# imports: http://rdl.rdlfacade.org/data
+# imports: http://www.mycompany.com/iso15926/edrc/refdata
+
+@prefix UseCase1CompleteSingleFile: <http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00006/UseCase1CompleteSingleFile#> .
+@prefix atc00000: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00000-JobNumber#> .
+@prefix atc00001: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber#> .
+@prefix atc00002: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00002/atomic_test_case00002-date#> .
+@prefix atc00003: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00003/atomic_test_case00003-CapacityNormal#> .
+@prefix atc00004: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00004/atomic_test_case00004-EnumeratedClassOfCapacity#> .
+@prefix atc00005: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00005/atomic_test_case00005-CapacityRated#> .
+@prefix atc00006: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00006/atomic_test_case00006-SuctionPressureMax#> .
+@prefix atc00007: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00007/atomic_test_case00007-SuctionPressureRated#> .
+@prefix atc00008: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00008/atomic_test_case00008-DischargePressure#> .
+@prefix atc00009: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00009/atomic_test_case00009-DifferentialPressure#> .
+@prefix atc00010: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00010/atomic_test_case00010-DifferentialHead#> .
+@prefix atc00011: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00011/atomic_test_case00011-NPSHA#> .
+@prefix atc00012: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00012/atomic_test_case00012-ProcessVariations#> .
+@prefix atc00013: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00013/atomic_test_case00013-StartingConditions#> .
+@prefix atc00014: <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00014/atomic_test_case00014-StartsPerDay#> .
+@prefix ctc00002: <http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00002-RevisionNumber#> .
+@prefix ctc00003: <http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00003/complex_test_case00003-CapacityOther#> .
+@prefix ctc00004: <http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00004/complex_test_case00004-ServiceOperationDutyCycle#> .
+@prefix ctc00005: <http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00005/complex_test_case00005-ParallelOperationsRequired#> .
+@prefix dm: <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#> .
+@prefix meta: <http://standards.iso.org/iso/15926/meta#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix tpl: <http://data.posccaesar.org/tpl/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+atc00000:ClassOfIndividual_1
+  rdf:type dm:ClassOfInformationObject ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.1 Define Document (ClassificationOfClassOfIndividual)"^^xsd:string ;
+  rdfs:label "Define Document (ClassificationOfClassOfIndividual)"^^xsd:string ;
+.
+atc00000:ClassificationOfClassOfIndividual_1
+  rdf:type tpl:ClassificationOfClassOfIndividual ;
+  tpl:hasClassified atc00000:ClassOfIndividual_1 ;
+  tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS345689> ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.1 Define Document (ClassificationOfClassOfIndividual)"^^xsd:string ;
+  rdfs:label "Define Document (ClassificationOfClassOfIndividual)"^^xsd:string ;
+.
+atc00000:ClassificationOfIndividual_2
+  rdf:type tpl:ClassificationOfIndividual ;
+  tpl:hasClassified atc00000:PossibleIndividual_2 ;
+  tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS9629> ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.1 Define Project Activity (ClassificationOfIndividual)"^^xsd:string ;
+  rdfs:label "Define Project Activity"^^xsd:string ;
+.
+atc00000:ClassifiedIdentificationOfIndividual_1
+  rdf:type tpl:ClassifiedIdentificationOfIndividual ;
+  tpl:hasIdentificationType <http://rdl.rdlfacade.org/data#RA279224C9180470BAE922CFCBA21A78F> ;
+  tpl:hasIdentified atc00000:PossibleIndividual_2 ;
+  tpl:valIdentifier "JN-1213A"^^xsd:string ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.1 Add Identification to Project  (ClassifiedIdentificationOfIndividual)"^^xsd:string ;
+  rdfs:label "Add Identification to Project (ClassifiedIdentificationOfIndividual)"^^xsd:string ;
+.
+atc00000:PossibleIndividual_2
+  rdf:type dm:Activity ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.1 Define Project Activity (ClassificationOfIndividual)"^^xsd:string ;
+  rdfs:label "Define Project Activity"^^xsd:string ;
+.
+atc00000:ReferenceToIndividualOnDocument_1
+  rdf:type tpl:ReferenceToIndividualOnDocument ;
+  tpl:hasDocument atc00000:ClassOfIndividual_1 ;
+  tpl:hasReferred atc00000:PossibleIndividual_2 ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.1 Define relationship between the Document and Engineering Work Package (ReferenceToIndividualOnDocument)"^^xsd:string ;
+  rdfs:label "Define relationship between the Document and Engineering Work Package (ReferenceToIndividualOnDocument)"^^xsd:string ;
+.
+atc00001:ClassificationOfIndividual_1
+  rdf:type tpl:ClassificationOfIndividual ;
+  tpl:hasClassified atc00001:PossibleIndividual_1 ;
+  tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS416834> ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.2 Item Number"^^xsd:string ;
+  rdfs:label "Pump is CENTRIFUGAL PUMP"^^xsd:string ;
+.
+atc00001:ClassifiedIdentificationOfIndividual_1
+  rdf:type tpl:ClassifiedIdentificationOfIndividual ;
+  tpl:hasIdentificationType <http://data.posccaesar.org/rdl/RDS2100944981> ;
+  tpl:hasIdentified atc00001:PossibleIndividual_1 ;
+  tpl:valIdentifier "P-11100A"^^xsd:string ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.2 Item Number"^^xsd:string ;
+  rdfs:label "Pump P-11100A"^^xsd:string ;
+.
+atc00001:PossibleIndividual_1
+  rdf:type dm:PossibleIndividual ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.2 Item Number"^^xsd:string ;
+  rdfs:label "Pump"^^xsd:string ;
+.
+atc00002:Activity_1
+  rdf:type dm:Activity ;
+  rdf:type dm:ActualIndividual ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.4 Date"^^xsd:string ;
+  rdfs:label "Revising DataSheet P-100-DS"^^xsd:string ;
+.
+atc00002:DocumentRevision_1
+  rdf:type tpl:DocumentRevision ;
+  tpl:hasActivity atc00002:Activity_1 ;
+  tpl:hasActivityType <http://data.posccaesar.org/rdl/RDS9656027> ;
+  tpl:hasRevisedDocument atc00000:ClassOfIndividual_1 ;
+  tpl:valRevisionDate "2014-12-12T00:00:00"^^xsd:dateTime ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.4 Date"^^xsd:string ;
+  rdfs:label "Dated Document Revision"^^xsd:string ;
+.
+atc00003:IndividualHasIndirectPropertyWithValue_1
+  rdf:type tpl:IndividualHasIndirectPropertyWithValue ;
+  tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS7354451> ;
+  tpl:hasPossessor atc00001:PossibleIndividual_1 ;
+  tpl:hasScale <http://data.posccaesar.org/rdl/RDS1321064> ;
+  tpl:valPropertyValue "1.1"^^xsd:float ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.1 Pump Capacity Normal"^^xsd:string ;
+  rdfs:label "Pump Capacity Normal is 1.1 Metre Cubed Per Hour"^^xsd:string ;
+.
+atc00004:EnumeratedSetOfCapacityClass_1
+  rdf:type dm:EnumeratedSetOfClass ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.2 Other Capacity"^^xsd:string ;
+  rdfs:label "a pump capacity class enumeration"^^xsd:string ;
+.
+atc00004:EnumerationOfClass_1
+  rdf:type tpl:EnumerationOfClass ;
+  tpl:hasMember <http://data.posccaesar.org/rdl/RDS14286227> ;
+  tpl:hasMember <http://data.posccaesar.org/rdl/RDS400679> ;
+  tpl:hasMember <http://data.posccaesar.org/rdl/RDS7353897> ;
+  tpl:hasMember <http://data.posccaesar.org/rdl/RDS7353960> ;
+  tpl:hasSet atc00004:EnumeratedSetOfCapacityClass_1 ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.2 Other Capacity"^^xsd:string ;
+  rdfs:label "Add members to pump capacity class enumeration"^^xsd:string ;
+.
+atc00004:PickListOfCapacityClasses_1
+  rdf:type tpl:PickListOfClasses ;
+  tpl:hasClass atc00004:PumpCapacityUnionClass_1 ;
+  tpl:hasSetOfClass atc00004:EnumeratedSetOfCapacityClass_1 ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.2 Other Capacity"^^xsd:string ;
+  rdfs:label "pump capacity picklist"^^xsd:string ;
+.
+atc00004:PumpCapacityUnionClass_1
+  rdf:type dm:ClassOfIndirectProperty ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.2 Other Capacity"^^xsd:string ;
+  rdfs:label "pump capacity union class"^^xsd:string ;
+.
+atc00005:IndividualHasIndirectPropertyWithValue_1
+  rdf:type tpl:IndividualHasIndirectPropertyWithValue ;
+  tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS4720595> ;
+  tpl:hasPossessor atc00001:PossibleIndividual_1 ;
+  tpl:hasScale <http://data.posccaesar.org/rdl/RDS1321064> ;
+  tpl:valPropertyValue "3.3"^^xsd:float ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.3 Pump Capacity Rated"^^xsd:string ;
+  rdfs:label "Pump Capacity Rated is 3.3 Metre Cubed Per Hour"^^xsd:string ;
+.
+atc00006:IndividualHasIndirectPropertyWithValue_1
+  rdf:type tpl:IndividualHasIndirectPropertyWithValue ;
+  tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS400724> ;
+  tpl:hasPossessor atc00001:PossibleIndividual_1 ;
+  tpl:hasScale <http://data.posccaesar.org/rdl/RDS1059963660> ;
+  tpl:valPropertyValue "4.4"^^xsd:float ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.4 Suction Pressure Max"^^xsd:string ;
+  rdfs:label "Pump Suction Pressure Max is 4.4 MegaPascalGuage"^^xsd:string ;
+.
+atc00007:IndividualHasIndirectPropertyWithValue_1
+  rdf:type tpl:IndividualHasIndirectPropertyWithValue ;
+  tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS7471322> ;
+  tpl:hasPossessor atc00001:PossibleIndividual_1 ;
+  tpl:hasScale <http://data.posccaesar.org/rdl/RDS1059963660> ;
+  tpl:valPropertyValue "5.5"^^xsd:float ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.5 Suction Pressure Rated"^^xsd:string ;
+  rdfs:label "Pump Suction Pressure Rated is 5.5 MegaPascalGuage"^^xsd:string ;
+.
+atc00008:IndividualHasIndirectPropertyWithValue_1
+  rdf:type tpl:IndividualHasIndirectPropertyWithValue ;
+  tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS361529> ;
+  tpl:hasPossessor atc00001:PossibleIndividual_1 ;
+  tpl:hasScale <http://data.posccaesar.org/rdl/RDS1059963660> ;
+  tpl:valPropertyValue "8.8"^^xsd:float ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.6 Discharge Pressure"^^xsd:string ;
+  rdfs:label "Pump Discharge Pressure is 8.8 MegaPascalGuage"^^xsd:string ;
+.
+atc00009:IndividualHasIndirectPropertyWithValue_1
+  rdf:type tpl:IndividualHasIndirectPropertyWithValue ;
+  tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS361574> ;
+  tpl:hasPossessor atc00001:PossibleIndividual_1 ;
+  tpl:hasScale <http://data.posccaesar.org/rdl/RDS1059963660> ;
+  tpl:valPropertyValue "9.9"^^xsd:float ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.7 Differential Pressure"^^xsd:string ;
+  rdfs:label "Pump Differential Pressure is 9.9 MegaPascalGuage"^^xsd:string ;
+.
+atc00010:IndividualHasIndirectPropertyWithValue_1
+  rdf:type tpl:IndividualHasIndirectPropertyWithValue ;
+  tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS401219> ;
+  tpl:hasPossessor atc00001:PossibleIndividual_1 ;
+  tpl:hasScale <http://data.posccaesar.org/rdl/RDS1061454811> ;
+  tpl:valPropertyValue "10.10"^^xsd:float ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.8 Differential Head"^^xsd:string ;
+  rdfs:label "Pump Differential Head is 10.10 METRE H2O AT 4 DEGREE CELCIUS"^^xsd:string ;
+.
+atc00011:IndividualHasIndirectPropertyWithValue_1
+  rdf:type tpl:IndividualHasIndirectPropertyWithValue ;
+  tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS362879> ;
+  tpl:hasPossessor atc00001:PossibleIndividual_1 ;
+  tpl:hasScale <http://data.posccaesar.org/rdl/RDS1332674> ;
+  tpl:valPropertyValue "11.11"^^xsd:float ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.9 NPSHA"^^xsd:string ;
+  rdfs:label "Pump NPSHA is 11.11 Metre"^^xsd:string ;
+.
+atc00012:ClassifiedDescriptionOfIndividual_1
+  rdf:type tpl:ClassifiedDescriptionOfIndividual ;
+  tpl:hasDescribed atc00001:PossibleIndividual_1 ;
+  tpl:hasDescriptionType <http://rdl.rdlfacade.org/data#PROCESS_VARIATIONS_DESCRIPTION> ;
+  tpl:valDescriptor "This is some process variation description text."^^xsd:string ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.10 Process Variations"^^xsd:string ;
+  rdfs:label "Describe a process variation using text"^^xsd:string ;
+.
+atc00013:ClassifiedDescriptionOfIndividual_1
+  rdf:type tpl:ClassifiedDescriptionOfIndividual ;
+  tpl:hasDescribed atc00001:PossibleIndividual_1 ;
+  tpl:hasDescriptionType <http://rdl.rdlfacade.org/data#STARTING_CONDITIONS_DESCRIPTION> ;
+  tpl:valDescriptor "This is some starting conditions description text."^^xsd:string ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.11 Starting Conditions"^^xsd:string ;
+  rdfs:label "Describe starting conditions with text"^^xsd:string ;
+.
+atc00014:IndividualHasIndirectPropertyWithValue_1
+  rdf:type tpl:IndividualHasIndirectPropertyWithValue ;
+  tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS402974> ;
+  tpl:hasPossessor atc00001:PossibleIndividual_1 ;
+  tpl:hasScale <http://rdl.rdlfacade.org/data#CYCLE_PER_DAY> ;
+  tpl:valPropertyValue "5.0"^^xsd:float ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.14 Starts PerDay"^^xsd:string ;
+  rdfs:label "Pump Starts Per Day is 5"^^xsd:string ;
+.
+ctc00002:ClassifiedIdentificationOfClassOfIndividual_1
+  rdf:type tpl:ClassifiedIdentificationOfClassOfIndividual ;
+  tpl:hasIdentificationType <http://data.posccaesar.org/rdl/RDS2102408551> ;
+  tpl:hasIdentified atc00000:ClassOfIndividual_1 ;
+  tpl:valIdentifier "DS-1234"^^xsd:string ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.3 Revision Number Define Identification (ClassifiedIdentificationOfClassOfIndividual)"^^xsd:string ;
+  rdfs:label "Define Identification (ClassifiedIdentificationOfClassOfIndividual)"^^xsd:string ;
+.
+ctc00002:ClassifiedIdentificationOfClassOfIndividual_2
+  rdf:type tpl:ClassifiedIdentificationOfClassOfIndividual ;
+  tpl:hasIdentificationType <http://rdl.rdlfacade.org/data#REVISION_CODE_ASSIGNMENT_CLASS> ;
+  tpl:hasIdentified atc00000:ClassOfIndividual_1 ;
+  tpl:valIdentifier "Rev 1"^^xsd:string ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.3 Revision Number Define Revision Number (ClassifiedIdentificationOfClassOfIndividual)"^^xsd:string ;
+  rdfs:label "Define Revision Number (ClassifiedIdentificationOfClassOfIndividual)"^^xsd:string ;
+.
+ctc00002:ReferenceToIndividualOnDocument_1
+  rdf:type tpl:ReferenceToIndividualOnDocument ;
+  tpl:hasDocument atc00000:ClassOfIndividual_1 ;
+  tpl:hasReferred atc00001:PossibleIndividual_1 ;
+  rdfs:comment "EDRC Use Case 1 Section 6.1.3 Revision Number Pump Referenced on Data Sheet (ReferenceToIndividualOnDocument)"^^xsd:string ;
+  rdfs:label "Pump Referenced on Data Sheet (ReferenceToIndividualOnDocument)"^^xsd:string ;
+.
+ctc00003:IndividualHasIndirectPropertyWithValue_1
+  rdf:type tpl:IndividualHasIndirectPropertyWithValue ;
+  tpl:hasIndirectPropertyType <http://data.posccaesar.org/rdl/RDS400679> ;
+  tpl:hasPossessor atc00001:PossibleIndividual_1 ;
+  tpl:hasScale <http://data.posccaesar.org/rdl/RDS1321064> ;
+  tpl:valPropertyValue "2.22"^^xsd:float ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.2 Capacity Other"^^xsd:string ;
+  rdfs:label "Pump has LOWER LIMIT VOLUME FLOW RATE of 2.22 Metre Cubed Per Hour"^^xsd:string ;
+.
+ctc00004:Activity_1
+  rdf:type dm:Activity ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.12 Service Continuous 7.2.13 Service Intermittent"^^xsd:string ;
+  rdfs:label "Pumping Activity"^^xsd:string ;
+.
+ctc00004:ClassificationOfIndividual_1
+  rdf:type tpl:ClassificationOfIndividual ;
+  tpl:hasClassified ctc00004:Activity_1 ;
+  tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS9710162> ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.12 Service Continuous 7.2.13 Service Intermittent"^^xsd:string ;
+  rdfs:label "Activity is Intermittent Operation"^^xsd:string ;
+.
+ctc00004:ClassificationOfIndividual_2
+  rdf:type tpl:ClassificationOfIndividual ;
+  tpl:hasClassified ctc00004:Activity_1 ;
+  tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS9657917> ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.12 Service Continuous 7.2.13 Service Intermittent"^^xsd:string ;
+  rdfs:label "Activity is Pumping"^^xsd:string ;
+.
+ctc00005:ClassificationOfIndividual_1
+  rdf:type tpl:ClassificationOfIndividual ;
+  tpl:hasClassified ctc00004:Activity_1 ;
+  tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS32039> ;
+  rdfs:comment "EDRC Use Case 1 Section 7.2.15 Parallel Operation Required Activity is Parallel Operation"^^xsd:string ;
+  rdfs:label "Activity is Parallel Operation"^^xsd:string ;
+.
+<http://iso15926.fiatech.org/edrc_usecase_1/complex_test_case00006/UseCase1CompleteSingleFile>
+  rdf:type owl:Ontology ;
+  owl:imports tpl: ;
+  owl:imports <http://rdl.rdlfacade.org/data> ;
+  owl:imports <http://www.mycompany.com/iso15926/edrc/refdata> ;
+  owl:versionInfo "Created with TopBraid Composer"^^xsd:string ;
+.
+<http://www.mycompany.com/iso15926/edrc/refdata#Classification_1>
+  rdfs:comment "EDRC Use Case 1 Section 7.2.12 Service Continuous 7.2.13 Service Intermittent"^^xsd:string ;
+  rdfs:label "INTERMITTENT OPERATION is PUMP_OPERATION_DUTY_CYCLE_TYPE"^^xsd:string ;
+.
+<http://www.mycompany.com/iso15926/edrc/refdata#Classification_2>
+  rdfs:comment "EDRC Use Case 1 Section 7.2.12 Service Continuous 7.2.13 Service Intermittent"^^xsd:string ;
+  rdfs:label "CONTINUOUS OPERATION is PUMP_OPERATION_DUTY_CYCLE_TYPE"^^xsd:string ;
+.

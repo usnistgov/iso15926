@@ -1,0 +1,149 @@
+# baseURI: http://standards.iso.org/iso/15926/meta
+
+@prefix meta: <http://standards.iso.org/iso/15926/meta#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://standards.iso.org/iso/15926/meta>
+  rdf:type owl:Ontology ;
+  rdfs:comment "This ontology provides metadata properties for classes, templates and individuals." ;
+.
+meta:annAccessCode
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "A security code (resource group) of the information represented by a template instance. It is used as a parameter in an ACL (Access Control List)." ;
+  rdfs:label "Access Code" ;
+.
+meta:annAdministrativeNote
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "An administrative note about a reference data item" ;
+  rdfs:label "administrative note" ;
+  rdfs:subPropertyOf rdfs:comment ;
+.
+meta:annChangeDescription
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "A description of the most recent change." ;
+  rdfs:label "change description" ;
+  rdfs:subPropertyOf rdfs:comment ;
+.
+meta:annCreationDate
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The date of creation of a reference data item within the reference data library." ;
+  rdfs:label "creation date" ;
+.
+meta:annEffectiveDate
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The date of the status of the release of the reference data item (if released)." ;
+  rdfs:label "effective date" ;
+.
+meta:annExplanatoryComment
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "A description of the reason for the creation of the refer-ence data item ." ;
+  rdfs:label "explanatory comment" ;
+  rdfs:subPropertyOf rdfs:comment ;
+.
+meta:annExponent
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The integer number which is used to derive one unit of measure from another in an 'exponentiate' operation." ;
+  rdfs:label "exponent" ;
+.
+meta:annFactor_Prefix
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The real number which is used to derive one unit of measure from another in a 'factor' operation.  Either a number or an ISO prefix, such as 'milli' or 'kilo' can be specified." ;
+  rdfs:label "factor/prefix" ;
+.
+meta:annFirstOperand
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The name identifier of the first unit of measure in a 'multiply', 'divide', 'factor' or 'exponentiate' operation." ;
+  rdfs:label "first operand" ;
+.
+meta:annLastChangeDate
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The data of the last change to the reference data item." ;
+  rdfs:label "last change date" ;
+.
+meta:annNotes
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "Notes and other informative text about the reference data item." ;
+  rdfs:label "notes" ;
+  rdfs:subPropertyOf rdfs:comment ;
+.
+meta:annOperator
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The operator which defined a unit of measure by an expression.  The allowed values are 'multiply', 'divide', 'factor', and 'exponentiate'." ;
+  rdfs:label "operator" ;
+.
+meta:annRegistrationStatus
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The status of the reference data item." ;
+  rdfs:label "registration status" ;
+.
+meta:annRule
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "A rule, method, or script applicable in application software." ;
+  rdfs:label "Rule" ;
+.
+meta:annSecondOperand
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The name identifier of the second unit of measure in a 'multiply' or 'divide' operation." ;
+  rdfs:label "second operand" ;
+.
+meta:annSource
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The source of the text definition for the reference data item." ;
+  rdfs:label "source" ;
+  rdfs:subPropertyOf rdfs:seeAlso ;
+.
+meta:annStewardshipContact
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The name of the person who is the contact for the stewardship of a reference data item." ;
+  rdfs:label "stewardship contact" ;
+.
+meta:annStewardshipOrganization
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The name of the organization that performs the steward-ship of a reference data item." ;
+  rdfs:label "stewardship organization" ;
+.
+meta:annSubmissionContact
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The name of the person who is the contact for the submission of a reference data item." ;
+  rdfs:label "submission contact" ;
+.
+meta:annSubmittingOrganization
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The name of the organization that performs the \"submission of a reference data item." ;
+  rdfs:label "submitting organization" ;
+.
+meta:annSymbol
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The symbol used to represent a unit of measure." ;
+  rdfs:label "symbol" ;
+.
+meta:annSynonym
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "A synonym for the unique name of the reference data item" ;
+  rdfs:label "synonym" ;
+.
+meta:annTextDefinition
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The text definition for the reference data item." ;
+  rdfs:label "text definition" ;
+  rdfs:subPropertyOf rdfs:comment ;
+.
+meta:annURI
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "A URI of the reference data item" ;
+  rdfs:label "URI" ;
+.
+meta:annUniqueName
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "The name identifier of the reference data item" ;
+  rdfs:label "unique name" ;
+  rdfs:subPropertyOf rdfs:label ;
+.
+meta:annUnresolvedIssues
+  rdf:type owl:AnnotationProperty ;
+  rdfs:comment "A description of any unresolved issues for a reference data item." ;
+  rdfs:label "unresolved issues" ;
+.

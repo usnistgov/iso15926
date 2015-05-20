@@ -1,0 +1,16 @@
+SELECT ?PumpIdentifier ?Property ?PropertyValue
+WHERE {
+    ?classificationofindividual tpl:hasClassified ?possibleindividual .
+    ?classificationofindividual tpl:hasClassifier <http://data.posccaesar.org/rdl/RDS416834> .
+    ?classificationofindividual rdf:type tpl:ClassificationOfIndividual .
+    ?possibleindividual rdf:type dm:PossibleIndividual .
+    ?classifiedidentificationofindividual tpl:hasIdentified ?possibleindividual .
+    ?classifiedidentificationofindividual tpl:hasIdentificationType <http://data.posccaesar.org/rdl/RDS2100944981> .
+    ?classifiedidentificationofindividual rdf:type tpl:ClassifiedIdentificationOfIndividual .
+    ?individualhasindirectpropertywithvalue tpl:hasIndirectPropertyType ?Property .
+    ?individualhasindirectpropertywithvalue tpl:hasPossessor ?possibleindividual .
+    ?individualhasindirectpropertywithvalue tpl:hasScale <http://data.posccaesar.org/rdl/RDS1321064> .
+    ?individualhasindirectpropertywithvalue rdf:type tpl:IndividualHasIndirectPropertyWithValue .
+    ?classifiedidentificationofindividual tpl:valIdentifier ?PumpIdentifier .
+    ?individualhasindirectpropertywithvalue tpl:valPropertyValue ?PropertyValue .
+}

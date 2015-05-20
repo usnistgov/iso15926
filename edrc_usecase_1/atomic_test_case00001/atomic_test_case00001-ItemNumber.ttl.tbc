@@ -1,0 +1,80 @@
+# baseURI: null
+
+@prefix composite: <http://www.topbraid.org/2007/05/composite.owl#> .
+@prefix forms: <http://www.topbraid.org/2007/01/forms.owl#> .
+@prefix inference: <http://www.topbraid.org/2007/06/inference.owl#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix visual: <http://topbraid.org/visual#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+[
+  rdf:type visual:Graph ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/rdl/RDS2100944981> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "328"^^xsd:int ;
+      visual:x "151"^^xsd:int ;
+      visual:y "253"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/rdl/RDS416834> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "302"^^xsd:int ;
+      visual:x "579"^^xsd:int ;
+      visual:y "240"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/tpl/ClassificationOfIndividual> ;
+      visual:height "197"^^xsd:int ;
+      visual:width "293"^^xsd:int ;
+      visual:x "375"^^xsd:int ;
+      visual:y "23"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://data.posccaesar.org/tpl/ClassifiedIdentificationOfIndividual> ;
+      visual:height "197"^^xsd:int ;
+      visual:width "293"^^xsd:int ;
+      visual:x "43"^^xsd:int ;
+      visual:y "20"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber.ttl#ClassificationOfIndividual_1> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "262"^^xsd:int ;
+      visual:x "515"^^xsd:int ;
+      visual:y "334"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber.ttl#ClassifiedIdentificationOfIndividual_1> ;
+      visual:height "35"^^xsd:int ;
+      visual:width "311"^^xsd:int ;
+      visual:x "15"^^xsd:int ;
+      visual:y "362"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber.ttl#PossibleIndividual_1> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "224"^^xsd:int ;
+      visual:x "322"^^xsd:int ;
+      visual:y "456"^^xsd:int ;
+    ] ;
+  visual:child [
+      rdf:type visual:Box ;
+      visual:depicts <http://rds.posccaesar.org/2008/02/OWL/ISO-15926-2_2003#PossibleIndividual> ;
+      visual:height "18"^^xsd:int ;
+      visual:width "179"^^xsd:int ;
+      visual:x "346"^^xsd:int ;
+      visual:y "359"^^xsd:int ;
+    ] ;
+  visual:depicts <http://iso15926.fiatech.org/edrc_usecase_1/atomic_test_case00001-ItemNumber.ttl#ClassifiedIdentificationOfIndividual_1> ;
+  rdfs:label "PumpIdentification" ;
+].
