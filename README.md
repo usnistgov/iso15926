@@ -1,5 +1,5 @@
 # iso15926
-Peter Denno
+
 
 This repository contains the Test Cases associated with NIST/Fiatech ISO 15926 Conformance Testing and the Fiatech Equipment Data Requirements Conformance (EDRC) project. Read the file README-EDRC-ConformanceTestingOverview2015-05-06.pdf for more information.
 
